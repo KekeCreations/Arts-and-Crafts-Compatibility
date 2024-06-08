@@ -12,9 +12,12 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation files("run/mods/Arts And Crafts-fabric-1.20.1-1.0.0-beta.jar")
+    modImplementation ("arts-and-crafts:arts_and_crafts-fabric-1.20.1:1.0.0")
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
+
+    //Optional
+    modImplementation "curse.maven:gilded-sherds-935749:4975224"
 }
 
 loom {

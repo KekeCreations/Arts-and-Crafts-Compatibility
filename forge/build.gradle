@@ -79,6 +79,9 @@ dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
     implementation fg.deobf("arts-and-crafts:arts_and_crafts-forge-1.20.1:1.0.0")
+
+    //OPTIONAL
+    implementation fg.deobf("curse.maven:gilded-sherds-935749:4975225")
 }
 
 tasks.withType(JavaCompile).configureEach {

@@ -21,12 +21,21 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 ResourcePackActivationType.ALWAYS_ENABLED
         );
     }
+    private static void registerBuiltinDataPack(ModContainer modContainer, String packId) {
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, packId + "_datapack"),
+                modContainer,
+                Component.translatable("pack." + ArtsAndCraftsCompatibility.MOD_ID + "." + packId),
+                ResourcePackActivationType.ALWAYS_ENABLED
+        );
+    }
 
     public static void loadBuiltinResourcePacks() {
         Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer(ArtsAndCraftsCompatibility.MOD_ID);
         if (modContainer.isPresent()) {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.GILDED_SHERDS);
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.GILDED_SHERDS);
             }
         }
     }

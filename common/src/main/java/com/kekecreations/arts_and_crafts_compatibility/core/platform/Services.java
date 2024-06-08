@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.core.platform;
 
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.RegistryHelper;
 
 import java.util.ServiceLoader;
 
@@ -14,6 +15,8 @@ public class Services {
     // For example this can be used to check if the code is running on Forge vs Fabric, or to ask the modloader if another
     // mod is loaded.
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
+
+    public static final RegistryHelper REGISTRY = load(RegistryHelper.class);
 
     // This code is used to load a service for the current environment. Your implementation of the service must be defined
     // manually by including a text file in META-INF/services named with the fully qualified class name of the service.

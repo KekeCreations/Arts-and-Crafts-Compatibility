@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "item": "arts_and_crafts:finale_pottery_sherd"
+    }
+  ],
+  "result": {
+    "item": "arts_and_crafts_compat:gilded_finale_pottery_sherd"
+  }
+}

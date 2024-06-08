@@ -25,13 +25,22 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            gildedsherds_compat(event);
+            gildedsherds_res_compat(event);
+        }
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            gildedsherds_data_compat(event);
         }
     }
-    public static void gildedsherds_compat(AddPackFindersEvent event) {
+    public static void gildedsherds_res_compat(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_resource_pack");
         var pack = Pack.readMetaAndCreate("builtin/gildedsherds_resource_pack", Component.literal("GildedSherds Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
                 (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    public static void gildedsherds_data_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/gildedsherds_data_pack", Component.literal("GildedSherds Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

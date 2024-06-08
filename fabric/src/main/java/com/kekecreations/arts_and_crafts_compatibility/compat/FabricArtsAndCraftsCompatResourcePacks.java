@@ -37,6 +37,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.GILDED_SHERDS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.GILDED_SHERDS);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.OH_MY_SHERD)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.OH_MY_SHERD);
+            }
         }
     }
 }

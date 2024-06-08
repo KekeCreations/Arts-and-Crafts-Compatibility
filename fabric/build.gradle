@@ -18,6 +18,7 @@ dependencies {
 
     //Optional
     modImplementation "curse.maven:gilded-sherds-935749:4975224"
+    modImplementation "curse.maven:oh-my-sherd-897227:4864086"
 }
 
 loom {

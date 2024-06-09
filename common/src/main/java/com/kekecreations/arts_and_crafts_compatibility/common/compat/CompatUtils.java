@@ -8,4 +8,5 @@ public class CompatUtils {
     public static final String OH_MY_SHERD = "ohmysherd";
 
     public static final String BUILT = "built";
+    public static final String FARMERS_DELIGHT = "farmersdelight";
 }

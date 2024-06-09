@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts_compatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
+import com.kekecreations.arts_and_crafts_compatibility.compat.farmersdelight.FDCompatBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.platform.ForgeRegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -16,9 +17,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Objects;
 
 @Mod(ArtsAndCraftsCompatibility.MOD_ID)
 public class ForgeArtsAndCraftsCompatibility {
@@ -32,6 +30,9 @@ public class ForgeArtsAndCraftsCompatibility {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         ArtsAndCraftsCompatibility.init();
+        if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
+            FDCompatBlocks.register();
+        }
 
         modEventBus.addListener(this::creativeItemGroups);
     }
@@ -75,6 +76,11 @@ public class ForgeArtsAndCraftsCompatibility {
                 addAfter(event, BuiltBlocks.CORK_COMPACT_PLANKS.get(), BuiltBlocks.CORK_SHAKES.get());
                 addAfter(event, BuiltBlocks.CORK_SHAKES.get(), BuiltBlocks.CORK_SHAKES_STAIRS.get());
                 addAfter(event, BuiltBlocks.CORK_SHAKES_STAIRS.get(), BuiltBlocks.CORK_SHAKES_SLAB.get());
+            }
+        }
+        if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
+            if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "farmersdelight"))) {
+                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDCompatBlocks.CORK_CABINET.get());
             }
         }
     }

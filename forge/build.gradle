@@ -80,6 +80,9 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
     implementation fg.deobf("arts-and-crafts:arts_and_crafts-forge-1.20.1:1.0.0")
 
+    //GOTTA KEEP FOR CODE
+    implementation fg.deobf("curse.maven:farmers-delight-398521:5051242")
+
     //OPTIONAL
     implementation fg.deobf("curse.maven:gilded-sherds-935749:4975225")
     implementation fg.deobf("curse.maven:oh-my-sherd-897227:4864087")

@@ -28,10 +28,12 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             gildedsherds_res_compat(event);
             ohmysherd_res_compat(event);
             built_res_compat(event);
+            farmersdelight_res_compat(event);
         }
         if (event.getPackType() == PackType.SERVER_DATA) {
             gildedsherds_data_compat(event);
             built_data_compat(event);
+            farmersdelight_data_compat(event);
         }
     }
     //GILDED SHERDS
@@ -57,14 +59,27 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     //BUILT
     public static void built_res_compat(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/built_resource_pack", Component.literal("Built Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
-                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        var pack = Pack.readMetaAndCreate("builtin/built_resource_pack", Component.literal("Built Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
     public static void built_data_compat(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/built_datapack", Component.literal("Built Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
-                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        var pack = Pack.readMetaAndCreate("builtin/built_datapack", Component.literal("Built Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    //FARMERS DELIGHT
+    public static void farmersdelight_res_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_resource_pack", Component.literal("Farmer's Delight Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    public static void farmersdelight_data_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_datapack", Component.literal("Farmer's Delight Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

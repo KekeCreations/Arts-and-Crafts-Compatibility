@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "arts_and_crafts:cork_trapdoor"
+    },
+    "_": {
+      "item": "arts_and_crafts:cork_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "item": "arts_and_crafts_compat:cork_cabinet"
+  },
+  "show_notification": true
+}

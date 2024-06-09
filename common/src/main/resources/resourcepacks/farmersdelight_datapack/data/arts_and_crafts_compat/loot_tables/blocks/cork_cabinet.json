@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            }
+          ],
+          "name": "arts_and_crafts_compat:cork_cabinet"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "arts_and_crafts_compat:blocks/cork_cabinet"
+}

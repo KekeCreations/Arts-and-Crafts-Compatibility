@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "arts_and_crafts_compat:block/cork_cabinet_front",
+    "side": "arts_and_crafts_compat:block/cork_cabinet_side",
+    "top": "arts_and_crafts_compat:block/cork_cabinet_top"
+  }
+}

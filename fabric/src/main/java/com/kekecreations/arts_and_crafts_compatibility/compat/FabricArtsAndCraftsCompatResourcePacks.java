@@ -40,6 +40,10 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.OH_MY_SHERD)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.OH_MY_SHERD);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.BUILT);
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.BUILT);
+            }
         }
     }
 }

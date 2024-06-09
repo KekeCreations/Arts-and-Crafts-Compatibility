@@ -83,6 +83,7 @@ dependencies {
     //OPTIONAL
     implementation fg.deobf("curse.maven:gilded-sherds-935749:4975225")
     implementation fg.deobf("curse.maven:oh-my-sherd-897227:4864087")
+    implementation fg.deobf("curse.maven:built-982827:5398958")
 }
 
 tasks.withType(JavaCompile).configureEach {

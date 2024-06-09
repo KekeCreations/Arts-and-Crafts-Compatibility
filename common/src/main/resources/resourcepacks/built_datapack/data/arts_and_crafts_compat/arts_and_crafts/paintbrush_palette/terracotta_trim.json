@@ -1,0 +1,22 @@
+{
+  "blocks": "#arts_and_crafts_compat:paintable/terracotta_trim",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "built:white_terracotta_trim",
+    "arts_and_crafts:light_gray_paintbrush": "built:light_gray_terracotta_trim",
+    "arts_and_crafts:gray_paintbrush": "built:gray_terracotta_trim",
+    "arts_and_crafts:black_paintbrush": "built:black_terracotta_trim",
+    "arts_and_crafts:brown_paintbrush": "built:brown_terracotta_trim",
+    "arts_and_crafts:red_paintbrush": "built:red_terracotta_trim",
+    "arts_and_crafts:orange_paintbrush": "built:orange_terracotta_trim",
+    "arts_and_crafts:yellow_paintbrush": "built:yellow_terracotta_trim",
+    "arts_and_crafts:lime_paintbrush": "built:lime_terracotta_trim",
+    "arts_and_crafts:green_paintbrush": "built:green_terracotta_trim",
+    "arts_and_crafts:cyan_paintbrush": "built:cyan_terracotta_trim",
+    "arts_and_crafts:light_blue_paintbrush": "built:light_blue_terracotta_trim",
+    "arts_and_crafts:blue_paintbrush": "built:blue_terracotta_trim",
+    "arts_and_crafts:purple_paintbrush": "built:purple_terracotta_trim",
+    "arts_and_crafts:magenta_paintbrush": "built:magenta_terracotta_trim",
+    "arts_and_crafts:pink_paintbrush": "built:pink_terracotta_trim",
+    "arts_and_crafts:bleachdew_paintbrush": "built:terracotta_trim"
+  }
+}

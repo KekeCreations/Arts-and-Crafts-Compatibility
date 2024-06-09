@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
@@ -17,10 +18,12 @@ public class ArtsAndCraftsCompatibility {
 
 
     public static void init() {
-
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsItems.register();
             GildedSherdsPatterns.register();
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
+            BuiltBlocks.register();
         }
 
 

@@ -2,8 +2,10 @@ package com.kekecreations.arts_and_crafts_compatibility.compat;
 
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +19,14 @@ public class CompatItemGroups {
                 event.accept(GildedSherdsItems.GILDED_GATEWAY_POTTERY_SHERD.get());
                 event.accept(GildedSherdsItems.GILDED_ROLL_POTTERY_SHERD.get());
                 event.accept(GildedSherdsItems.GILDED_RUINED_POTTERY_SHERD.get());
+            });
+        }
+        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)) {
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.BUILT, "built"))).register(event -> {
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.BUILT, "acacia_shakes_slab")), BuiltBlocks.CORK_COMPACT_PLANKS.get());
+                event.addAfter(BuiltBlocks.CORK_COMPACT_PLANKS.get(), BuiltBlocks.CORK_SHAKES.get());
+                event.addAfter(BuiltBlocks.CORK_SHAKES.get(), BuiltBlocks.CORK_SHAKES_STAIRS.get());
+                event.addAfter(BuiltBlocks.CORK_SHAKES_STAIRS.get(), BuiltBlocks.CORK_SHAKES_SLAB.get());
             });
         }
     }

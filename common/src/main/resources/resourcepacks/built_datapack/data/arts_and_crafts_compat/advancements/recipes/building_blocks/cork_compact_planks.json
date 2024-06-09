@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_acacia_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:stripped_cork_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts_compat:crafting/cork_compat_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stripped_acacia_log",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts_compat:crafting/cork_compact_planks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

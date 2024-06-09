@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "arts_and_crafts_compat:block/cork_shakes_slab"
+    },
+    "type=double": {
+      "model": "arts_and_crafts_compat:block/cork_shakes"
+    },
+    "type=top": {
+      "model": "arts_and_crafts_compat:block/cork_shakes_slab_top"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "compact_planks",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:cork_planks"
+    },
+    "S": {
+      "item": "arts_and_crafts:stripped_cork_log"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts_compat:cork_compact_planks"
+  },
+  "show_notification": true
+}

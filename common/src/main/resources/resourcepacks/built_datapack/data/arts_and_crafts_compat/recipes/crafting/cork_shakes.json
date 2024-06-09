@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wood_shakes",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:cork_planks"
+    },
+    "S": {
+      "item": "arts_and_crafts:stripped_cork_log"
+    }
+  },
+  "pattern": [
+    "#S",
+    "S#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts_compat:cork_shakes"
+  },
+  "show_notification": true
+}

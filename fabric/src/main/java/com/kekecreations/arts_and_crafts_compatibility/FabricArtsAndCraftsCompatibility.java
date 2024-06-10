@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils
 import com.kekecreations.arts_and_crafts_compatibility.compat.CompatItemGroups;
 import com.kekecreations.arts_and_crafts_compatibility.compat.FabricArtsAndCraftsCompatResourcePacks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.built.BuiltFlammableAndStrippableBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -16,6 +17,9 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         CompatItemGroups.addItemsToTabs();
         if (isModLoaded(CompatUtils.BUILT)) {
             BuiltFlammableAndStrippableBlocks.register();
+        }
+        if (isModLoaded(CompatUtils.CAFFEINATED)) {
+            CaffeinatedBlocks.register();
         }
     }
 

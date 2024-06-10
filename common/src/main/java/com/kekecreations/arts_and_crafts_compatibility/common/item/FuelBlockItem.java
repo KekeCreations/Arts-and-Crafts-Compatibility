@@ -1,18 +1,27 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.item;
 
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 
+import javax.annotation.Nullable;
+
 public class FuelBlockItem extends BlockItem {
+    public final int burnTime;
 
-    private int burnTime = 0;
+    public FuelBlockItem(Block block, Item.Properties properties) {
+        super(block, properties);
+        this.burnTime = 100;
+    }
 
-    public FuelBlockItem(Block $$0, Properties $$1, int burnTime) {
-        super($$0, $$1);
+    public FuelBlockItem(Block block, Item.Properties properties, int burnTime) {
+        super(block, properties);
         this.burnTime = burnTime;
     }
 
-    public int getBurnTimeInt() {
+    public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
         return this.burnTime;
     }
 }

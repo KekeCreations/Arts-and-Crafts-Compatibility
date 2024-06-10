@@ -7,8 +7,7 @@
   "mixins": [
     "FlammableBlockSelfMixin",
     "FlammableSlabBlockSelfMixin",
-    "FlammableStairBlockSelfMixin",
-    "FuelBlockItemSelfMixin"
+    "FlammableStairBlockSelfMixin"
   ],
   "client": [
   ],

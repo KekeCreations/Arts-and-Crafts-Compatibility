@@ -1,14 +1,17 @@
 package com.kekecreations.arts_and_crafts_compatibility.compat;
 
+import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 
 public class CompatItemGroups {
 
@@ -28,6 +31,12 @@ public class CompatItemGroups {
                 event.addAfter(BuiltBlocks.CORK_SHAKES.get(), BuiltBlocks.CORK_SHAKES_STAIRS.get());
                 event.addAfter(BuiltBlocks.CORK_SHAKES_STAIRS.get(), BuiltBlocks.CORK_SHAKES_SLAB.get());
             });
+        }
+        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)) {
+            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.ARTS_AND_CRAFTS, "cork_slab")), TwigsBlocks.CORK_TABLE.get());
+            });
+
         }
     }
 

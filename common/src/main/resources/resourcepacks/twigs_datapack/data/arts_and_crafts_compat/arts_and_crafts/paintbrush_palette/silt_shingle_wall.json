@@ -1,0 +1,22 @@
+{
+  "blocks": "#arts_and_crafts_compat:paintable/silt_shingle_wall",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "twigs:white_silt_shingle_wall",
+    "arts_and_crafts:light_gray_paintbrush": "twigs:light_gray_silt_shingle_wall",
+    "arts_and_crafts:gray_paintbrush": "twigs:gray_silt_shingle_wall",
+    "arts_and_crafts:black_paintbrush": "twigs:black_silt_shingle_wall",
+    "arts_and_crafts:brown_paintbrush": "twigs:brown_silt_shingle_wall",
+    "arts_and_crafts:red_paintbrush": "twigs:red_silt_shingle_wall",
+    "arts_and_crafts:orange_paintbrush": "twigs:orange_silt_shingle_wall",
+    "arts_and_crafts:yellow_paintbrush": "twigs:yellow_silt_shingle_wall",
+    "arts_and_crafts:lime_paintbrush": "twigs:lime_silt_shingle_wall",
+    "arts_and_crafts:green_paintbrush": "twigs:green_silt_shingle_wall",
+    "arts_and_crafts:cyan_paintbrush": "twigs:cyan_silt_shingle_wall",
+    "arts_and_crafts:light_blue_paintbrush": "twigs:light_blue_silt_shingle_wall",
+    "arts_and_crafts:blue_paintbrush": "twigs:blue_silt_shingle_wall",
+    "arts_and_crafts:purple_paintbrush": "twigs:purple_silt_shingle_wall",
+    "arts_and_crafts:magenta_paintbrush": "twigs:magenta_silt_shingle_wall",
+    "arts_and_crafts:pink_paintbrush": "twigs:pink_silt_shingle_wall",
+    "arts_and_crafts:bleachdew_paintbrush": "twigs:silt_shingle_wall"
+  }
+}

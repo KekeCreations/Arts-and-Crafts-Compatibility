@@ -29,11 +29,13 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             ohmysherd_res_compat(event);
             built_res_compat(event);
             farmersdelight_res_compat(event);
+            twigs_res_compat(event);
         }
         if (event.getPackType() == PackType.SERVER_DATA) {
             gildedsherds_data_compat(event);
             built_data_compat(event);
             farmersdelight_data_compat(event);
+            twigs_data_compat(event);
         }
     }
     //GILDED SHERDS
@@ -79,6 +81,19 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     public static void farmersdelight_data_compat(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_datapack");
         var pack = Pack.readMetaAndCreate("builtin/farmersdelight_datapack", Component.literal("Farmer's Delight Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    //TWIGS
+    public static void twigs_res_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/twigs_resource_pack", Component.literal("Twigs Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    public static void twigs_data_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/twigs_datapack", Component.literal("Twigs Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
                 (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }

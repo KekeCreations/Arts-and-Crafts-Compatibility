@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsPatterns;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -25,11 +26,8 @@ public class ArtsAndCraftsCompatibility {
         if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
             BuiltBlocks.register();
         }
-
-
-        if (Services.PLATFORM.isModLoaded("examplemod")) {
-
-            ArtsAndCraftsCompatibility.LOG.info("Hello to examplemod");
+        if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
+            TwigsBlocks.register();
         }
     }
 

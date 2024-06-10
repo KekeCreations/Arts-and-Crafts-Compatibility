@@ -7,4 +7,6 @@ public class CompatUtils {
 
     public static final String BUILT = "built";
     public static final String FARMERS_DELIGHT = "farmersdelight";
+
+    public static final String TWIGS = "twigs";
 }

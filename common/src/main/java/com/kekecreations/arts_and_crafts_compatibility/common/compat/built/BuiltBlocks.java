@@ -25,9 +25,6 @@ public class BuiltBlocks {
     public static final Supplier<FuelBlockItem> CORK_SHAKES = registerItem("cork_shakes", () -> new FuelBlockItem(CORK_SHAKES_BLOCK.get(), new Item.Properties(), 300));
     public static final Supplier<FuelBlockItem> CORK_SHAKES_SLAB = registerItem("cork_shakes_slab", () -> new FuelBlockItem(CORK_SHAKES_SLAB_BLOCK.get(), new Item.Properties(), 300));
     public static final Supplier<FuelBlockItem> CORK_SHAKES_STAIRS = registerItem("cork_shakes_stairs", () -> new FuelBlockItem(CORK_SHAKES_STAIRS_BLOCK.get(), new Item.Properties(), 300));
-    private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
-        return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
-    }
 
     private static <T extends Block> Supplier<T> registerBlock(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlock(name, blockSupplier);

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "O O",
+    "O O"
+  ],
+  "key": {
+    "_": {
+      "item": "arts_and_crafts:cork_slab"
+    },
+    "O": {
+      "item": "arts_and_crafts:cork_fence"
+    }
+  },
+  "result": {
+    "item": "arts_and_crafts_compat:cork_table",
+    "count": 1
+  }
+}

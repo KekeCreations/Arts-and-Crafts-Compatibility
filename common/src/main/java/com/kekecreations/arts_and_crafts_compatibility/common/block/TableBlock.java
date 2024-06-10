@@ -1,10 +1,5 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
-/*
-    Hi I heavily referenced this code from Another Furniture, spoke to CrispyTwig and Synthestra from Starfish, and they are fine with it so yea
-    (https://github.com/starfish-studios/AnotherFurniture/blob/1.19.2/common/src/main/java/com/starfish_studios/another_furniture/block/TableBlock.java)
-    go check it out it's a very awesome mod
-*/
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsProperties;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsTags;

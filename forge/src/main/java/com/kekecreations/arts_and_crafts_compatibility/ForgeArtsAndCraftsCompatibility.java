@@ -2,8 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
-import com.kekecreations.arts_and_crafts_compatibility.compat.farmersdelight.FDCompatBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.platform.ForgeRegistryHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -30,9 +30,6 @@ public class ForgeArtsAndCraftsCompatibility {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         ArtsAndCraftsCompatibility.init();
-        if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
-            FDCompatBlocks.register();
-        }
 
         modEventBus.addListener(this::creativeItemGroups);
     }
@@ -80,7 +77,7 @@ public class ForgeArtsAndCraftsCompatibility {
         }
         if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "farmersdelight"))) {
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDCompatBlocks.CORK_CABINET.get());
+                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDBlocks.CORK_CABINET.get());
             }
         }
     }

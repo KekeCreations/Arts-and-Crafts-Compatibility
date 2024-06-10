@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.compat;
 
-import com.kekecreations.arts_and_crafts.core.registry.KekeBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -36,7 +36,11 @@ public class CompatItemGroups {
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
                 event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.ARTS_AND_CRAFTS, "cork_slab")), TwigsBlocks.CORK_TABLE.get());
             });
-
+        }
+        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "farmersdelight"))).register(event -> {
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDBlocks.CORK_CABINET.get());
+            });
         }
     }
 

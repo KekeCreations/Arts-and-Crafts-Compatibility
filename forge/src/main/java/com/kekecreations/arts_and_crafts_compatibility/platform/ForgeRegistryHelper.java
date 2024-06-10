@@ -32,8 +32,8 @@ public class ForgeRegistryHelper implements RegistryHelper {
         return registryMap.register(registry, name, entry);
     }
 
-    public Supplier<SoundEvent> registerSound(String id) {
-        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id)));
+    public Supplier<SoundEvent> registerSound(String modID, String id) {
+        return SOUNDS.register(id, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(modID, id)));
     }
 
 

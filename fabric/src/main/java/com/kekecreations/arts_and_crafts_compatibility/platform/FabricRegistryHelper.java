@@ -23,8 +23,8 @@ public class FabricRegistryHelper implements RegistryHelper {
         return () -> value;
     }
 
-    public Supplier<SoundEvent> registerSound(String id) {
-        var location = new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id);
+    public Supplier<SoundEvent> registerSound(String modID, String id) {
+        var location = new ResourceLocation(modID, id);
         var soundEvent = Registry.register(BuiltInRegistries.SOUND_EVENT, location, SoundEvent.createVariableRangeEvent(location));
         return () -> soundEvent;
     }

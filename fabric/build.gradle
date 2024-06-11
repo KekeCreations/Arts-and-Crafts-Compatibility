@@ -22,6 +22,7 @@ dependencies {
     modImplementation "curse.maven:built-982827:5398960"
     modImplementation "curse.maven:twigs-496913:4603805"
     modImplementation "curse.maven:caffeinated-835826:4659359"
+    modImplementation "curse.maven:decorative-blocks-362528:5089408"
 }
 
 loom {

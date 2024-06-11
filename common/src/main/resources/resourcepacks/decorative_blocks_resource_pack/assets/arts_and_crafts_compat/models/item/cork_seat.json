@@ -1,0 +1,11 @@
+{
+  "parent": "arts_and_crafts_compat:block/cork_seat_inventory",
+  "overrides": [
+    {
+      "model": "arts_and_crafts_compat:block/cork_seat_post_inventory",
+      "predicate": {
+        "decorative_blocks:post": 1.0
+      }
+    }
+  ]
+}

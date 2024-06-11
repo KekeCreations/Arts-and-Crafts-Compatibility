@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "decorative_beams",
+  "key": {
+    "x": {
+      "item": "arts_and_crafts:stripped_cork_log"
+    }
+  },
+  "pattern": [
+    " x ",
+    " x "
+  ],
+  "result": {
+    "count": 2,
+    "item": "arts_and_crafts_compat:cork_beam"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "arts_and_crafts_compat:block/cork_support_inventory",
+  "overrides": [
+    {
+      "model": "arts_and_crafts_compat:block/cork_upside_down_support_inventory",
+      "predicate": {
+        "decorative_blocks:up": 1.0
+      }
+    }
+  ]
+}

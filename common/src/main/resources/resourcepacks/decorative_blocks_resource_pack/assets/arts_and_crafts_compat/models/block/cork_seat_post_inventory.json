@@ -1,0 +1,7 @@
+{
+  "parent": "decorative_blocks:custom/seat_post_inventory",
+  "textures": {
+    "particle": "arts_and_crafts_compat:block/cork_seat",
+    "texture": "arts_and_crafts_compat:block/cork_seat"
+  }
+}

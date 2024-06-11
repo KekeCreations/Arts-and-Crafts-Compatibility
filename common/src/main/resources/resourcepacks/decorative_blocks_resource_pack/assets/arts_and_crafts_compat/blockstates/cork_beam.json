@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "arts_and_crafts_compat:block/cork_beam_x"
+    },
+    "axis=y": {
+      "model": "arts_and_crafts_compat:block/cork_beam_y"
+    },
+    "axis=z": {
+      "model": "arts_and_crafts_compat:block/cork_beam_z"
+    }
+  }
+}

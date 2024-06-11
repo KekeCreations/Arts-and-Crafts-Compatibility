@@ -1,0 +1,55 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat"
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat",
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat",
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat",
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat_post"
+      },
+      "when": {
+        "attached": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "arts_and_crafts_compat:block/cork_seat_top_post"
+      },
+      "when": {
+        "post": "true"
+      }
+    }
+  ]
+}

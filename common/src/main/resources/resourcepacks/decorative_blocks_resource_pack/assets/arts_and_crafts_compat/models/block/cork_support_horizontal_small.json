@@ -1,0 +1,8 @@
+{
+  "parent": "decorative_blocks:custom/support_horizontal_small",
+  "textures": {
+    "end": "arts_and_crafts_compat:block/cork_support_end",
+    "particle": "arts_and_crafts_compat:block/cork_support_side",
+    "side": "arts_and_crafts_compat:block/cork_support_side"
+  }
+}

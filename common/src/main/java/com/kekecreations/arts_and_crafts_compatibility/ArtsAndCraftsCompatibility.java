@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
@@ -34,6 +35,9 @@ public class ArtsAndCraftsCompatibility {
         if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
             FDBlocks.register();
             FDEntityTypes.register();
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
+            DBBlocks.register();
         }
     }
 

@@ -79,8 +79,8 @@ public class ForgeArtsAndCraftsCompatibility {
             }
         }
         if (isModLoaded(CompatUtils.TWIGS)) {
-            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.ARTS_AND_CRAFTS, "cork_slab")), TwigsBlocks.CORK_TABLE.get());
+            if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.TWIGS, "twig"))) {
+                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.TWIGS, "acacia_table")), TwigsBlocks.CORK_TABLE.get());
             }
         }
         if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {

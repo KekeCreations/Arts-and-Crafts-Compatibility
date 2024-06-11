@@ -31,6 +31,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             farmersdelight_res_compat(event);
             twigs_res_compat(event);
             decorative_blocks_res_compat(event);
+            neapolitan_res_compat(event);
         }
         if (event.getPackType() == PackType.SERVER_DATA) {
             gildedsherds_data_compat(event);
@@ -110,6 +111,13 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/decorative_blocks_datapack");
         var pack = Pack.readMetaAndCreate("builtin/decorative_blocks_datapack", Component.literal("Decorative Blocks Compatibility Data Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS),
                 (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+    //NEAPOLITAN
+    public static void neapolitan_res_compat(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/neapolitan_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/neapolitan_resource_pack", Component.literal("Neapolitan Compatibility Resource Pack"), ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NEAPOLITAN),
+                (path) -> new PathPackResources(path, resourcePath, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NEAPOLITAN)), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

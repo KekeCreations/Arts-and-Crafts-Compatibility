@@ -15,6 +15,7 @@ public class CompatUtils {
     public static final String TWIGS = "twigs";
     public static final String CAFFEINATED = "caffeinated";
     public static final String DECORATIVE_BLOCKS = "decorative_blocks";
+    public static final String NEAPOLITAN = "neapolitan";
 
 
 

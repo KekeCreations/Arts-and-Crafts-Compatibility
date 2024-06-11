@@ -5,11 +5,12 @@
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
-        "${mod_author}"
+        "KekeCreations",
+        "Arbeet"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://kekecreations.boomla.net/minecraft/java-mods/arts-and-crafts",
+        "sources": "https://github.com/KekeCreations/Arts-and-Crafts/issues"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",

@@ -1,15 +1,14 @@
 modLoader = "javafml"
 loaderVersion = "${forge_loader_version_range}"
 license = "${license}"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+issueTrackerURL = "https://github.com/KekeCreations/Arts-and-Crafts-Compatibility/issues"
 [[mods]] #mandatory
 modId = "${mod_id}"
 version = "${version}"
 displayName = "${mod_name}"
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional (see https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/)
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional (displayed in the mod UI)
+displayURL="https://kekecreations.boomla.net/minecraft/java-mods/arts-and-crafts"
 logoFile = "${mod_id}.png"
-authors = "${mod_author}"
+authors = "KekeCreations and Arbeet!"
 description = '''${description}'''
 [[dependencies.${mod_id}]]
 modId="arts_and_crafts"

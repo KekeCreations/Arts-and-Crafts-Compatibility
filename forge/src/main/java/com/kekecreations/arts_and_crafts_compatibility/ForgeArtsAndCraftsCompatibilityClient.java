@@ -32,7 +32,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             rpGildedSherds(event);
             rpOhMySherd(event);
-            rpBuilt(event);
+            //rpBuilt(event);
             rpFarmerDelight(event);
             rpTwigs(event);
             rpDecorativeBlocks(event);
@@ -40,7 +40,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         }
         if (event.getPackType() == PackType.SERVER_DATA) {
             bpGildedSherds(event);
-            bpBuilt(event);
+            //bpBuilt(event);
             bpFarmerDelight(event);
             bpTwigs(event);
             bpDecorativeBlocks(event);
@@ -123,14 +123,14 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     }
     private static void bpFarmerDelight(AddPackFindersEvent event) {
         IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/built_datapack");
+        Path file = mod.getFile().findResource("resourcepacks/farmersdelight_datapack");
         event.addRepositorySource((packConsumer) ->
                 packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:built_datapack",
-                        Component.literal("Built Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)),
-                        new Pack.Info(Component.literal("Built Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
+                        "arts_and_crafts_compat:farmersdelight_datapack",
+                        Component.literal("Farmer's Delight Compatibility Data Pack"),
+                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
+                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)),
+                        new Pack.Info(Component.literal("Farmer's Delight Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
                         PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
     }
 

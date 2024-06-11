@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight;
 
+import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.CabinetBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
@@ -13,7 +14,7 @@ import java.util.function.Supplier;
 
 public class FDBlocks {
 
-    public static final Supplier<Block> CORK_CABINET = registerBlock("cork_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+    public static final Supplier<Block> CORK_CABINET = registerBlock("cork_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).sound(ArtsAndCraftsSoundTypes.CORK)));
 
     public static final Supplier<Item> CORK_CABINET_ITEM = registerItem("cork_cabinet", () -> new FuelBlockItem(CORK_CABINET.get(), new Item.Properties()));
 

@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.built;
+package com.kekecreations.arts_and_crafts_compatibility.compat.built;
 
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSoundTypes;
 import com.kekecreations.arts_and_crafts.core.registry.ArtsAndCraftsSounds;

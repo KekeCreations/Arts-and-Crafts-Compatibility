@@ -13,7 +13,7 @@ description = '''${description}'''
 [[dependencies.${mod_id}]]
 modId="arts_and_crafts"
 mandatory=true
-versionRange="[1.0.1,)"
+versionRange="[1.0.2,)"
 ordering="NONE"
 side="BOTH"
 

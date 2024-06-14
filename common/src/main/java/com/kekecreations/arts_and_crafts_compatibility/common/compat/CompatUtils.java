@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.compat;
 
-import com.kekecreations.arts_and_crafts.common.block.CustomFlowerPotBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,8 +19,8 @@ public class CompatUtils {
 
 
 
-    public static CustomFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
+    public static ACFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        return new CustomFlowerPotBlock(block, dyeColor, properties);
+        return new ACFlowerPotBlock(block, dyeColor, properties);
     }
 }

@@ -80,6 +80,21 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 rpNeapolitan(event);
             }
         }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.SPAWN)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpSpawn(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.BIOME_MAKEOVER)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpBiomeMakeover(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.ALEX_CAVES)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpAlexCaves(event);
+            }
+        }
     }
 
 
@@ -164,6 +179,27 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     private static void rpNeapolitan(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/neapolitan_resource_pack");
         var pack = Pack.readMetaAndCreate("builtin/neapolitan_resource_pack", Component.literal("Neapolitan Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void rpSpawn(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/spawn_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/spawn_resource_pack", Component.literal("Spawn Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void rpBiomeMakeover(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/biomemakeover_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/biomemakeover_resource_pack", Component.literal("Biome Makeover Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void rpAlexCaves(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/alexcaves_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/alexcaves_resource_pack", Component.literal("Alex's Caves Compatibility Resource Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }

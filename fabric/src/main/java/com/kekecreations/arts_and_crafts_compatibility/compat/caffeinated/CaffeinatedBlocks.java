@@ -16,7 +16,7 @@ public class CaffeinatedBlocks {
 
     static {
         for (DyeColor colours : DyeColor.values()) {
-            DYED_COFFEE_SHRUB_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_coffee_shrub", () -> CompatUtils.flowerPot(BuiltInRegistries.BLOCK.get(new ResourceLocation(CompatUtils.CAFFEINATED, "coffee_shrub")), colours)));
+            DYED_COFFEE_SHRUB_FLOWER_POTS.put(colours, registerBlock(colours + "_potted_coffee_shrub", () -> CompatUtils.flowerPot(com.chikoritalover.caffeinated.registry.CaffeinatedBlocks.COFFEE_SHRUB, colours)));
         }
     }
 

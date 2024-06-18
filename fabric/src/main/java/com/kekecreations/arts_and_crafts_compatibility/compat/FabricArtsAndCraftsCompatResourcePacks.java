@@ -60,6 +60,15 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.SPAWN)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.SPAWN);
+            }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BIOME_MAKEOVER)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.BIOME_MAKEOVER);
+            }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ALEX_CAVES)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.ALEX_CAVES);
+            }
         }
     }
 }

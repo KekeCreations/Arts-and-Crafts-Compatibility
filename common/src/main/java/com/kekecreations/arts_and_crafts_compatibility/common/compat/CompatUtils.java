@@ -16,6 +16,9 @@ public class CompatUtils {
     public static final String CAFFEINATED = "caffeinated";
     public static final String DECORATIVE_BLOCKS = "decorative_blocks";
     public static final String NEAPOLITAN = "neapolitan";
+    public static final String SPAWN = "spawn";
+    public static final String BIOME_MAKEOVER = "biomemakeover";
+    public static final String ALEX_CAVES = "alexscaves";
 
 
 

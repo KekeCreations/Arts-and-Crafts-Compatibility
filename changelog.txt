@@ -1,3 +1,7 @@
 V1.0.4
 1. Fixed mouseClicked crash
 2. Added Built compat to Forge!
+3. Added Compat for Spawn!
+4. Added Compat for Biome's Makeover
+5. Added Compat for Alex's Caves
+6. Fixed Compat for Caffeinated

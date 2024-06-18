@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.compat.built;
+package com.kekecreations.arts_and_crafts_compatibility.common.compat.built;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;

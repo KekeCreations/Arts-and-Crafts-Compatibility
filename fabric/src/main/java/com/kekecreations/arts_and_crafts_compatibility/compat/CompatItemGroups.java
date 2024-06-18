@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.compat;
 
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;

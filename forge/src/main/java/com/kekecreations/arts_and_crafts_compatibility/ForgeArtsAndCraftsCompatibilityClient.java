@@ -32,7 +32,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         if (event.getPackType() == PackType.CLIENT_RESOURCES) {
             rpGildedSherds(event);
             rpOhMySherd(event);
-            //rpBuilt(event);
+            rpBuilt(event);
             rpFarmerDelight(event);
             rpTwigs(event);
             rpDecorativeBlocks(event);
@@ -40,7 +40,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         }
         if (event.getPackType() == PackType.SERVER_DATA) {
             bpGildedSherds(event);
-            //bpBuilt(event);
+            bpBuilt(event);
             bpFarmerDelight(event);
             bpTwigs(event);
             bpDecorativeBlocks(event);

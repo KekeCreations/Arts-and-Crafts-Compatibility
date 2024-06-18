@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
@@ -18,6 +19,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod(ArtsAndCraftsCompatibility.MOD_ID)
 public class ForgeArtsAndCraftsCompatibility {
@@ -70,20 +72,28 @@ public class ForgeArtsAndCraftsCompatibility {
         }
         if (isModLoaded(CompatUtils.TWIGS)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.TWIGS, "twig"))) {
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.TWIGS, "acacia_table")), TwigsBlocks.CORK_TABLE.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.TWIGS, "acacia_table")), TwigsBlocks.CORK_TABLE.get());
             }
         }
         if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "farmersdelight"))) {
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDBlocks.CORK_CABINET.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.FARMERS_DELIGHT, "acacia_cabinet")), FDBlocks.CORK_CABINET.get());
             }
         }
         if (isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "general"))) {
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_seat")), DBBlocks.CORK_SEAT.get());
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_support")), DBBlocks.CORK_SUPPORT.get());
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_palisade")), DBBlocks.CORK_PALISADE.get());
-                addAfter(event, BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_beam")), DBBlocks.CORK_BEAM.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_seat")), DBBlocks.CORK_SEAT.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_support")), DBBlocks.CORK_SUPPORT.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_palisade")), DBBlocks.CORK_PALISADE.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_beam")), DBBlocks.CORK_BEAM.get());
+            }
+        }
+        if (isModLoaded(CompatUtils.BUILT)) {
+            if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.BUILT, "built_tab"))) {
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.BUILT, "acacia_shakes_slab")), BuiltBlocks.CORK_COMPACT_PLANKS.get());
+                addAfter(event, BuiltBlocks.CORK_COMPACT_PLANKS.get(), BuiltBlocks.CORK_SHAKES.get());
+                addAfter(event, BuiltBlocks.CORK_SHAKES.get(), BuiltBlocks.CORK_SHAKES_STAIRS.get());
+                addAfter(event, BuiltBlocks.CORK_SHAKES_STAIRS.get(), BuiltBlocks.CORK_SHAKES_SLAB.get());
             }
         }
     }

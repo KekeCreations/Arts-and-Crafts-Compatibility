@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
@@ -29,171 +30,141 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-            rpGildedSherds(event);
-            rpOhMySherd(event);
-            rpBuilt(event);
-            rpFarmerDelight(event);
-            rpTwigs(event);
-            rpDecorativeBlocks(event);
-            rpNeapolitan(event);
+        if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpBuilt(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpBuilt(event);
+            }
         }
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            bpGildedSherds(event);
-            bpBuilt(event);
-            bpFarmerDelight(event);
-            bpTwigs(event);
-            bpDecorativeBlocks(event);
+        if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpGildedSherds(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpGildedSherds(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.OH_MY_SHERD)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpOhMySherd(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpFarmerDelight(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpFarmerDelight(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpTwigs(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpTwigs(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpDecorativeBlocks(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpDecorativeBlocks(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.NEAPOLITAN)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpNeapolitan(event);
+            }
         }
     }
+
+
     private static void rpGildedSherds(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/gildedsherds_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:gildedsherds_resource_pack",
-                        Component.literal("Gilded Sherds Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)),
-                        new Pack.Info(Component.literal("Gilded Sherds Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/gildedsherds_resource_pack", Component.literal("Gilded Sherds Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
+
     private static void bpGildedSherds(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/gildedsherds_datapack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:gildedsherds_datapack",
-                        Component.literal("GildedSherds Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.GILDED_SHERDS)),
-                        new Pack.Info(Component.literal("GildedSherds Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
-                        PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/gildedsherds_datapack", Component.literal("Gilded Sherds Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
     private static void rpOhMySherd(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/ohmysherd_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:ohmysherd_resource_pack",
-                        Component.literal("Oh My Sherd Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.OH_MY_SHERD),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.OH_MY_SHERD)),
-                        new Pack.Info(Component.literal("Oh My Sherd Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ohmysherd_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/ohmysherd_resource_pack", Component.literal("Oh My Sherd Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
+
     private static void rpBuilt(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/built_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:built_resource_pack",
-                        Component.literal("Built Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)),
-                        new Pack.Info(Component.literal("Built Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/built_resource_pack", Component.literal("Built Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
+
     private static void bpBuilt(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/built_datapack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:built_datapack",
-                        Component.literal("Built Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)),
-                        new Pack.Info(Component.literal("Built Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
-                        PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/built_datapack", Component.literal("Built Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
     private static void rpFarmerDelight(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/farmersdelight_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:farmersdelight_resource_pack",
-                        Component.literal("Farmer's Delight Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)),
-                        new Pack.Info(Component.literal("Farmer's Delight Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_resource_pack", Component.literal("Farmer's Delight Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
+
     private static void bpFarmerDelight(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/farmersdelight_datapack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:farmersdelight_datapack",
-                        Component.literal("Farmer's Delight Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)),
-                        new Pack.Info(Component.literal("Farmer's Delight Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
-                        PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_datapack", Component.literal("Farmer's Delight Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
     private static void rpTwigs(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/twigs_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:twigs_resource_pack",
-                        Component.literal("Twigs Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)),
-                        new Pack.Info(Component.literal("Twigs Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/twigs_resource_pack", Component.literal("Twigs Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
+
     private static void bpTwigs(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/twigs_datapack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:twigs_datapack",
-                        Component.literal("Twigs Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)),
-                        new Pack.Info(Component.literal("Twigs Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
-                        PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/twigs_datapack", Component.literal("Twigs Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
     private static void rpDecorativeBlocks(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/decorative_blocks_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:decorative_blocks_resource_pack",
-                        Component.literal("Decorative Blocks Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)),
-                        new Pack.Info(Component.literal("Decorative Blocks Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/decorative_blocks_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/decorative_blocks_resource_pack", Component.literal("Decorative Blocks Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
+
     private static void bpDecorativeBlocks(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/decorative_blocks_datapack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:decorative_blocks_datapack",
-                        Component.literal("Decorative Blocks Compatibility Data Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)),
-                        new Pack.Info(Component.literal("Decorative Blocks Compatibility Data Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
-                        PackType.SERVER_DATA, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/decorative_blocks_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/decorative_blocks_datapack", Component.literal("Decorative Blocks Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
     private static void rpNeapolitan(AddPackFindersEvent event) {
-        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
-        Path file = mod.getFile().findResource("resourcepacks/neapolitan_resource_pack");
-        event.addRepositorySource((packConsumer) ->
-                packConsumer.accept(Pack.create(
-                        "arts_and_crafts_compat:neapolitan_resource_pack",
-                        Component.literal("Neapolitan Compatibility Resource Pack"),
-                        ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NEAPOLITAN),
-                        (path) -> new PathPackResources(path, file, ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NEAPOLITAN)),
-                        new Pack.Info(Component.literal("Neapolitan Compatibility Resource Pack"), SharedConstants.getCurrentVersion().getPackVersion(PackType.CLIENT_RESOURCES), FeatureFlagSet.of()),
-                        PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, false, PackSource.BUILT_IN)));
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/neapolitan_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/neapolitan_resource_pack", Component.literal("Neapolitan Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

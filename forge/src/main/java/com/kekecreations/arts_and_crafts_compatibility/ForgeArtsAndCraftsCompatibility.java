@@ -61,6 +61,7 @@ public class ForgeArtsAndCraftsCompatibility {
         event.getEntries().putBefore(beforeItem.getDefaultInstance(), item.getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
+
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
         if (isModLoaded(CompatUtils.GILDED_SHERDS)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.GILDED_SHERDS, "tab"))) {

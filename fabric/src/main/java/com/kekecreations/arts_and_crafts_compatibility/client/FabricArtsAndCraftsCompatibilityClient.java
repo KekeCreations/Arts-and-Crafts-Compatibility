@@ -2,6 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.ecologics.EBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -20,9 +21,12 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
 
 
     public static void registerBlockLayers() {
-        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.CAFFEINATED)) {
-            for (DyeColor colours : DyeColor.values()) {
-                BlockRenderLayerMap.INSTANCE.putBlock(CaffeinatedBlocks.getDyedPottedCoffeeShrub(colours), RenderType.cutout());
+        for (DyeColor colour : DyeColor.values()) {
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.CAFFEINATED)) {
+                BlockRenderLayerMap.INSTANCE.putBlock(CaffeinatedBlocks.getDyedPottedCoffeeShrub(colour), RenderType.cutout());
+            }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
+                BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
             }
         }
     }

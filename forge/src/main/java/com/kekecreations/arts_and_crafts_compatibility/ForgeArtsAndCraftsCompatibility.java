@@ -7,7 +7,6 @@ import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdeli
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.platform.ForgeRegistryHelper;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

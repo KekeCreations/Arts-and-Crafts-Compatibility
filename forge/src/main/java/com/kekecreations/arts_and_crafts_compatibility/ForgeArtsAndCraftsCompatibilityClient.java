@@ -1,14 +1,18 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.common.compat.ecologics.EBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.SharedConstants;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,9 +27,14 @@ import java.nio.file.Path;
 @Mod.EventBusSubscriber(modid = ArtsAndCraftsCompatibility.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ForgeArtsAndCraftsCompatibilityClient {
 
+
     @SubscribeEvent
-    @SuppressWarnings("all")
     public static void clientSetup(FMLClientSetupEvent event) {
+        for (DyeColor colour : DyeColor.values()) {
+            if (ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
+                //ItemBlockRenderTypes.setRenderLayer(EBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+            }
+        }
     }
 
     @SubscribeEvent
@@ -93,6 +102,14 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         if (Services.PLATFORM.isModLoaded(CompatUtils.ALEX_CAVES)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpAlexCaves(event);
+            }
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpEcologics(event);
+            }
+            if (event.getPackType() == PackType.SERVER_DATA) {
+                bpEcologics(event);
             }
         }
     }
@@ -201,6 +218,20 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/alexcaves_resource_pack");
         var pack = Pack.readMetaAndCreate("builtin/alexcaves_resource_pack", Component.literal("Alex's Caves Compatibility Resource Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void rpEcologics(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ecologics_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/ecologics_resource_pack", Component.literal("Ecologics Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void bpEcologics(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ecologics_datapack");
+        var pack = Pack.readMetaAndCreate("builtin/ecologics_datapack", Component.literal("Ecologics Compatibility Data Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

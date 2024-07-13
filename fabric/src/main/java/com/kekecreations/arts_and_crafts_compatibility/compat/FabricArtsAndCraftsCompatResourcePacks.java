@@ -69,6 +69,10 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ALEX_CAVES)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.ALEX_CAVES);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.ECOLOGICS);
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.ECOLOGICS);
+            }
         }
     }
 }

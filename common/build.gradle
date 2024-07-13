@@ -19,6 +19,7 @@ dependencies {
      implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
      compileOnly("curse.maven:artsandcrafts-1034791:5426191")
      compileOnly("curse.maven:decorative-blocks-362528:5089406")
+     compileOnly "curse.maven:ecologics-570463:4857272"
 }
 
 publishing {

@@ -13,6 +13,7 @@
   ],
   "server": [
   ],
+  "plugin": "com.kekecreations.arts_and_crafts_compatibility.mixin.ACCMixinPlugin",
   "injectors": {
     "defaultRequire": 1
   }

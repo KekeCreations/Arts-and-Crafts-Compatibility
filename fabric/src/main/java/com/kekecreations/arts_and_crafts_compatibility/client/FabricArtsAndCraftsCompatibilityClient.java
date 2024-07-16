@@ -27,6 +27,7 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
                 BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
             }
         }
     }

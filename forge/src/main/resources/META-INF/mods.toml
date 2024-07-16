@@ -10,11 +10,22 @@ displayURL="https://kekecreations.boomla.net/minecraft/java-mods/arts-and-crafts
 logoFile = "${mod_id}.png"
 authors = "KekeCreations and Arbeet!"
 description = '''${description}'''
+
+
+
+
 [[dependencies.${mod_id}]]
 modId="arts_and_crafts"
 mandatory=true
 versionRange="[1.0.2,)"
-ordering="NONE"
+ordering="AFTER"
+side="BOTH"
+#SOFT DEPENDENCIES
+[[dependencies.${mod_id}]]
+modId="ecologics"
+mandatory=false
+versionRange="[2.2.0,)"
+ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]

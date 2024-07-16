@@ -14,7 +14,7 @@ public class EBlocks {
 
     static {
         for (DyeColor colours : DyeColor.values()) {
-            //DYED_WALNUT_SAPLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_walnut_sapling", () -> CompatUtils.flowerPot(ModBlocks.WALNUT_SAPLING.get(), colours)));
+            DYED_WALNUT_SAPLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_walnut_sapling", () -> CompatUtils.flowerPot(ModBlocks.WALNUT_SAPLING.get(), colours)));
         }
     }
 

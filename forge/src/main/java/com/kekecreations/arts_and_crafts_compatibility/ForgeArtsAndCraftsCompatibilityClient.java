@@ -29,6 +29,7 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             if (ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
                 ItemBlockRenderTypes.setRenderLayer(EBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
                 ItemBlockRenderTypes.setRenderLayer(EBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
+                ItemBlockRenderTypes.setRenderLayer(EBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
             }
         }
     }

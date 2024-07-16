@@ -20,6 +20,7 @@ dependencies {
     modImplementation "curse.maven:caffeinated-835826:4659359"
     modImplementation "curse.maven:decorative-blocks-362528:5089408"
     modImplementation "curse.maven:ecologics-570463:4857271"
+    modImplementation "curse.maven:cloth-config-348521:4973440"
 
     //Optional
     modImplementation "curse.maven:gilded-sherds-935749:4975224"

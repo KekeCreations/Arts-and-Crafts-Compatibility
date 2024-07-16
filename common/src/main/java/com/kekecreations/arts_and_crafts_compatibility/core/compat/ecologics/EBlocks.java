@@ -12,11 +12,13 @@ public class EBlocks {
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_WALNUT_SAPLING_FLOWER_POTS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_AZALEA_FLOWER_FLOWER_POTS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_COCONUT_SEEDLING_FLOWER_POTS = new HashMap<>();
 
     static {
         for (DyeColor colours : DyeColor.values()) {
             DYED_WALNUT_SAPLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_walnut_sapling", () -> CompatUtils.flowerPot(ModBlocks.WALNUT_SAPLING.get(), colours)));
             DYED_AZALEA_FLOWER_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_azalea_flower", () -> CompatUtils.flowerPot(ModBlocks.AZALEA_FLOWER.get(), colours)));
+            DYED_COCONUT_SEEDLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_coconut_seedling", () -> CompatUtils.flowerPot(ModBlocks.COCONUT_SEEDLING.get(), colours)));
         }
     }
 
@@ -26,6 +28,9 @@ public class EBlocks {
 
     public static Block getDyedPottedAzaleaFlower(DyeColor dyeColor) {
         return DYED_AZALEA_FLOWER_FLOWER_POTS.get(dyeColor).get();
+    }
+    public static Block getDyedPottedCoconutSeedling(DyeColor dyeColor) {
+        return DYED_COCONUT_SEEDLING_FLOWER_POTS.get(dyeColor).get();
     }
 
     public static void register() {

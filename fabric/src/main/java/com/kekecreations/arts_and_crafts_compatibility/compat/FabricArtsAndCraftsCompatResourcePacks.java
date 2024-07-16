@@ -73,6 +73,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.ECOLOGICS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.ECOLOGICS);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.YAPPING_TOOLTIPS)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.YAPPING_TOOLTIPS);
+            }
         }
     }
 }

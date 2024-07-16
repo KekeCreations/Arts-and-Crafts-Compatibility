@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 

@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 

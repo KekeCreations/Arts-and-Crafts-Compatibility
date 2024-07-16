@@ -1,6 +1,6 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.ecologics;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.ecologics;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import samebutdifferent.ecologics.registry.ModBlocks;

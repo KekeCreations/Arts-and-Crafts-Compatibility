@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.blockentity.CabinetBlockEntity;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

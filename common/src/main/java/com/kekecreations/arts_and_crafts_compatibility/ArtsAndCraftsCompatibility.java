@@ -1,14 +1,14 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks.DBBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.ecologics.EBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDEntityTypes;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsPatterns;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.ecologics.EBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsPatterns;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;

@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsItems;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds.GildedSherdsPatterns;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;

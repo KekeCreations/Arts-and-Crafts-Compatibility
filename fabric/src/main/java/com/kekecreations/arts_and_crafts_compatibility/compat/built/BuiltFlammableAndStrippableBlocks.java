@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.compat.built;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.built.BuiltBlocks;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 
 public class BuiltFlammableAndStrippableBlocks {

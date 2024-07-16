@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.compat;
 
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;

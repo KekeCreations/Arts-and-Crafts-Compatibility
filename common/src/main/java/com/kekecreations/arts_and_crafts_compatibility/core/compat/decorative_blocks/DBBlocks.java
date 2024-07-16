@@ -1,9 +1,9 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.SeatBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.SupportBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import lilypuree.decorative_blocks.blocks.PalisadeBlock;
 import lilypuree.decorative_blocks.blocks.types.VanillaWoodTypes;
 import net.minecraft.world.level.block.Block;

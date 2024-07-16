@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.blockentity;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.block.CabinetBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight.FDEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;

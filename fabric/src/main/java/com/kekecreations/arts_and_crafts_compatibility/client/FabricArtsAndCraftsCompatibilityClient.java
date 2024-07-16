@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.ecologics.EBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.ecologics.EBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;

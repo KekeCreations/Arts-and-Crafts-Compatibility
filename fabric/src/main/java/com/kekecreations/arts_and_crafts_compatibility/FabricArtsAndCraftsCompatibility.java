@@ -1,9 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.compat.CompatItemGroups;
 import com.kekecreations.arts_and_crafts_compatibility.compat.FabricArtsAndCraftsCompatResourcePacks;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.built.BuiltFlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
 import net.fabricmc.api.ModInitializer;

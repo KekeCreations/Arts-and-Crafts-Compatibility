@@ -1,8 +1,8 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.farmersdelight;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.CabinetBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

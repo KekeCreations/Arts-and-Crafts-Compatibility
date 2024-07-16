@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.TableBlock;

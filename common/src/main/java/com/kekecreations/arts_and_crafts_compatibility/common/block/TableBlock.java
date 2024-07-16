@@ -1,8 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsProperties;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs.TwigsTags;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;

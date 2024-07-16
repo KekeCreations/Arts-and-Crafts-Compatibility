@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.gildedsherds;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds;
 
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
 import net.minecraft.core.registries.Registries;

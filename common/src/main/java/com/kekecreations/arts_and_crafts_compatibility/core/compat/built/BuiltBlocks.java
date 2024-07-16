@@ -1,10 +1,10 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.built;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.built;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableSlabBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableStairBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;

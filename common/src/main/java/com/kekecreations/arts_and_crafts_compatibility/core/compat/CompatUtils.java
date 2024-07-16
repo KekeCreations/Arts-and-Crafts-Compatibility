@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat;
 
 import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;

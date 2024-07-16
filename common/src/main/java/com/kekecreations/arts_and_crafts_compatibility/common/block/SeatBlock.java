@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.compat.decorative_blocks.DBBlockProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlockProperties;
 import lilypuree.decorative_blocks.core.Registration;
 import lilypuree.decorative_blocks.entity.DummyEntityForSitting;
 import lilypuree.decorative_blocks.items.SwitchableBlockItem;

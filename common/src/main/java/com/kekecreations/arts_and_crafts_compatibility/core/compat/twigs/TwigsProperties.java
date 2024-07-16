@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.compat.twigs;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;

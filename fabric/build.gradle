@@ -27,7 +27,7 @@ dependencies {
     modImplementation "curse.maven:oh-my-sherd-897227:4864086"
     modImplementation "curse.maven:built-982827:5398960"
     modImplementation "curse.maven:twigs-496913:4603805"
-    modImplementation "curse.maven:yapping-tooltips-1059597:5528547"
+    modImplementation "curse.maven:yapping-tooltips-1059597:5537445"
 }
 
 loom {

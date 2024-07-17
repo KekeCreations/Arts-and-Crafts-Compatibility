@@ -7,7 +7,7 @@
   "yapping_tooltips.block.arts_and_crafts.bleached_bed.desc": "Sleeping with bleach? This can't be healthy",
   "yapping_tooltips.block.arts_and_crafts.bleached_concrete.desc": "Concrete powder that has been hardened and bleached",
   "yapping_tooltips.block.arts_and_crafts.bleached_concrete_powder.desc": "A mixture of gravel and sand that got bleached",
-  "yapping_tooltips.item.arts_and_crafts.bleached_chalk.desc": "A pastel block thats bleached",
+  "yapping_tooltips.block.arts_and_crafts.bleached_chalk.desc": "A pastel block thats soaked in bleach",
 
   "yapping_tooltips.block.arts_and_crafts_compat.cork_table.desc": "Someone cooked here",
   "yapping_tooltips.block.arts_and_crafts.cork.desc": "No you can't make armor that floats in water with it",
@@ -44,6 +44,40 @@
   "yapping_tooltips.block.arts_and_crafts.gypsum_brick_stairs.desc": "Falling may cause injury",
   "yapping_tooltips.block.arts_and_crafts.gypsum_brick_slab.desc": "Darth Maul survived being chopped in half?",
   "yapping_tooltips.block.arts_and_crafts.gypsum_brick_wall.desc": "You can't jump over walls, I'm sorry, you just can't for some reason",
+
+  "yapping_tooltips.block.arts_and_crafts.white_chalk.desc": "White pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.orange_chalk.desc": "Orange pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.magenta_chalk.desc": "Magenta pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.light_blue_chalk.desc": "Light blue pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.yellow_chalk.desc": "Yellow pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.lime_chalk.desc": "Lime pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.pink_chalk.desc": "Pink pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.gray_chalk.desc": "Gray pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.light_gray_chalk.desc": "Light gray pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.cyan_chalk.desc": "Cyan pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.purple_chalk.desc": "Purple pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.blue_chalk.desc": "Blue pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.brown_chalk.desc": "Brown pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.green_chalk.desc": "Green pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.red_chalk.desc": "Red pastel color in Minecraft!",
+  "yapping_tooltips.block.arts_and_crafts.black_chalk.desc": "Black pastel color in Minecraft!",
+
+  "yapping_tooltips.block.arts_and_crafts.soapstone.desc": "Can be found in aquifers",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_stairs.desc": "Can you imagine stairs made out of soap? Would you try to walk up them?",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_slab.desc": "Can you imagine floors being made out of soap?",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_wall.desc": "Soap wall",
+
+
+  "yapping_tooltips.block.arts_and_crafts.polished_soapstone.desc": "I remember someone asking for this feature",
+  "yapping_tooltips.block.arts_and_crafts.polished_soapstone_stairs.desc": "The cleanest stairs you will ever see",
+  "yapping_tooltips.block.arts_and_crafts.polished_soapstone_slab.desc": "The cleanest slab you will ever see",
+  "yapping_tooltips.block.arts_and_crafts.polished_soapstone_wall.desc": "The cleanest wall you will ever see",
+
+
+  "yapping_tooltips.block.arts_and_crafts.soapstone_bricks.desc": "People keep telling me these look like tiles instead of bricks",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_brick_slab.desc": "Soapstone Tile Slab :(",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_brick_stairs.desc": "Soapstone Tile Stairs :(",
+  "yapping_tooltips.block.arts_and_crafts.soapstone_brick_wall.desc": "A wall made out of Soapstone Bricks",
 
   "yapping_tooltips.block.arts_and_crafts.plaster.desc": "Put Gypsum in a furnace and you can get some plaster!",
   "yapping_tooltips.block.arts_and_crafts.white_plaster.desc": "Plaster but dyed white",

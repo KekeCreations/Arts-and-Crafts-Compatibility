@@ -95,6 +95,7 @@ dependencies {
     implementation fg.deobf("curse.maven:blueprint-382216:5292242")
     implementation fg.deobf("curse.maven:built-982827:5398958")
     implementation fg.deobf("curse.maven:more-pottery-sherd-909168:4733392")
+    implementation fg.deobf("curse.maven:sherdsapi-847583:4931972")
 }
 
 tasks.withType(JavaCompile).configureEach {

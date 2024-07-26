@@ -31,6 +31,7 @@ dependencies {
     modImplementation "curse.maven:yapping-tooltips-1059597:5537445"
     modImplementation "curse.maven:dwdsb-865592:5024948"
     modImplementation "curse.maven:more-pottery-sherd-909168:4733638"
+    modImplementation "curse.maven:sherdsapi-847583:4931973"
 }
 
 loom {

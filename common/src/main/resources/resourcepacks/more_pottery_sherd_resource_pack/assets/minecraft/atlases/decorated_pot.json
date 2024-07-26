@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "type": "paletted_permutations",
+      "textures": [
+        "more_pottery_sherd:entity/decorated_pot/armor_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/axolotl_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/berry_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/blaze_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/bolok_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/bone_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/bucket_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/cactus_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/cogwheel_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/cube_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/empty_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/enchanting_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/eye_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/fish_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/flower_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/fruit_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/house_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/moloch_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/pet_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/sky_pottery_pattern",
+        "more_pottery_sherd:entity/decorated_pot/turtle_pottery_pattern"
+      ],
+      "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
+      "permutations": {
+        "black": "arts_and_crafts:color_palettes/decorated_pot/black_decorated_pot_palette",
+        "blue": "arts_and_crafts:color_palettes/decorated_pot/blue_decorated_pot_palette",
+        "brown": "arts_and_crafts:color_palettes/decorated_pot/brown_decorated_pot_palette",
+        "cyan": "arts_and_crafts:color_palettes/decorated_pot/cyan_decorated_pot_palette",
+        "gray": "arts_and_crafts:color_palettes/decorated_pot/gray_decorated_pot_palette",
+        "green": "arts_and_crafts:color_palettes/decorated_pot/green_decorated_pot_palette",
+        "light_blue": "arts_and_crafts:color_palettes/decorated_pot/light_blue_decorated_pot_palette",
+        "light_gray": "arts_and_crafts:color_palettes/decorated_pot/light_gray_decorated_pot_palette",
+        "lime": "arts_and_crafts:color_palettes/decorated_pot/lime_decorated_pot_palette",
+        "magenta": "arts_and_crafts:color_palettes/decorated_pot/magenta_decorated_pot_palette",
+        "orange": "arts_and_crafts:color_palettes/decorated_pot/orange_decorated_pot_palette",
+        "pink": "arts_and_crafts:color_palettes/decorated_pot/pink_decorated_pot_palette",
+        "purple": "arts_and_crafts:color_palettes/decorated_pot/purple_decorated_pot_palette",
+        "red": "arts_and_crafts:color_palettes/decorated_pot/red_decorated_pot_palette",
+        "white": "arts_and_crafts:color_palettes/decorated_pot/white_decorated_pot_palette",
+        "yellow": "arts_and_crafts:color_palettes/decorated_pot/yellow_decorated_pot_palette"
+      }
+    }
+  ]
+}

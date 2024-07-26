@@ -10,6 +10,12 @@
   "yapping_tooltips.block.arts_and_crafts.bleached_chalk.desc": "A pastel block thats soaked in bleach",
   "yapping_tooltips.block.arts_and_crafts.glazed_terracotta.desc": "Seriously why wasn't this in vanilla?",
 
+  "yapping_tooltips.item.arts_and_crafts.pottery_sherd.desc": "A blank slate",
+  "yapping_tooltips.item.arts_and_crafts.gateway_pottery_sherd.desc": "A crumbled portal to a fiery dimension",
+  "yapping_tooltips.item.arts_and_crafts.finale_pottery_sherd.desc": "Prepare thyself",
+  "yapping_tooltips.item.arts_and_crafts.roll_pottery_sherd.desc": "Are you lucky?",
+  "yapping_tooltips.item.arts_and_crafts.ruined_pottery_sherd.desc": "Lost to time",
+
   "yapping_tooltips.block.arts_and_crafts_compat.cork_table.desc": "Someone cooked here",
   "yapping_tooltips.block.arts_and_crafts.cork.desc": "No you can't make armor that floats in water with it",
   "yapping_tooltips.block.arts_and_crafts.smooth_cork.desc": "Floatin' in style",

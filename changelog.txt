@@ -1,3 +1,19 @@
+
+V1.1.0
+• Fixed Gilded Sherd Mixin firing when the Gilded Sherds Mod wasn't loaded
+• Added Compat for Ecologics
+• Added Compat for Yapping Tooltips
+• Added Compat for Dramatic Doors
+• Added Compat for Discs Where Discs Shouldn't Be
+• Added Compat for More Pottery Sherd
+• Added Sherd Compat for Jaden's Nether Expansion Beta
+• Updated Arts & Crafts Dependency to 1.1.7
+
+
+
+
+
+
 V1.0.4
 1. Fixed mouseClicked crash
 2. Added Built compat to Forge!

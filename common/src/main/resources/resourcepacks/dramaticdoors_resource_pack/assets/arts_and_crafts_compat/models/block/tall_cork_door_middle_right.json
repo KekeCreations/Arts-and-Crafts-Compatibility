@@ -1,0 +1,8 @@
+{
+  "parent": "dramaticdoors:block/door_middle_right",
+  "textures": {
+    "bottom": "arts_and_crafts_compat:block/tall_cork_door_middle",
+    "middle": "arts_and_crafts_compat:block/tall_cork_door_middle",
+    "top": "arts_and_crafts_compat:block/tall_cork_door_middle"
+  }
+}

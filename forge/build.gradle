@@ -83,6 +83,7 @@ dependencies {
     //GOTTA KEEP FOR CODE
     implementation fg.deobf("curse.maven:decorative-blocks-362528:5089406")
     implementation fg.deobf("curse.maven:ecologics-570463:4857272")
+    implementation fg.deobf("curse.maven:dramatic-doors-380617:5476685")
 
     //OPTIONAL
     implementation fg.deobf("curse.maven:gilded-sherds-935749:4975225")
@@ -93,7 +94,6 @@ dependencies {
     implementation fg.deobf("curse.maven:neapolitan-382016:5296594")
     implementation fg.deobf("curse.maven:blueprint-382216:5292242")
     implementation fg.deobf("curse.maven:built-982827:5398958")
-    implementation fg.deobf("curse.maven:dramatic-doors-380617:5476685")
 }
 
 tasks.withType(JavaCompile).configureEach {

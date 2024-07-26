@@ -1,5 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.fizzware.dramaticdoors.forge.DDRegistry;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
@@ -13,6 +15,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -101,6 +104,12 @@ public class ForgeArtsAndCraftsCompatibility {
                 addAfter(event, BuiltBlocks.CORK_COMPACT_PLANKS.get(), BuiltBlocks.CORK_SHAKES.get());
                 addAfter(event, BuiltBlocks.CORK_SHAKES.get(), BuiltBlocks.CORK_SHAKES_STAIRS.get());
                 addAfter(event, BuiltBlocks.CORK_SHAKES_STAIRS.get(), BuiltBlocks.CORK_SHAKES_SLAB.get());
+            }
+        }
+        if (isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
+            if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+                addBefore(event, ACBlocks.CORK_DOOR.get(), DDBlocks.SHORT_CORK_DOOR.get());
+                addAfter(event, ACBlocks.CORK_DOOR.get(), DDBlocks.TALL_CORK_DOOR.get());
             }
         }
     }

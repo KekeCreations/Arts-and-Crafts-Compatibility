@@ -1,6 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.compat;
 
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
+import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
@@ -49,6 +51,12 @@ public class CompatItemGroups {
                 event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_support")), DBBlocks.CORK_SUPPORT.get());
                 event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_palisade")), DBBlocks.CORK_PALISADE.get());
                 event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_beam")), DBBlocks.CORK_BEAM.get());
+            });
+        }
+        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
+            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
+                event.addBefore(ACBlocks.CORK_DOOR.get(), DDBlocks.SHORT_CORK_DOOR.get());
+                event.addAfter(ACBlocks.CORK_DOOR.get(), DDBlocks.TALL_CORK_DOOR.get());
             });
         }
     }

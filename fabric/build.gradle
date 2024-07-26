@@ -21,6 +21,7 @@ dependencies {
     modImplementation "curse.maven:decorative-blocks-362528:5089408"
     modImplementation "curse.maven:ecologics-570463:4857271"
     modImplementation "curse.maven:cloth-config-348521:4973440"
+    modImplementation "curse.maven:dramatic-doors-380617:5476685"
 
     //Optional
     modImplementation "curse.maven:gilded-sherds-935749:4975224"
@@ -28,7 +29,6 @@ dependencies {
     modImplementation "curse.maven:built-982827:5398960"
     modImplementation "curse.maven:twigs-496913:4603805"
     modImplementation "curse.maven:yapping-tooltips-1059597:5537445"
-    modImplementation "curse.maven:dramatic-doors-380617:5476685"
 }
 
 loom {

@@ -17,7 +17,7 @@ description = '''${description}'''
 [[dependencies.${mod_id}]]
 modId="arts_and_crafts"
 mandatory=true
-versionRange="[1.0.2,)"
+versionRange="[1.1.7,)"
 ordering="AFTER"
 side="BOTH"
 #SOFT DEPENDENCIES

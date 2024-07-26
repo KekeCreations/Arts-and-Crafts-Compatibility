@@ -86,6 +86,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.MORE_POTTERY_SHERD)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.MORE_POTTERY_SHERD);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.COBBLEMON)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.COBBLEMON);
+            }
         }
     }
 }

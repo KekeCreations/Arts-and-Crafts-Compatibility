@@ -32,6 +32,7 @@ dependencies {
     modImplementation "curse.maven:dwdsb-865592:5024948"
     modImplementation "curse.maven:more-pottery-sherd-909168:4733638"
     modImplementation "curse.maven:sherdsapi-847583:4931973"
+    //modImplementation "curse.maven:cobblemon-687131:5375408"
 }
 
 loom {

@@ -122,6 +122,11 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 rpMorePotterySherd(event);
             }
         }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.COBBLEMON)) {
+            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
+                rpCobblemon(event);
+            }
+        }
     }
 
 
@@ -262,6 +267,13 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     private static void rpMorePotterySherd(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/more_pottery_sherd_resource_pack");
         var pack = Pack.readMetaAndCreate("builtin/more_pottery_sherd_resource_pack", Component.literal("More Pottery Sherd Compatibility Resource Pack"), true,
+                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
+        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+    }
+
+    private static void rpCobblemon(AddPackFindersEvent event) {
+        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/cobblemon_resource_pack");
+        var pack = Pack.readMetaAndCreate("builtin/cobblemon_resource_pack", Component.literal("Cobblemon Compatibility Resource Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }

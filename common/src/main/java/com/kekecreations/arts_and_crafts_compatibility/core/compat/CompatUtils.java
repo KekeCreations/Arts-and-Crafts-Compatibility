@@ -32,6 +32,7 @@ public class CompatUtils {
     public static final String DRAMATIC_DOORS = "dramaticdoors";
     public static final String DISCS_WHERE_DISCS_SHOULD_NOT_BE = "dwdsb";
     public static final String MORE_POTTERY_SHERD = "more_pottery_sherd";
+    public static final String COBBLEMON = "cobblemon";
 
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {

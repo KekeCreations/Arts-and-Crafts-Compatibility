@@ -2,6 +2,7 @@ modLoader = "javafml"
 loaderVersion = "${forge_loader_version_range}"
 license = "${license}"
 issueTrackerURL = "https://github.com/KekeCreations/Arts-and-Crafts-Compatibility/issues"
+updateJSONURL="https://raw.githubusercontent.com/KekeCreations/Arts-and-Crafts-Compatibility/1.20.1x/forge_updates.json"
 [[mods]] #mandatory
 modId = "${mod_id}"
 version = "${version}"

@@ -30,6 +30,7 @@ dependencies {
     modImplementation "curse.maven:twigs-496913:4603805"
     modImplementation "curse.maven:yapping-tooltips-1059597:5537445"
     modImplementation "curse.maven:dwdsb-865592:5024948"
+    modImplementation "curse.maven:more-pottery-sherd-909168:4733638"
 }
 
 loom {

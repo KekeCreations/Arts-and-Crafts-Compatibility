@@ -1,5 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
@@ -32,6 +34,11 @@ public class ForgeArtsAndCraftsCompatibility {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         ArtsAndCraftsCompatibility.init();
+
+        if (isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
+            DDBlocks.register();
+            DDItems.register();
+        }
 
         modEventBus.addListener(this::creativeItemGroups);
     }

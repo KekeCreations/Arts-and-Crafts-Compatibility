@@ -1,0 +1,6 @@
+{
+  "parent": "dramaticdoors:block/door_short_right_open",
+  "textures": {
+    "texture": "arts_and_crafts_compat:block/short_cork_door"
+  }
+}

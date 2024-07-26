@@ -76,6 +76,10 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.YAPPING_TOOLTIPS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.YAPPING_TOOLTIPS);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
+            }
         }
     }
 }

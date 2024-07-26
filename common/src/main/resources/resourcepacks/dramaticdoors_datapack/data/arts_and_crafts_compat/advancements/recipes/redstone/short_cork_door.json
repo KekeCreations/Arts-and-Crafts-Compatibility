@@ -1,0 +1,34 @@
+{
+  "parent": "dramaticdoors:recipes/root",
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts_compat:short_cork_door"
+    ]
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "arts_and_crafts_compat:short_cork_door"
+      }
+    },
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:cork_door"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_items"
+    ]
+  ]
+}

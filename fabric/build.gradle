@@ -28,6 +28,7 @@ dependencies {
     modImplementation "curse.maven:built-982827:5398960"
     modImplementation "curse.maven:twigs-496913:4603805"
     modImplementation "curse.maven:yapping-tooltips-1059597:5537445"
+    modImplementation "curse.maven:dramatic-doors-380617:5476685"
 }
 
 loom {

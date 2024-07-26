@@ -29,6 +29,7 @@ public class CompatUtils {
     public static final String ALEX_CAVES = "alexscaves";
     public static final String ECOLOGICS = "ecologics";
     public static final String YAPPING_TOOLTIPS = "yapping_tooltips";
+    public static final String DRAMATIC_DOORS = "dramaticdoors";
 
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {

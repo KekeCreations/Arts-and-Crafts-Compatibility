@@ -89,6 +89,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.COBBLEMON)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.COBBLEMON);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NETHER_EXPANSION)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.NETHER_EXPANSION);
+            }
         }
     }
 }

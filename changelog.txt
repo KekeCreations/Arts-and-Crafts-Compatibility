@@ -6,6 +6,7 @@ V1.1.0
 • Added Compat for Dramatic Doors
 • Added Compat for Discs Where Discs Shouldn't Be
 • Added Compat for More Pottery Sherd
+• Added Compat for Cobblemon
 • Added Sherd Compat for Jaden's Nether Expansion Beta
 • Updated Arts & Crafts Dependency to 1.1.7
 

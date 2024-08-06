@@ -1,20 +1,17 @@
-package com.kekecreations.arts_and_crafts_compatibility.mixin;
+package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableStairBlock;
+import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-import java.util.function.Supplier;
-
-@Mixin(FlammableStairBlock.class)
-public class FlammableStairBlockSelfMixin extends StairBlock {
-
-    public FlammableStairBlockSelfMixin(Supplier<BlockState> state, Properties properties) {
-        super(state, properties);
+@Mixin(FlammableBlock.class)
+public class FlammableBlockSelfMixin extends Block {
+    public FlammableBlockSelfMixin(Properties p_49795_) {
+        super(p_49795_);
     }
 
     @Override

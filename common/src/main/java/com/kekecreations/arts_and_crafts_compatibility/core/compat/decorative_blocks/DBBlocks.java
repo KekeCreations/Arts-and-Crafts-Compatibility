@@ -16,6 +16,7 @@ import java.util.function.Supplier;
 
 public class DBBlocks {
 
+    /*
 
     public static final Supplier<Block> CORK_PALISADE = CompatUtils.registerBlockWithItem("cork_palisade", () -> new PalisadeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F, 4.0F).sound(ACSoundTypes.CORK).ignitedByLava(), VanillaWoodTypes.OAK));
 
@@ -24,7 +25,7 @@ public class DBBlocks {
 
     public static final Supplier<Block> CORK_SUPPORT = CompatUtils.registerBlockWithItem("cork_support", () -> new SupportBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.2F).sound(ACSoundTypes.CORK).ignitedByLava()));
 
-
+ */
     public static void register() {
 
     }

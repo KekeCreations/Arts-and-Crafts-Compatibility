@@ -40,8 +40,8 @@ public class CompatUtils {
         return Services.REGISTRY.register(BuiltInRegistries.ITEM, name, itemSupplier);
     }
 
-    public static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
-        return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
+    public static <T extends Block> Supplier<T> registerBlockWithItem(String modID, String name, java.util.function.Supplier<T> blockSupplier) {
+        return Services.REGISTRY.registerBlockWithItem(modID, name, blockSupplier);
     }
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> blockSupplier) {

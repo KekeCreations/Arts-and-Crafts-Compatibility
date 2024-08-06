@@ -1,16 +1,16 @@
-package com.kekecreations.arts_and_crafts_compatibility.mixin;
+package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;
+import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableSlabBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(FlammableBlock.class)
-public class FlammableBlockSelfMixin extends Block {
-    public FlammableBlockSelfMixin(Properties p_49795_) {
+@Mixin(FlammableSlabBlock.class)
+public class FlammableSlabBlockSelfMixin extends SlabBlock {
+    public FlammableSlabBlockSelfMixin(Properties p_49795_) {
         super(p_49795_);
     }
 

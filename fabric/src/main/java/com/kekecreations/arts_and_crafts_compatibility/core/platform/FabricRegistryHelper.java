@@ -1,6 +1,7 @@
-package com.kekecreations.arts_and_crafts_compatibility.platform;
+package com.kekecreations.arts_and_crafts_compatibility.core.platform;
 
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.CompatBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.RegistryHelper;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.core.Registry;
@@ -8,7 +9,6 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -30,9 +30,9 @@ public class FabricRegistryHelper implements RegistryHelper {
     }
 
     @Override
-    public <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> blockSupplier) {
+    public <T extends Block> Supplier<T> registerBlockWithItem(String modID, String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new BlockItem(block, new Item.Properties()));
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new CompatBlockItem(modID, block, new Item.Properties()));
         return () -> block;
     }
 

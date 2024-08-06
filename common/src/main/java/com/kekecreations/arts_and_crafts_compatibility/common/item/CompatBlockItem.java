@@ -1,15 +1,15 @@
-package com.kekecreations.arts_and_crafts_compatibility.common.block;
+package com.kekecreations.arts_and_crafts_compatibility.common.item;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
 
-public class FlammableStairBlock extends StairBlock {
+public class CompatBlockItem extends BlockItem {
     private final String modID;
 
 
-    public FlammableStairBlock(String modID, BlockState $$0, Properties $$1) {
+    public CompatBlockItem(String modID, Block $$0, Properties $$1) {
         super($$0, $$1);
         this.modID = modID;
     }

@@ -1,13 +1,13 @@
-package com.kekecreations.arts_and_crafts_compatibility.platform;
+package com.kekecreations.arts_and_crafts_compatibility.core.platform;
 
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.CompatBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.RegistryHelper;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,9 +38,9 @@ public class ForgeRegistryHelper implements RegistryHelper {
 
 
     @Override
-    public <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> blockSupplier) {
+    public <T extends Block> Supplier<T> registerBlockWithItem(String modID, String id, Supplier<T> blockSupplier) {
         var block = BLOCKS.register(id, blockSupplier);
-        ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
+        ITEMS.register(id, () -> new CompatBlockItem(modID, block.get(), new Item.Properties()));
         return block;
     }
 

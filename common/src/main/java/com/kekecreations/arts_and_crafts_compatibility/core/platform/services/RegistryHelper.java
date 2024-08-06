@@ -14,7 +14,7 @@ public interface RegistryHelper {
     Supplier<SoundEvent> registerSound(String modID, String id);
 
 
-    <T extends Block> Supplier<T> registerBlockWithItem(String id, java.util.function.Supplier<T> blockSupplier);
+    <T extends Block> Supplier<T> registerBlockWithItem(String modID, String id, java.util.function.Supplier<T> blockSupplier);
 
     <T extends Block> Supplier<T> registerBlock(String id, java.util.function.Supplier<T> blockSupplier);
 

@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.mixin;
+package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;

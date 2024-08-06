@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.platform;
+package com.kekecreations.arts_and_crafts_compatibility.core.platform;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
 import net.minecraft.world.level.block.Block;

@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.built.BuiltBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.ecologics.EBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
@@ -10,6 +9,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,6 +23,7 @@ public class ArtsAndCraftsCompatibility {
 
 
     public static void init() {
+        ACCBlocks.register();
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsItems.register();
             GildedSherdsPatterns.register();
@@ -36,9 +37,6 @@ public class ArtsAndCraftsCompatibility {
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
             DBBlocks.register();
-        }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
-            BuiltBlocks.register();
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
             EBlocks.register();

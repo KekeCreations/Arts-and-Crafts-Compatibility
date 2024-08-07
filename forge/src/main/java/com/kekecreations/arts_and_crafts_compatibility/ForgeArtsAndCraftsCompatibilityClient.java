@@ -36,14 +36,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpBuilt(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpBuilt(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpGildedSherds(event);

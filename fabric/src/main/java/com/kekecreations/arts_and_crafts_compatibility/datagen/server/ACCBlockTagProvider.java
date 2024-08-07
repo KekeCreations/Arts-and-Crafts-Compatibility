@@ -17,6 +17,7 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider arg) {
         ecologics();
+        built();
     }
 
     private void ecologics() {
@@ -26,5 +27,19 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACCBlocks.getDyedPottedWalnutSapling(colour))
                     .add(ACCBlocks.getDyedPottedCoconutSeedling(colour));
         }
+    }
+    private void built() {
+        this.getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ACCBlocks.CORK_SHAKES.get())
+                .add(ACCBlocks.CORK_COMPACT_PLANKS.get());
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ACCBlocks.CORK_SHAKES.get())
+                .add(ACCBlocks.CORK_SHAKES_SLAB.get())
+                .add(ACCBlocks.CORK_SHAKES_STAIRS.get())
+                .add(ACCBlocks.CORK_COMPACT_PLANKS.get());
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+                .add(ACCBlocks.CORK_SHAKES_SLAB.get());
+        this.getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+                .add(ACCBlocks.CORK_SHAKES_STAIRS.get());
     }
 }

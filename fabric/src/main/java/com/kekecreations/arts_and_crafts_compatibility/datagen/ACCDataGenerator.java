@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen;
 
+import com.kekecreations.arts_and_crafts_compatibility.datagen.client.ACCLanguageProvider;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.ACCModelProvider;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.server.ACCBlockLootTableProvider;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.server.ACCBlockTagProvider;
@@ -15,6 +16,7 @@ public class ACCDataGenerator implements DataGeneratorEntrypoint {
         // Server Data
         //pack.addProvider(VerdanceRecipeProvider::new);
         pack.addProvider(ACCBlockTagProvider::new);
+        pack.addProvider(ACCLanguageProvider::new);
         //pack.addProvider(VerdanceItemTagProvider::new);
         //pack.addProvider(VerdanceEntityTypeTagProvider::new);
         //pack.addProvider(VerdanceBiomeTagProvider::new);

@@ -101,14 +101,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 rpAlexCaves(event);
             }
         }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                //rpEcologics(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpEcologics(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpDramaticDoors(event);

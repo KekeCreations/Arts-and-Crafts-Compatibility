@@ -54,21 +54,6 @@ minecraft {
                 }
             }
         }
-
-        data {
-            workingDirectory project.file('run')
-            ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-            taskName 'Data'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            mods {
-                modDataRun {
-                    source sourceSets.main
-                    source project(":common").sourceSets.main
-                }
-            }
-        }
     }
 }
 
@@ -96,7 +81,7 @@ dependencies {
     implementation fg.deobf("curse.maven:built-982827:5398958")
     implementation fg.deobf("curse.maven:more-pottery-sherd-909168:4733392")
     implementation fg.deobf("curse.maven:sherdsapi-847583:4931972")
-    implementation fg.deobf("curse.maven:cobblemon-687131:5375390")
+    //implementation fg.deobf("curse.maven:cobblemon-687131:5375390")
     implementation fg.deobf("curse.maven:kotlin-for-forge-351264:5402061")
 }
 

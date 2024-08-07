@@ -21,6 +21,9 @@
         ],
         "client": [
             "com.kekecreations.arts_and_crafts_compatibility.client.FabricArtsAndCraftsCompatibilityClient"
+        ],
+        "fabric-datagen": [
+            "com.kekecreations.arts_and_crafts_compatibility.datagen.ACCDataGenerator"
         ]
     },
     "mixins": [

@@ -5,7 +5,7 @@ import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDI
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.compat.CompatItemGroups;
 import com.kekecreations.arts_and_crafts_compatibility.compat.FabricArtsAndCraftsCompatResourcePacks;
-import com.kekecreations.arts_and_crafts_compatibility.compat.built.BuiltFlammableAndStrippableBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.compat.FlammableAndStrippableBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -17,9 +17,7 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         FabricArtsAndCraftsCompatResourcePacks.loadBuiltinResourcePacks();
         ArtsAndCraftsCompatibility.init();
         CompatItemGroups.addItemsToTabs();
-        if (isModLoaded(CompatUtils.BUILT)) {
-            BuiltFlammableAndStrippableBlocks.register();
-        }
+        FlammableAndStrippableBlocks.register();
         if (isModLoaded(CompatUtils.CAFFEINATED)) {
             CaffeinatedBlocks.register();
         }

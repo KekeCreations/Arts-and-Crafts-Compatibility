@@ -4,10 +4,8 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsItems;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.ForgeRegistryHelper;
 import net.minecraft.core.registries.Registries;
@@ -44,6 +42,7 @@ public class ForgeArtsAndCraftsCompatibility {
 
         modEventBus.addListener(this::creativeItemGroups);
     }
+
     public static boolean isModLoaded(String modId) {
 
         return ModList.get().isLoaded(modId);

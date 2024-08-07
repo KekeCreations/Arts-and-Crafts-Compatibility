@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.compat;
 
 import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
+import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -57,8 +58,8 @@ public class CompatUtils {
     }
 
 
-    public static ACFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
+    public static ACCFlowerPotBlock flowerPot(String modID, Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        return new ACFlowerPotBlock(block, dyeColor, properties);
+        return new ACCFlowerPotBlock(modID, block, dyeColor, properties);
     }
 }

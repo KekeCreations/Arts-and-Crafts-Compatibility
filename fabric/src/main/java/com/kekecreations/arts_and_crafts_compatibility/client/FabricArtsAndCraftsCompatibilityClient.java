@@ -2,8 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.ecologics.EBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.compat.caffeinated.CaffeinatedBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -26,9 +26,9 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
                 BlockRenderLayerMap.INSTANCE.putBlock(CaffeinatedBlocks.getDyedPottedCoffeeShrub(colour), RenderType.cutout());
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
-                BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
-                BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
-                BlockRenderLayerMap.INSTANCE.putBlock(EBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
             }
         }
     }

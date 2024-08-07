@@ -13,7 +13,7 @@ public class CaffeinatedBlocks {
 
     static {
         for (DyeColor colours : DyeColor.values()) {
-            DYED_COFFEE_SHRUB_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_coffee_shrub", () -> CompatUtils.flowerPot(com.chikoritalover.caffeinated.registry.CaffeinatedBlocks.COFFEE_SHRUB, colours)));
+            DYED_COFFEE_SHRUB_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_coffee_shrub", () -> CompatUtils.flowerPot(CompatUtils.CAFFEINATED, com.chikoritalover.caffeinated.registry.CaffeinatedBlocks.COFFEE_SHRUB, colours)));
         }
     }
 

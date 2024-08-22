@@ -92,6 +92,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NETHER_EXPANSION)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.NETHER_EXPANSION);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.MYTHIC_CHARMS)) {
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.MYTHIC_CHARMS);
+            }
         }
     }
 }

@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "type": "paletted_permutations",
+      "textures": [
+        "mythic_charms:entity/decorated_pot/aid_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/body_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/core_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/crystal_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/farmer_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/farmland_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/fight_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/freedom_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/ghost_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/growth_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/heat_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/mountain_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/nature_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/prophecy_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/resonance_pottery_pattern",
+        "mythic_charms:entity/decorated_pot/safety_pottery_pattern"
+      ],
+      "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
+      "permutations": {
+        "black": "arts_and_crafts:color_palettes/decorated_pot/black_decorated_pot_palette",
+        "blue": "arts_and_crafts:color_palettes/decorated_pot/blue_decorated_pot_palette",
+        "brown": "arts_and_crafts:color_palettes/decorated_pot/brown_decorated_pot_palette",
+        "cyan": "arts_and_crafts:color_palettes/decorated_pot/cyan_decorated_pot_palette",
+        "gray": "arts_and_crafts:color_palettes/decorated_pot/gray_decorated_pot_palette",
+        "green": "arts_and_crafts:color_palettes/decorated_pot/green_decorated_pot_palette",
+        "light_blue": "arts_and_crafts:color_palettes/decorated_pot/light_blue_decorated_pot_palette",
+        "light_gray": "arts_and_crafts:color_palettes/decorated_pot/light_gray_decorated_pot_palette",
+        "lime": "arts_and_crafts:color_palettes/decorated_pot/lime_decorated_pot_palette",
+        "magenta": "arts_and_crafts:color_palettes/decorated_pot/magenta_decorated_pot_palette",
+        "orange": "arts_and_crafts:color_palettes/decorated_pot/orange_decorated_pot_palette",
+        "pink": "arts_and_crafts:color_palettes/decorated_pot/pink_decorated_pot_palette",
+        "purple": "arts_and_crafts:color_palettes/decorated_pot/purple_decorated_pot_palette",
+        "red": "arts_and_crafts:color_palettes/decorated_pot/red_decorated_pot_palette",
+        "white": "arts_and_crafts:color_palettes/decorated_pot/white_decorated_pot_palette",
+        "yellow": "arts_and_crafts:color_palettes/decorated_pot/yellow_decorated_pot_palette"
+      }
+    }
+  ]
+}

@@ -35,6 +35,7 @@ public class CompatUtils {
     public static final String MORE_POTTERY_SHERD = "more_pottery_sherd";
     public static final String COBBLEMON = "cobblemon";
     public static final String NETHER_EXPANSION = "netherexp";
+    public static final String MYTHIC_CHARMS = "mythic_charms";
 
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {

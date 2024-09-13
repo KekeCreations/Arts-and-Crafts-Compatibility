@@ -54,7 +54,11 @@
         "alexscaves:entity/decorated_pot/dinosaur_pottery_pattern",
         "alexscaves:entity/decorated_pot/footprint_pottery_pattern",
         "alexscaves:entity/decorated_pot/guardian_pottery_pattern",
-        "alexscaves:entity/decorated_pot/hero_pottery_pattern"
+        "alexscaves:entity/decorated_pot/hero_pottery_pattern",
+        "biomemakeover:entity/decorated_pot/cracked_pottery_pattern",
+        "biomemakeover:entity/decorated_pot/refined_pottery_pattern",
+        "biomemakeover:entity/decorated_pot/whinny_pottery_pattern",
+        "biomemakeover:entity/decorated_pot/worker_pottery_pattern"
       ],
       "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
       "permutations": {

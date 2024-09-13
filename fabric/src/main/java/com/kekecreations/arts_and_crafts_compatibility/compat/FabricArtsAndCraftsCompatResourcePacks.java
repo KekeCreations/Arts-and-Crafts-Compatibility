@@ -52,9 +52,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.SPAWN)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.SPAWN);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BIOME_MAKEOVER)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.BIOME_MAKEOVER);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.YAPPING_TOOLTIPS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.YAPPING_TOOLTIPS);
             }

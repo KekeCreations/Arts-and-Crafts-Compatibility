@@ -58,7 +58,13 @@
         "biomemakeover:entity/decorated_pot/cracked_pottery_pattern",
         "biomemakeover:entity/decorated_pot/refined_pottery_pattern",
         "biomemakeover:entity/decorated_pot/whinny_pottery_pattern",
-        "biomemakeover:entity/decorated_pot/worker_pottery_pattern"
+        "biomemakeover:entity/decorated_pot/worker_pottery_pattern",
+        "cobblemon:entity/decorated_pot/bygone_pottery_pattern",
+        "cobblemon:entity/decorated_pot/capture_pottery_pattern",
+        "cobblemon:entity/decorated_pot/dome_pottery_pattern",
+        "cobblemon:entity/decorated_pot/helix_pottery_pattern",
+        "cobblemon:entity/decorated_pot/nostalgic_pottery_pattern",
+        "cobblemon:entity/decorated_pot/suspicious_pottery_pattern"
       ],
       "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
       "permutations": {

@@ -36,11 +36,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (Services.PLATFORM.isModLoaded(CompatUtils.OH_MY_SHERD)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpOhMySherd(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpFarmerDelight(event);
@@ -112,12 +107,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
 
 
-    private static void rpOhMySherd(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ohmysherd_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/ohmysherd_resource_pack", Component.literal("Oh My Sherd Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
 
     private static void rpFarmerDelight(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_resource_pack");
@@ -189,19 +178,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 
-    private static void rpEcologics(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ecologics_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/ecologics_resource_pack", Component.literal("Ecologics Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpEcologics(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ecologics_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/ecologics_datapack", Component.literal("Ecologics Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
 
     private static void rpDramaticDoors(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_resource_pack");

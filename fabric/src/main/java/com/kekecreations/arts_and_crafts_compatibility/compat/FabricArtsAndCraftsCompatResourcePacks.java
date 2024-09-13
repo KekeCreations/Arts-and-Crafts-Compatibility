@@ -33,13 +33,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
     public static void loadBuiltinResourcePacks() {
         Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer(ArtsAndCraftsCompatibility.MOD_ID);
         if (modContainer.isPresent()) {
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.OH_MY_SHERD)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.OH_MY_SHERD);
-            }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.BUILT);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.BUILT);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.FARMERS_DELIGHT);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.FARMERS_DELIGHT);

@@ -26,7 +26,10 @@
         "arts_and_crafts_compat:entity/decorated_pot/gilded_roll_pottery_pattern",
         "arts_and_crafts_compat:entity/decorated_pot/gilded_ruined_pottery_pattern",
         "arts_and_crafts_compat:entity/decorated_pot/gilded_finale_pottery_pattern",
-        "arts_and_crafts_compat:entity/decorated_pot/gilded_gateway_pottery_pattern"
+        "arts_and_crafts_compat:entity/decorated_pot/gilded_gateway_pottery_pattern",
+        "ohmysherd:entity/decorated_pot/invader_pottery_pattern",
+        "ohmysherd:entity/decorated_pot/remains_pottery_pattern",
+        "ohmysherd:entity/decorated_pot/snip_pottery_pattern"
       ],
       "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
       "permutations": {

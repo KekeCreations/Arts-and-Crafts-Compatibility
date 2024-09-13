@@ -73,7 +73,8 @@
         "netherexp:entity/decorated_pot/firearm_pottery_pattern",
         "netherexp:entity/decorated_pot/marionette_pottery_pattern",
         "netherexp:entity/decorated_pot/sealed_pottery_pattern",
-        "netherexp:entity/decorated_pot/spectre_pottery_pattern"
+        "netherexp:entity/decorated_pot/spectre_pottery_pattern",
+        "dwdsb:entity/decorated_pot/melody_pottery_pattern"
       ],
       "palette_key": "arts_and_crafts:color_palettes/decorated_pot/decorated_pot_palette",
       "permutations": {

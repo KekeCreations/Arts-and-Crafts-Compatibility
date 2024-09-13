@@ -56,9 +56,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE);
-            }
         }
     }
 }

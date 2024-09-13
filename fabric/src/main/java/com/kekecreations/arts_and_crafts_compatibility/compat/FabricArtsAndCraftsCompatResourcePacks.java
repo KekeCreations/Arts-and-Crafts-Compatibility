@@ -55,9 +55,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BIOME_MAKEOVER)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.BIOME_MAKEOVER);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ALEX_CAVES)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.ALEX_CAVES);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.YAPPING_TOOLTIPS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.YAPPING_TOOLTIPS);
             }

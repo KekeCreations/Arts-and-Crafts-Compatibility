@@ -1,9 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsItems;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsPatterns;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
@@ -20,16 +20,16 @@ public class DecoratedPotPatternsMixin {
     private static void arts_and_crafts_addedPatterns(Item item, CallbackInfoReturnable<ResourceKey<String>> cir) {
 
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
-            if (item == GildedSherdsItems.GILDED_ROLL_POTTERY_SHERD.get()) {
+            if (item == ACCItems.GILDED_ROLL_POTTERY_SHERD.get()) {
                 cir.setReturnValue(GildedSherdsPatterns.GILDED_ROLL_POTTERY_PATTERN);
             }
-            if (item == GildedSherdsItems.GILDED_RUINED_POTTERY_SHERD.get()) {
+            if (item == ACCItems.GILDED_RUINED_POTTERY_SHERD.get()) {
                 cir.setReturnValue(GildedSherdsPatterns.GILDED_RUINED_POTTERY_PATTERN);
             }
-            if (item == GildedSherdsItems.GILDED_FINALE_POTTERY_SHERD.get()) {
+            if (item == ACCItems.GILDED_FINALE_POTTERY_SHERD.get()) {
                 cir.setReturnValue(GildedSherdsPatterns.GILDED_FINALE_POTTERY_PATTERN);
             }
-            if (item == GildedSherdsItems.GILDED_GATEWAY_POTTERY_SHERD.get()) {
+            if (item == ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get()) {
                 cir.setReturnValue(GildedSherdsPatterns.GILDED_GATEWAY_POTTERY_PATTERN);
             }
         }

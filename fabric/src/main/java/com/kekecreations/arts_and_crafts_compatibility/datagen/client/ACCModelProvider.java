@@ -2,12 +2,14 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCModelTemplates;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCTextureMapping;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
@@ -35,6 +37,10 @@ public class ACCModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        itemModelGenerator.generateFlatItem(ACCItems.GILDED_FINALE_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
 
     }
 

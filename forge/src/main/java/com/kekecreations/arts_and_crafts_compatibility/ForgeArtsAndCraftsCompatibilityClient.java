@@ -36,14 +36,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpGildedSherds(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpGildedSherds(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.OH_MY_SHERD)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpOhMySherd(event);
@@ -119,39 +111,11 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     }
 
 
-    private static void rpGildedSherds(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/gildedsherds_resource_pack", Component.literal("Gilded Sherds Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpGildedSherds(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/gildedsherds_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/gildedsherds_datapack", Component.literal("Gilded Sherds Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
 
     private static void rpOhMySherd(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/ohmysherd_resource_pack");
         var pack = Pack.readMetaAndCreate("builtin/ohmysherd_resource_pack", Component.literal("Oh My Sherd Compatibility Resource Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-
-    private static void rpBuilt(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/built_resource_pack", Component.literal("Built Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpBuilt(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/built_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/built_datapack", Component.literal("Built Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 

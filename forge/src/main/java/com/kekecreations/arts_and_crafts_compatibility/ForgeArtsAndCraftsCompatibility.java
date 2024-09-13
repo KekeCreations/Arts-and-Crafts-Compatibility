@@ -5,9 +5,9 @@ import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDB
 import com.kekecreations.arts_and_crafts_compatibility.compat.dramatic_doors.DDItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.gildedsherds.GildedSherdsItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.ForgeRegistryHelper;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -72,10 +72,10 @@ public class ForgeArtsAndCraftsCompatibility {
     public void creativeItemGroups(BuildCreativeModeTabContentsEvent event) {
         if (isModLoaded(CompatUtils.GILDED_SHERDS)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.GILDED_SHERDS, "tab"))) {
-                event.accept(GildedSherdsItems.GILDED_FINALE_POTTERY_SHERD.get());
-                event.accept(GildedSherdsItems.GILDED_GATEWAY_POTTERY_SHERD.get());
-                event.accept(GildedSherdsItems.GILDED_ROLL_POTTERY_SHERD.get());
-                event.accept(GildedSherdsItems.GILDED_RUINED_POTTERY_SHERD.get());
+                event.accept(ACCItems.GILDED_FINALE_POTTERY_SHERD.get());
+                event.accept(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get());
+                event.accept(ACCItems.GILDED_ROLL_POTTERY_SHERD.get());
+                event.accept(ACCItems.GILDED_RUINED_POTTERY_SHERD.get());
             }
         }
         if (isModLoaded(CompatUtils.TWIGS)) {

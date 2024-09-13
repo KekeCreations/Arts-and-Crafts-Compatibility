@@ -58,10 +58,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ALEX_CAVES)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.ALEX_CAVES);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.ECOLOGICS);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.ECOLOGICS);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.YAPPING_TOOLTIPS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.YAPPING_TOOLTIPS);
             }
@@ -71,9 +67,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE);
-            }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.MORE_POTTERY_SHERD)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.MORE_POTTERY_SHERD);
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.COBBLEMON)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.COBBLEMON);

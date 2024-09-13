@@ -59,9 +59,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DISCS_WHERE_DISCS_SHOULD_NOT_BE);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.NETHER_EXPANSION)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.NETHER_EXPANSION);
-            }
         }
     }
 }

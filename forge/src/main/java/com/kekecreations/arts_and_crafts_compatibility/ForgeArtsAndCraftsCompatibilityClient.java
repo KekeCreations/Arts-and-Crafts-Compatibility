@@ -73,11 +73,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 bpDramaticDoors(event);
             }
         }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.NETHER_EXPANSION)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpNetherExpansion(event);
-            }
-        }
     }
 
 
@@ -144,13 +139,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_datapack");
         var pack = Pack.readMetaAndCreate("builtin/dramaticdoors_datapack", Component.literal("Dramatic Doors Compatibility Data Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void rpNetherExpansion(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/netherexp_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/netherexp_resource_pack", Component.literal("Nether Expansion Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

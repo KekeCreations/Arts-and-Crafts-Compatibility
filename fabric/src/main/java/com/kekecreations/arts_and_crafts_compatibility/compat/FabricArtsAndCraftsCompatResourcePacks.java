@@ -41,10 +41,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.TWIGS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.TWIGS);
             }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.CAFFEINATED)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.CAFFEINATED);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.CAFFEINATED);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);

@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableSlabBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableStairBlock;
+import com.kekecreations.arts_and_crafts_compatibility.common.block.TableBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
@@ -34,6 +35,11 @@ public class ACCBlocks {
                     () -> CompatUtils.flowerPot(CompatUtils.ECOLOGICS, ModBlocks.COCONUT_SEEDLING.get(), colours)));
         }
     }
+
+    //TWIGS COMPAT
+    public static final Supplier<Block> CORK_TABLE = CompatUtils.registerBlockWithItem(CompatUtils.TWIGS, "cork_table",
+            () -> new TableBlock(CompatUtils.TWIGS, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
+
 
 
     //BUILT COMPAT

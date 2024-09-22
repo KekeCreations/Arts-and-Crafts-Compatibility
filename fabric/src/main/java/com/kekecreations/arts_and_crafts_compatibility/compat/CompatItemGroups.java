@@ -35,7 +35,7 @@ public class CompatItemGroups {
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)) {
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
-                //event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.ARTS_AND_CRAFTS, "cork_slab")), TwigsBlocks.CORK_TABLE.get());
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.ARTS_AND_CRAFTS, "cork_slab")), ACCBlocks.CORK_TABLE.get());
             });
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
@@ -53,8 +53,8 @@ public class CompatItemGroups {
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
-                event.addBefore(ACBlocks.CORK_DOOR.get(), DDBlocks.SHORT_CORK_DOOR.get());
-                event.addAfter(ACBlocks.CORK_DOOR.get(), DDBlocks.TALL_CORK_DOOR.get());
+                //event.addBefore(ACBlocks.CORK_DOOR.get(), DDBlocks.SHORT_CORK_DOOR.get());
+                //event.addAfter(ACBlocks.CORK_DOOR.get(), DDBlocks.TALL_CORK_DOOR.get());
             });
         }
     }

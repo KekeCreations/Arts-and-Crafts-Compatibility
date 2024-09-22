@@ -24,6 +24,9 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), "Gilded Gateway Pottery Sherd");
         builder.add(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), "Gilded Ruined Pottery Sherd");
 
+        //TWIGS
+        builder.add(ACCBlocks.CORK_TABLE.get(), "Cork Table");
+
 
 
         //YAPPING TOOLTIPS

@@ -5,7 +5,6 @@ import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_bl
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.GildedSherdsPatterns;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
@@ -28,9 +27,6 @@ public class ArtsAndCraftsCompatibility {
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsPatterns.register();
             ACCTags.register();
-        }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
-            TwigsBlocks.register();
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
             FDBlocks.register();

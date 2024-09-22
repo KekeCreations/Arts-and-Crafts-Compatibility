@@ -1,10 +1,12 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsProperties;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs.TwigsTags;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.TwigsProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
@@ -61,10 +63,17 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock {
             Shapes.or(TOP, LEG_2, LEG_3, LEG_4),
             Shapes.or(TOP, LEG_1, LEG_2, LEG_3, LEG_4)
     };
+    private final String modID;
 
-    public TableBlock(Properties properties) {
+    public TableBlock(String modID, Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false).setValue(LEG1, true).setValue(LEG2, true).setValue(LEG3, true).setValue(LEG4, true));
+        this.modID = modID;
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.PLATFORM.isModLoaded(modID);
     }
 
     @Override
@@ -114,7 +123,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     public boolean canConnect(BlockState state) {
-        return state.is(TwigsTags.TABLES_BLOCK);
+        return state.is(ACCTags.TABLES_BLOCK);
     }
 
     @Nullable

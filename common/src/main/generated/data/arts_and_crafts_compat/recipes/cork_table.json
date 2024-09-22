@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "0": {
+      "item": "arts_and_crafts:cork_fence"
+    },
+    "_": {
+      "item": "arts_and_crafts:cork_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "0 0",
+    "0 0"
+  ],
+  "result": {
+    "item": "arts_and_crafts_compat:cork_table"
+  },
+  "show_notification": true
+}

@@ -1,8 +1,6 @@
-package com.kekecreations.arts_and_crafts_compatibility.core.compat.twigs;
+package com.kekecreations.arts_and_crafts_compatibility.core.compat;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public interface TwigsProperties {
     BooleanProperty TABLE_LEG1 = BooleanProperty.create("table_leg1");

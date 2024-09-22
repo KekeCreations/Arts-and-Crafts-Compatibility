@@ -38,7 +38,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.FARMERS_DELIGHT);
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.TWIGS);
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.TWIGS);
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {

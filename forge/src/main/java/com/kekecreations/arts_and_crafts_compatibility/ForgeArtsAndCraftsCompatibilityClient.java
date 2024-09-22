@@ -45,9 +45,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             }
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpTwigs(event);
-            }
             if (event.getPackType() == PackType.SERVER_DATA) {
                 bpTwigs(event);
             }
@@ -89,13 +86,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_datapack");
         var pack = Pack.readMetaAndCreate("builtin/farmersdelight_datapack", Component.literal("Farmer's Delight Compatibility Data Pack"), true,
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void rpTwigs(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/twigs_resource_pack", Component.literal("Twigs Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 

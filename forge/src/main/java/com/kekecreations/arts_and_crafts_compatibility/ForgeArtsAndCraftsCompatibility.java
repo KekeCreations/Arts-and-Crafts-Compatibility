@@ -80,7 +80,7 @@ public class ForgeArtsAndCraftsCompatibility {
         }
         if (isModLoaded(CompatUtils.TWIGS)) {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.TWIGS, "twig"))) {
-                //addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.TWIGS, "acacia_table")), TwigsBlocks.CORK_TABLE.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.TWIGS, "acacia_table")), ACCBlocks.CORK_TABLE.get());
             }
         }
         if (isModLoaded(CompatUtils.FARMERS_DELIGHT)) {

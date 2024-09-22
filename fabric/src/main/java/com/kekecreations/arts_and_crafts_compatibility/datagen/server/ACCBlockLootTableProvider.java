@@ -21,6 +21,11 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         ecologics();
+        twigs();
+    }
+
+    public void twigs() {
+        dropSelf(ACCBlocks.CORK_TABLE.get());
     }
 
     public void ecologics() {

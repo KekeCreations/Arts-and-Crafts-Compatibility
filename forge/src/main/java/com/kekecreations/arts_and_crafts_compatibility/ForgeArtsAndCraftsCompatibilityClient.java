@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts_compatibility;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.AddPackFindersEvent;
@@ -17,6 +19,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.forgespi.language.IModFileInfo;
+
+import java.nio.file.Path;
 
 
 @Mod.EventBusSubscriber(modid = ArtsAndCraftsCompatibility.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -90,10 +95,16 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     }
 
     private static void bpTwigs(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/twigs_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/twigs_datapack", Component.literal("Twigs Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
+        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
+        Path file = mod.getFile().findResource("resourcepacks/twigs_datapack");
+        event.addRepositorySource((packConsumer) ->
+                packConsumer.accept(Pack.create(
+                        "twigs_datapack",
+                        Component.literal("Twigs Compatibility Data Pack"),
+                        false,
+                        (path) -> new PathPackResources(path, file, true),
+                        new Pack.Info(Component.literal("Arts & Crafts Compat features for Twigs"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
+                        PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
     }
 
     private static void rpDecorativeBlocks(AddPackFindersEvent event) {

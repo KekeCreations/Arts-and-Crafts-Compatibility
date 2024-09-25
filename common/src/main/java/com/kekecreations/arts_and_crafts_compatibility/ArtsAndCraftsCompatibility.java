@@ -2,11 +2,10 @@ package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.minecraft.resources.ResourceLocation;
@@ -24,13 +23,10 @@ public class ArtsAndCraftsCompatibility {
     public static void init() {
         ACCItems.register();
         ACCBlocks.register();
+        ACCEntityTypes.register();
+        ACCTags.register();
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsPatterns.register();
-            ACCTags.register();
-        }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
-            FDBlocks.register();
-            FDEntityTypes.register();
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
             DBBlocks.register();

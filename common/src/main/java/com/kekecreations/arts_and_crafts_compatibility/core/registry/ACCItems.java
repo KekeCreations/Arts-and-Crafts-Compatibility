@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.item.CompatItem;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.item.Item;
 
@@ -14,6 +15,8 @@ public class ACCItems {
     public static final Supplier<Item> GILDED_FINALE_POTTERY_SHERD = CompatUtils.registerItem("gilded_finale_pottery_sherd", () -> new CompatItem(CompatUtils.GILDED_SHERDS, new Item.Properties()));
     public static final Supplier<Item> GILDED_GATEWAY_POTTERY_SHERD = CompatUtils.registerItem("gilded_gateway_pottery_sherd", () -> new CompatItem(CompatUtils.GILDED_SHERDS, new Item.Properties()));
 
+    //FARMERS DELIGHT COMPAT
+    public static final Supplier<Item> CORK_CABINET_ITEM = CompatUtils.registerItem("cork_cabinet", () -> new FuelBlockItem(ACCBlocks.CORK_CABINET.get(), new Item.Properties()));
 
     public static void register() {
     }

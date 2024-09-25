@@ -1,13 +1,13 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
-import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableSlabBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.block.FlammableStairBlock;
-import com.kekecreations.arts_and_crafts_compatibility.common.block.TableBlock;
+import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -40,6 +40,9 @@ public class ACCBlocks {
     public static final Supplier<Block> CORK_TABLE = CompatUtils.registerBlockWithItem(CompatUtils.TWIGS, "cork_table",
             () -> new TableBlock(CompatUtils.TWIGS, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0f, 3.0f).sound(ACSoundTypes.CORK).ignitedByLava()));
 
+    //FARMERS DELIGHT COMPAT
+    public static final Supplier<Block> CORK_CABINET = CompatUtils.registerBlock("cork_cabinet",
+            () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).sound(ACSoundTypes.CORK)));
 
 
     //BUILT COMPAT

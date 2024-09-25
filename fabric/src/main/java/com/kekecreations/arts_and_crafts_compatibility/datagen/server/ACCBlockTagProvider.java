@@ -18,6 +18,13 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void addTags(HolderLookup.Provider arg) {
         ecologics();
         built();
+        farmersDelight();
+    }
+
+    private void farmersDelight() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .setReplace(false)
+                .add(ACCBlocks.CORK_CABINET.get());
     }
 
     private void ecologics() {

@@ -23,6 +23,15 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+        //FARMERS DELIGHT
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_CABINET.get())
+                .pattern("___")
+                .pattern("D D")
+                .pattern("___")
+                .define('_', ACBlocks.CORK_SLAB.get())
+                .define('D', ACBlocks.CORK_TRAPDOOR.get())
+                .unlockedBy("has_planks", has(ACBlocks.CORK_TRAPDOOR.get()))
+                .save(exporter);
         //TWIGS
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_TABLE.get())
                 .pattern("___")

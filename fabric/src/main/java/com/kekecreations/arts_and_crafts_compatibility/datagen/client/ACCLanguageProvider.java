@@ -27,6 +27,9 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         //TWIGS
         builder.add(ACCBlocks.CORK_TABLE.get(), "Cork Table");
 
+        //FARMERS DELIGHT
+        builder.add(ACCBlocks.CORK_CABINET.get(), "Cork Cabinet");
+
 
 
         //YAPPING TOOLTIPS

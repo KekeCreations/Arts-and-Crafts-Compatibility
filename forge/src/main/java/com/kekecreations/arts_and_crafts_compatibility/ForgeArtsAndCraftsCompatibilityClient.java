@@ -41,14 +41,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpFarmerDelight(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpFarmerDelight(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
             if (event.getPackType() == PackType.SERVER_DATA) {
                 bpTwigs(event);
@@ -72,22 +64,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
         }
     }
 
-
-
-
-    private static void rpFarmerDelight(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_resource_pack", Component.literal("Farmer's Delight Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpFarmerDelight(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/farmersdelight_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/farmersdelight_datapack", Component.literal("Farmer's Delight Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
 
     private static void bpTwigs(AddPackFindersEvent event) {
         IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);

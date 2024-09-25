@@ -1,7 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.blockentity.CabinetBlockEntity;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -12,6 +14,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -42,6 +45,11 @@ public class CabinetBlock extends BaseEntityBlock
     public CabinetBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(OPEN, false));
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.PLATFORM.isModLoaded(CompatUtils.FARMERS_DELIGHT);
     }
 
     @Override
@@ -109,7 +117,7 @@ public class CabinetBlock extends BaseEntityBlock
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return FDEntityTypes.CABINET.get().create(pos, state);
+        return ACCEntityTypes.CABINET.get().create(pos, state);
     }
 
     @Override

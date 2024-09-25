@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.common.blockentity;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.block.CabinetBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.farmersdelight.FDEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
@@ -59,7 +59,7 @@ public class CabinetBlockEntity extends RandomizableContainerBlockEntity
     };
 
     public CabinetBlockEntity(BlockPos pos, BlockState state) {
-        super(FDEntityTypes.CABINET.get(), pos, state);
+        super(ACCEntityTypes.CABINET.get(), pos, state);
     }
 
     @Override

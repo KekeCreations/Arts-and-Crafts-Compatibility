@@ -42,6 +42,36 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_planks", has(ACBlocks.CORK_PLANKS.get()))
                 .save(exporter);
 
+        //DECORATIVE BLOCKS
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_BEAM.get(), 2)
+                .pattern(" x ")
+                .pattern(" x ")
+                .define('x', ACBlocks.STRIPPED_CORK_LOG.get())
+                .unlockedBy("has_log", has(ACBlocks.STRIPPED_CORK_LOG.get()))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_PALISADE.get(), 6)
+                .pattern("xx ")
+                .define('x', ACBlocks.CORK_LOG.get())
+                .unlockedBy("has_log", has(ACBlocks.CORK_LOG.get()))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_SEAT.get(), 6)
+                .pattern("x  ")
+                .pattern("y  ")
+                .define('x', ACBlocks.CORK_SLAB.get())
+                .define('y', ACBlocks.CORK_FENCE.get())
+                .unlockedBy("has_planks", has(ACBlocks.CORK_PLANKS.get()))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_SUPPORT.get(), 6)
+                .pattern("xx ")
+                .pattern("x  ")
+                .define('x', ACBlocks.CORK_PLANKS.get())
+                .unlockedBy("has_planks", has(ACBlocks.CORK_PLANKS.get()))
+                .save(exporter);
+
+
         //GILDED SHERDS
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ACCItems.GILDED_FINALE_POTTERY_SHERD.get())
                 .requires(Items.GOLD_NUGGET, 1)

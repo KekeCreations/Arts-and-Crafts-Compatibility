@@ -22,10 +22,18 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         ecologics();
         twigs();
+        decorativeBlocks();
     }
 
     public void twigs() {
         dropSelf(ACCBlocks.CORK_TABLE.get());
+    }
+
+    public void decorativeBlocks() {
+        dropSelf(ACCBlocks.CORK_PALISADE.get());
+        dropSelf(ACCBlocks.CORK_BEAM.get());
+        dropSelf(ACCBlocks.CORK_SEAT.get());
+        dropSelf(ACCBlocks.CORK_SUPPORT.get());
     }
 
     public void ecologics() {

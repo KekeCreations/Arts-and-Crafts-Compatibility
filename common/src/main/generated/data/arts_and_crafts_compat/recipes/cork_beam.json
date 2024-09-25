@@ -1,19 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "decorative_supports",
   "key": {
     "x": {
-      "item": "arts_and_crafts:cork_planks"
+      "item": "arts_and_crafts:stripped_cork_log"
     }
   },
   "pattern": [
-    "xx ",
-    "x  "
+    " x ",
+    " x "
   ],
   "result": {
-    "count": 6,
-    "item": "arts_and_crafts_compat:cork_support"
+    "count": 2,
+    "item": "arts_and_crafts_compat:cork_beam"
   },
   "show_notification": true
 }

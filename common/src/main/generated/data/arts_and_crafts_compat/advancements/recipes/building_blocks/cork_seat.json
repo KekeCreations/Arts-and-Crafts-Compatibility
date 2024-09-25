@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stripped_log": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "arts_and_crafts:stripped_cork_log"
+              "arts_and_crafts:cork_planks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "arts_and_crafts_compat:cork_beam"
+        "recipe": "arts_and_crafts_compat:cork_seat"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_stripped_log",
+      "has_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "arts_and_crafts_compat:cork_beam"
+      "arts_and_crafts_compat:cork_seat"
     ]
   },
   "sends_telemetry_event": false

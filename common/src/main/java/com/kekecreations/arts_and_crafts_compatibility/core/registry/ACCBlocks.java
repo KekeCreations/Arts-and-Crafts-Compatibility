@@ -4,6 +4,8 @@ import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import lilypuree.decorative_blocks.blocks.PalisadeBlock;
+import lilypuree.decorative_blocks.blocks.types.VanillaWoodTypes;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -43,6 +45,20 @@ public class ACCBlocks {
     //FARMERS DELIGHT COMPAT
     public static final Supplier<Block> CORK_CABINET = CompatUtils.registerBlock("cork_cabinet",
             () -> new CabinetBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).sound(ACSoundTypes.CORK)));
+
+    //DECORATIVE BLOCKS COMPAT
+    public static final Supplier<Block> CORK_PALISADE = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_palisade",
+            () -> new ACCPalisadeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F, 4.0F).sound(ACSoundTypes.CORK).ignitedByLava(), VanillaWoodTypes.OAK));
+
+    public static final Supplier<Block> CORK_SEAT = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_seat",
+            () -> new SeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.2F).sound(ACSoundTypes.CORK).ignitedByLava()));
+
+    public static final Supplier<Block> CORK_BEAM = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_beam",
+            () -> new ACCRotatedPillarBlock(CompatUtils.DECORATIVE_BLOCKS, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.2F).sound(ACSoundTypes.CORK).ignitedByLava()));
+
+    public static final Supplier<Block> CORK_SUPPORT = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_support",
+            () -> new SupportBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.2F).sound(ACSoundTypes.CORK).ignitedByLava()));
+
 
 
     //BUILT COMPAT

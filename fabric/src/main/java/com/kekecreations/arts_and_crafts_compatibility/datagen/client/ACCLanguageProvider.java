@@ -30,6 +30,12 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         //FARMERS DELIGHT
         builder.add(ACCBlocks.CORK_CABINET.get(), "Cork Cabinet");
 
+        //DECORATIVE BLOCKS
+        builder.add(ACCBlocks.CORK_PALISADE.get(), "Cork Palisade");
+        builder.add(ACCBlocks.CORK_BEAM.get(), "Cork Beam");
+        builder.add(ACCBlocks.CORK_SEAT.get(), "Cork Seat");
+        builder.add(ACCBlocks.CORK_SUPPORT.get(), "Cork Support");
+
 
 
         //YAPPING TOOLTIPS

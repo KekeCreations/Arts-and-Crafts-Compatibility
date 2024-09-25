@@ -1,6 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.decorative_blocks.DBBlockProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.DBProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import lilypuree.decorative_blocks.core.Registration;
 import lilypuree.decorative_blocks.entity.DummyEntityForSitting;
 import lilypuree.decorative_blocks.items.SwitchableBlockItem;
@@ -11,6 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -56,12 +59,17 @@ public class SeatBlock extends HorizontalDirectionalBlock implements SimpleWater
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
     public static final BooleanProperty ATTACHED = BlockStateProperties.ATTACHED;
-    public static final BooleanProperty POST = DBBlockProperties.POST;
+    public static final BooleanProperty POST = DBProperties.POST;
 
 
     public SeatBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(WATERLOGGED, false).setValue(OCCUPIED, false).setValue(ATTACHED, false).setValue(POST, false));
+    }
+
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS);
     }
 
 

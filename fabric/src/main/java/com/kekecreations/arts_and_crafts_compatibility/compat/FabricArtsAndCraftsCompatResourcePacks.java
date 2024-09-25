@@ -33,16 +33,8 @@ public class FabricArtsAndCraftsCompatResourcePacks {
     public static void loadBuiltinResourcePacks() {
         Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer(ArtsAndCraftsCompatibility.MOD_ID);
         if (modContainer.isPresent()) {
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.FARMERS_DELIGHT)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.FARMERS_DELIGHT);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.FARMERS_DELIGHT);
-            }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)) {
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.TWIGS);
-            }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.DECORATIVE_BLOCKS);
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
                 registerBuiltinResourcePack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);

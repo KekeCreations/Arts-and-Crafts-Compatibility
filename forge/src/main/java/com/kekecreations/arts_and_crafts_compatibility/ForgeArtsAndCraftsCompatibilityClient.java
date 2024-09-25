@@ -46,14 +46,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 bpTwigs(event);
             }
         }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpDecorativeBlocks(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpDecorativeBlocks(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpDramaticDoors(event);
@@ -78,19 +70,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                         PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
     }
 
-    private static void rpDecorativeBlocks(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/decorative_blocks_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/decorative_blocks_resource_pack", Component.literal("Decorative Blocks Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpDecorativeBlocks(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/decorative_blocks_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/decorative_blocks_datapack", Component.literal("Decorative Blocks Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
 
     private static void rpDramaticDoors(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_resource_pack");

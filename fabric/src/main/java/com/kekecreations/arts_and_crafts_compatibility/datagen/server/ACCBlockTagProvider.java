@@ -19,6 +19,21 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ecologics();
         built();
         farmersDelight();
+        decorativeBlocks();
+    }
+
+    private void decorativeBlocks() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ACCBlocks.CORK_BEAM.get())
+                .add(ACCBlocks.CORK_PALISADE.get())
+                .add(ACCBlocks.CORK_SEAT.get())
+                .add(ACCBlocks.CORK_SUPPORT.get());
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ACCBlocks.CORK_PALISADE.get());
+        this.getOrCreateTagBuilder(BlockTags.LOGS)
+                .add(ACCBlocks.CORK_BEAM.get());
+        this.getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ACCBlocks.CORK_PALISADE.get());
     }
 
     private void farmersDelight() {

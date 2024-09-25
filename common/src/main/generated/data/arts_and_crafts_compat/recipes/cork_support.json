@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "decorative_palisades",
   "key": {
     "x": {
-      "item": "arts_and_crafts:cork_log"
+      "item": "arts_and_crafts:cork_planks"
     }
   },
   "pattern": [
-    "xx "
+    "xx ",
+    "x  "
   ],
   "result": {
     "count": 6,
-    "item": "arts_and_crafts_compat:cork_palisade"
+    "item": "arts_and_crafts_compat:cork_support"
   },
   "show_notification": true
 }

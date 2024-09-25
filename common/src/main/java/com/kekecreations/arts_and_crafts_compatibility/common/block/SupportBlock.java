@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import lilypuree.decorative_blocks.blocks.IWoodenBlock;
 import lilypuree.decorative_blocks.blocks.state.ModBlockProperties;
 import lilypuree.decorative_blocks.blocks.state.SupportFaceShape;
@@ -17,6 +19,7 @@ import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.Plane;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -68,6 +71,10 @@ public class SupportBlock extends HorizontalDirectionalBlock implements SimpleWa
         this.registerDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateDefinition.any()).setValue(WATERLOGGED, Boolean.FALSE)).setValue(UP, Boolean.TRUE)).setValue(HORIZONTAL_SHAPE, SupportFaceShape.BIG)).setValue(VERTICAL_SHAPE, SupportFaceShape.SMALL));
     }
 
+    @Override
+    public boolean isEnabled(FeatureFlagSet $$0) {
+        return Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS);
+    }
 
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
         return (VoxelShape)this.stateToShapeMap.get(state);

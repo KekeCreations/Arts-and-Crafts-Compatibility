@@ -1,9 +1,13 @@
 {
+  "block.arts_and_crafts_compat.cork_beam": "Cork Beam",
   "block.arts_and_crafts_compat.cork_cabinet": "Cork Cabinet",
   "block.arts_and_crafts_compat.cork_compact_planks": "Cork Compact Planks",
+  "block.arts_and_crafts_compat.cork_palisade": "Cork Palisade",
+  "block.arts_and_crafts_compat.cork_seat": "Cork Seat",
   "block.arts_and_crafts_compat.cork_shakes": "Cork Shakes",
   "block.arts_and_crafts_compat.cork_shakes_slab": "Cork Shakes Slab",
   "block.arts_and_crafts_compat.cork_shakes_stairs": "Cork Shakes Stairs",
+  "block.arts_and_crafts_compat.cork_support": "Cork Support",
   "block.arts_and_crafts_compat.cork_table": "Cork Table",
   "item.arts_and_crafts_compat.gilded_finale_pottery_sherd": "Gilded Finale Pottery Sherd",
   "item.arts_and_crafts_compat.gilded_gateway_pottery_sherd": "Gilded Gateway Pottery Sherd",

@@ -62,11 +62,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 bpDecorativeBlocks(event);
             }
         }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.NEAPOLITAN)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpNeapolitan(event);
-            }
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             if (event.getPackType() == PackType.CLIENT_RESOURCES) {
                 rpDramaticDoors(event);
@@ -120,14 +115,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
         event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
-
-    private static void rpNeapolitan(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/neapolitan_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/neapolitan_resource_pack", Component.literal("Neapolitan Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
 
     private static void rpDramaticDoors(AddPackFindersEvent event) {
         var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_resource_pack");

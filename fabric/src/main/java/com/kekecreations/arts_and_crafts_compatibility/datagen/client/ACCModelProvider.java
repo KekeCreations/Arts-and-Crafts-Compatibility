@@ -46,6 +46,7 @@ public class ACCModelProvider extends FabricModelProvider {
         generator.createFullAndCarpetBlocks(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
         generator.createCraftingTableLike(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), TextureMapping::craftingTable);
         generator.createTrivialBlock(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), TexturedModel.COLUMN);
+        registerEBBookshelf(generator, ACCFabricBlocks.CORK_BOOKSHELF.get(), ACBlocks.CORK_PLANKS.get());
     }
 
     @Override
@@ -55,6 +56,12 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
 
+    }
+
+    private static void registerEBBookshelf(BlockModelGenerators generator, Block bookshelf, Block planks) {
+        TextureMapping textureMap = TextureMapping.column(TextureMapping.getBlockTexture(bookshelf), TextureMapping.getBlockTexture(planks));
+        ResourceLocation model = ModelTemplates.CUBE_COLUMN.create(bookshelf, textureMap, generator.modelOutput);
+        generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(bookshelf, model));
     }
 
 

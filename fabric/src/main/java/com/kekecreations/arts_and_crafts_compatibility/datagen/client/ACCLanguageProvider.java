@@ -51,6 +51,7 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), "Bleached Knitted Carpet");
         builder.add(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), "Cork Crafting Table");
         builder.add(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), "Chiseled Cork Planks");
+        builder.add(ACCFabricBlocks.CORK_BOOKSHELF.get(), "Cork Bookshelf");
 
 
 

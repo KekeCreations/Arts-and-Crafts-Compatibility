@@ -141,8 +141,18 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), 2, exporter);
+       createShelfBlock(ACCFabricBlocks.CORK_BOOKSHELF.get(), 1, Ingredient.of(ACBlocks.CORK_PLANKS.get()), Ingredient.of(Items.BOOK), exporter);
     }
 
+    public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, count)
+                .define('#', input).define('@', input2)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###")
+                .unlockedBy("unlock", has(Items.BOOK))
+                .save(exporter);
+    }
 
     public void createVerticalStairsRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4)

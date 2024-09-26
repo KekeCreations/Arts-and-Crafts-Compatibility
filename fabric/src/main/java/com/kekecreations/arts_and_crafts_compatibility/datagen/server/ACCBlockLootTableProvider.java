@@ -7,6 +7,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBl
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -55,6 +56,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
         dropSelf(ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
+        add(ACCFabricBlocks.CORK_BOOKSHELF.get(), createSingleItemTable(Items.BOOK, ConstantValue.exactly(3.0F)));
     }
 
     public void dropDyedPotContents(Block flowerPot, Block flowerPotWithPlant) {

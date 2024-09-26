@@ -7,7 +7,9 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricBookshelfBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricCraftingTableBlockItem;
+import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricDecorativeShelfBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricVerticalStairsBlockItem;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -42,7 +44,8 @@ public class ACCFabricBlocks {
 
     public static final Supplier<Block> CORK_CRAFTING_TABLE = registerCraftingTable("cork_crafting_table", () -> new FabricCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CHISELED_CORK_PLANKS = registerCraftingTable("chiseled_cork_planks", () -> new ACCBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
-    public static final Supplier<Block> CORK_BOOKSHELF = registerCraftingTable("cork_bookshelf", () -> new FabricBookshelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_BOOKSHELF = registerBookShelf("cork_bookshelf", () -> new FabricBookshelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_DECORATIVE_SHELF = registerDecorativeShelf("cork_decorative_shelf", () -> new FabricDecorativeShelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
 
 
     public static <T extends Block> Supplier<T> registerVStairs(String id, Supplier<T> blockSupplier) {
@@ -54,6 +57,18 @@ public class ACCFabricBlocks {
     public static <T extends Block> Supplier<T> registerCraftingTable(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricCraftingTableBlockItem(block, new Item.Properties()));
+        return () -> block;
+    }
+
+    public static <T extends Block> Supplier<T> registerBookShelf(String id, Supplier<T> blockSupplier) {
+        var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricBookshelfBlockItem(block, new Item.Properties()));
+        return () -> block;
+    }
+
+    public static <T extends Block> Supplier<T> registerDecorativeShelf(String id, Supplier<T> blockSupplier) {
+        var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricDecorativeShelfBlockItem(block, new Item.Properties()));
         return () -> block;
     }
 

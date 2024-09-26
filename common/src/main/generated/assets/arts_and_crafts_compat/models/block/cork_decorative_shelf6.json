@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arts_and_crafts_compat:block/cork_mosaic",
+    "side": "arts_and_crafts_compat:block/cork_decorative_shelf6"
+  }
+}

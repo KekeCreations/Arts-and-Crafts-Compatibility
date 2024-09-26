@@ -47,6 +47,13 @@ public class ACCModelProvider extends FabricModelProvider {
         generator.createCraftingTableLike(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), TextureMapping::craftingTable);
         generator.createTrivialBlock(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), TexturedModel.COLUMN);
         registerEBBookshelf(generator, ACCFabricBlocks.CORK_BOOKSHELF.get(), ACBlocks.CORK_PLANKS.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "0", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "1", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "2", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "3", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "4", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "5", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "6", ACCFabricBlocks.CORK_MOSAIC.get());
     }
 
     @Override
@@ -55,7 +62,11 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+    }
 
+    private static void registerDecorativeShelfModel(BlockModelGenerators generator, Block bookshelf, String variant, Block planks) {
+        TextureMapping textureMap = TextureMapping.column(TextureMapping.getBlockTexture(bookshelf, variant), TextureMapping.getBlockTexture(planks));
+        ModelTemplates.CUBE_COLUMN.createWithSuffix(bookshelf, variant, textureMap, generator.modelOutput);
     }
 
     private static void registerEBBookshelf(BlockModelGenerators generator, Block bookshelf, Block planks) {

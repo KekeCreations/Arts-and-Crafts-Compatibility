@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "variant=0": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf0" },
+    "variant=1": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf1" },
+    "variant=2": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf2" },
+    "variant=3": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf3" },
+    "variant=4": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf4" },
+    "variant=5": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf5" },
+    "variant=6": { "model": "arts_and_crafts_compat:block/cork_decorative_shelf6" }
+  }
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-26T22:40:58.6534726	Arts And Crafts Compatibility/Block Loot Tables
+// 1.20.1	2024-09-27T00:39:41.0418519	Arts And Crafts Compatibility/Block Loot Tables
 9f4efec7d034b1e1237138283b6a5673a169e608 data\arts_and_crafts_compat\loot_tables\blocks\red_potted_walnut_sapling.json
 7b33b7fc4c071758fb4002cb146f0490cee99343 data\arts_and_crafts_compat\loot_tables\blocks\cyan_potted_azalea_flower.json
 d56e2590603155af3cefb100e7c56a55f609ee11 data\arts_and_crafts_compat\loot_tables\blocks\cyan_potted_coconut_seedling.json
@@ -34,6 +34,7 @@ ba14e42b2c817f9782015c282569642528ddbe0e data\arts_and_crafts_compat\loot_tables
 42ccca497d87d9f161cacbde564bcecb6648c660 data\arts_and_crafts_compat\loot_tables\blocks\blue_potted_azalea_flower.json
 13fc733937fa8548e81ff3624efe93070060e622 data\arts_and_crafts_compat\loot_tables\blocks\purple_potted_azalea_flower.json
 f0bde802b29fb0d5e7e60dd0edc9b6b23661a2aa data\arts_and_crafts_compat\loot_tables\blocks\cork_crafting_table.json
+40cee09dff10b60621305e5c5dad4ad6bcc84089 data\arts_and_crafts_compat\loot_tables\blocks\cork_decorative_shelf.json
 5610f56e606dffabfaf20d2bd02e7c10074a95fe data\arts_and_crafts_compat\loot_tables\blocks\bleached_knitted_wool.json
 1d9729cc999d46a12459befac540419738ab89e4 data\arts_and_crafts_compat\loot_tables\blocks\white_potted_azalea_flower.json
 352314d4ba62a190dce90c5a7dfa9328f3b8042f data\arts_and_crafts_compat\loot_tables\blocks\chiseled_cork_planks.json

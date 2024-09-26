@@ -1,11 +1,13 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -18,6 +20,12 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider arg) {
         gildedSherds();
+        excessiveBuilding();
+    }
+
+    public void excessiveBuilding() {
+        this.getOrCreateTagBuilder(EBTags.Items.MOSAIC)
+                .add(ACCFabricBlocks.CORK_MOSAIC.get().asItem());
     }
 
     private void gildedSherds() {

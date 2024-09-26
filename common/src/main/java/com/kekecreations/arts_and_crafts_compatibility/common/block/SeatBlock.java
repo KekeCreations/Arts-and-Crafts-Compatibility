@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.DBProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DBProperties;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import lilypuree.decorative_blocks.core.Registration;
 import lilypuree.decorative_blocks.entity.DummyEntityForSitting;

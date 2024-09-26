@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -40,6 +41,12 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         //DRAMATIC DOORS
         builder.add(ACCFabricItems.CORK_SHORT_DOOR.get(), "Short Cork Door");
         builder.add(ACCFabricItems.TALL_CORK_DOOR.get(), "Tall Cork Door");
+
+        //EXCESSIVE BUILDING
+        builder.add(ACCFabricBlocks.CORK_MOSAIC.get(), "Cork Mosaic");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), "Cork Mosaic Slab");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(), "Cork Mosaic Stairs");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), "Cork Mosaic Vertical Stairs");
 
 
 

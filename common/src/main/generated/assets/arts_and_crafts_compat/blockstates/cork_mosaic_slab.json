@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "arts_and_crafts_compat:block/cork_mosaic_slab"
+    },
+    "type=double": {
+      "model": "arts_and_crafts_compat:block/cork_mosaic"
+    },
+    "type=top": {
+      "model": "arts_and_crafts_compat:block/cork_mosaic_slab_top"
+    }
+  }
+}

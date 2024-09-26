@@ -4,7 +4,7 @@ import com.fizzware.dramaticdoors.forge.blocks.ShortDoorBlock;
 import com.fizzware.dramaticdoors.forge.blocks.TallDoorBlock;
 import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.Supplier;

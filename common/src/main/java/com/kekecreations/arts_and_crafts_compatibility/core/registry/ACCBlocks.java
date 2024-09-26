@@ -2,12 +2,9 @@ package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
-import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import lilypuree.decorative_blocks.blocks.PalisadeBlock;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import lilypuree.decorative_blocks.blocks.types.VanillaWoodTypes;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;

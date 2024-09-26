@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricShortDoorItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FabricTallDoorItem;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 

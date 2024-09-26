@@ -4,7 +4,7 @@ import com.fizzware.dramaticdoors.forge.items.ShortDoorItem;
 import com.fizzware.dramaticdoors.forge.items.TallDoorItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.ForgeShortDoorItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.ForgeTallDoorItem;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.item.Item;
 
 import java.util.function.Supplier;

@@ -22,6 +22,15 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         farmersDelight();
         decorativeBlocks();
         dramaticDoors();
+        excessiveBuilding();
+    }
+
+    private void excessiveBuilding() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ACCFabricBlocks.CORK_MOSAIC.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
     }
 
     private void dramaticDoors() {

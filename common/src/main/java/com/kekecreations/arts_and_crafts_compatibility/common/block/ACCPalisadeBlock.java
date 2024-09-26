@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import lilypuree.decorative_blocks.blocks.PalisadeBlock;
 import lilypuree.decorative_blocks.blocks.types.IWoodType;

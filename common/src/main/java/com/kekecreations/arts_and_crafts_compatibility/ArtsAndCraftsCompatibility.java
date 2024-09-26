@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.GildedSherdsPatterns;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;

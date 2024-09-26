@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.core.compat;
+package com.kekecreations.arts_and_crafts_compatibility.core.util;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
@@ -35,6 +35,7 @@ public class CompatUtils {
     public static final String COBBLEMON = "cobblemon";
     public static final String NETHER_EXPANSION = "netherexp";
     public static final String MYTHIC_CHARMS = "mythic_charms";
+    public static final String EXCESSIVE_BUILDING = "excessive_building";
 
 
     public static <T extends Item> Supplier<T> registerItem(String name, Supplier<T> itemSupplier) {

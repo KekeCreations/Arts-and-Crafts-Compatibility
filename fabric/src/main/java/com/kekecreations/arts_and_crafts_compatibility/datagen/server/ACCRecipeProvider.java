@@ -8,13 +8,11 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricIt
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
+import net.minecraft.world.level.ItemLike;
 
 import java.util.function.Consumer;
 
@@ -109,5 +107,35 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("unlock", has(ACCItems.GILDED_ROLL_POTTERY_SHERD.get()))
                 .save(exporter);
 
+        //EXCESSIVE BUILDING
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCFabricBlocks.CORK_MOSAIC.get(), 1)
+                .define('#', ACBlocks.CORK_SLAB.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy("unlock", has(ACBlocks.CORK_SLAB.get()))
+                .save(exporter);
+
+        stairBuilder(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(),
+                Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .unlockedBy("unlock", has(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, ACCFabricBlocks.CORK_MOSAIC_SLAB.get(),
+                Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .unlockedBy("unlock", has(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .save(exporter);
+
+       createVerticalStairsRecipe(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get(), exporter);
+    }
+
+
+    public void createVerticalStairsRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                .unlockedBy("unlock", has(input))
+                .define('#', input)
+                .pattern("###")
+                .pattern("## ")
+                .pattern("#  ")
+                .save(exporter);
     }
 }

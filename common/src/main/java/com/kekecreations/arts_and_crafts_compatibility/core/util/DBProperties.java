@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.core.compat;
+package com.kekecreations.arts_and_crafts_compatibility.core.util;
 
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 

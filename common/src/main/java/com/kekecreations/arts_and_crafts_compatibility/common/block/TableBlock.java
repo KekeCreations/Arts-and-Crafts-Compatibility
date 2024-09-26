@@ -1,7 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.TwigsProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.TwigsProperties;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.minecraft.core.BlockPos;

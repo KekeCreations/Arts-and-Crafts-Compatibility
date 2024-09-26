@@ -2,7 +2,7 @@ package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts_compatibility.common.item.CompatItem;
 import com.kekecreations.arts_and_crafts_compatibility.common.item.FuelBlockItem;
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.item.Item;
 
 import java.util.function.Supplier;

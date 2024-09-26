@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
@@ -23,6 +24,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
         ecologics();
         twigs();
         decorativeBlocks();
+        excessiveBuilding();
     }
 
     public void twigs() {
@@ -42,6 +44,13 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCBlocks.getDyedPottedAzaleaFlower(colour));
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCBlocks.getDyedPottedCoconutSeedling(colour));
         }
+    }
+
+    private void excessiveBuilding() {
+        dropSelf(ACCFabricBlocks.CORK_MOSAIC.get());
+        dropSelf(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
+        add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), createSlabItemTable(ACCFabricBlocks.CORK_MOSAIC_SLAB.get()));
+        dropSelf(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
     }
 
     public void dropDyedPotContents(Block flowerPot, Block flowerPotWithPlant) {

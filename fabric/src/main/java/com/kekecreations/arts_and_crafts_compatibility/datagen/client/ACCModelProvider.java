@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.compat.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCModelTemplates;
@@ -15,6 +16,7 @@ import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.yirmiri.excessive_building.datagen.EBModelGen;
 
 public class ACCModelProvider extends FabricModelProvider {
     public ACCModelProvider(FabricDataOutput output) {
@@ -33,6 +35,13 @@ public class ACCModelProvider extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider corkShakes = generator.family(ACCBlocks.CORK_SHAKES.get());
         corkShakes.stairs(ACCBlocks.CORK_SHAKES_STAIRS.get());
         corkShakes.slab(ACCBlocks.CORK_SHAKES_SLAB.get());
+
+
+        //EXCESSIVE BUILDING
+        BlockModelGenerators.BlockFamilyProvider corkMosaic = generator.family(ACCFabricBlocks.CORK_MOSAIC.get());
+        corkMosaic.stairs(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
+        corkMosaic.slab(ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
+        EBModelGen.EBModels.registerVerticalStairs(generator, ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get());
     }
 
     @Override

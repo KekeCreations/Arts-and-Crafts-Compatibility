@@ -41,6 +41,7 @@ public class ACCFabricBlocks {
     public static final Supplier<Block> BLEACHED_KNITTED_CARPET = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "bleached_knitted_carpet", () -> new ACCCarpetBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(DyeColor.WHITE)));
 
     public static final Supplier<Block> CORK_CRAFTING_TABLE = registerCraftingTable("cork_crafting_table", () -> new FabricCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CHISELED_CORK_PLANKS = registerCraftingTable("chiseled_cork_planks", () -> new ACCBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
 
     public static <T extends Block> Supplier<T> registerVStairs(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());

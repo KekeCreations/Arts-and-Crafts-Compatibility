@@ -54,6 +54,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
         dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
+        dropSelf(ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
     }
 
     public void dropDyedPotContents(Block flowerPot, Block flowerPotWithPlant) {

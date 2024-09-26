@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.compat;
 
-import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
@@ -41,7 +40,7 @@ public class CompatUtils {
         return Services.REGISTRY.register(BuiltInRegistries.ITEM, name, itemSupplier);
     }
 
-    public static <T extends Block> Supplier<T> registerBlockWithItem(String modID, String name, java.util.function.Supplier<T> blockSupplier) {
+    public static <T extends Block> Supplier<T> registerBlockWithItem(String modID, String name, Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(modID, name, blockSupplier);
     }
 

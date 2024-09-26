@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -20,6 +21,13 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         built();
         farmersDelight();
         decorativeBlocks();
+        dramaticDoors();
+    }
+
+    private void dramaticDoors() {
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(ACCFabricBlocks.SHORT_CORK_DOOR.get())
+                .add(ACCFabricBlocks.TALL_CORK_DOOR.get());
     }
 
     private void decorativeBlocks() {

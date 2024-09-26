@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "arts_and_crafts:cork_door"
   },
-  "result": "arts_and_crafts_compat:short_cork_door",
-  "count": 2
+  "result": "arts_and_crafts_compat:short_cork_door"
 }

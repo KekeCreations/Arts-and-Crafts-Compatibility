@@ -3,6 +3,8 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -12,6 +14,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
 
 import java.util.function.Consumer;
 
@@ -23,6 +26,15 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+        //DRAMATIC DOORS
+        stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACCFabricItems.CORK_SHORT_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCFabricItems.TALL_CORK_DOOR.get(), 2)
+                .pattern("#")
+                .pattern("#")
+                .pattern("#")
+                .define('#', ACBlocks.CORK_DOOR.get())
+                .unlockedBy("has_planks", has(ACBlocks.CORK_TRAPDOOR.get()))
+                .save(exporter);
         //FARMERS DELIGHT
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_CABINET.get())
                 .pattern("___")

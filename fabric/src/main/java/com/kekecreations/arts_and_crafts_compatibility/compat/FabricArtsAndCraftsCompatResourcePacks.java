@@ -13,14 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.Optional;
 
 public class FabricArtsAndCraftsCompatResourcePacks {
-    private static void registerBuiltinResourcePack(ModContainer modContainer, String forModID) {
-        ResourceManagerHelper.registerBuiltinResourcePack(
-                new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, forModID + "_resource_pack"),
-                modContainer,
-                Component.translatable("pack." + ArtsAndCraftsCompatibility.MOD_ID + "." + forModID),
-                ResourcePackActivationType.ALWAYS_ENABLED
-        );
-    }
     private static void registerBuiltinDataPack(ModContainer modContainer, String packId) {
         ResourceManagerHelper.registerBuiltinResourcePack(
                 new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, packId + "_datapack"),
@@ -35,10 +27,6 @@ public class FabricArtsAndCraftsCompatResourcePacks {
         if (modContainer.isPresent()) {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.TWIGS)) {
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.TWIGS);
-            }
-            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
-                registerBuiltinResourcePack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
-                registerBuiltinDataPack(modContainer.get(), CompatUtils.DRAMATIC_DOORS);
             }
         }
     }

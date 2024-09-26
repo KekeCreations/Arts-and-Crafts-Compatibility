@@ -46,14 +46,6 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                 bpTwigs(event);
             }
         }
-        if (Services.PLATFORM.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
-            if (event.getPackType() == PackType.CLIENT_RESOURCES) {
-                rpDramaticDoors(event);
-            }
-            if (event.getPackType() == PackType.SERVER_DATA) {
-                bpDramaticDoors(event);
-            }
-        }
     }
 
 
@@ -68,20 +60,5 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                         (path) -> new PathPackResources(path, file, true),
                         new Pack.Info(Component.literal("Arts & Crafts Compat features for Twigs"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
                         PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
-    }
-
-
-    private static void rpDramaticDoors(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_resource_pack");
-        var pack = Pack.readMetaAndCreate("builtin/dramaticdoors_resource_pack", Component.literal("Dramatic Doors Compatibility Resource Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.CLIENT_RESOURCES, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
-    }
-
-    private static void bpDramaticDoors(AddPackFindersEvent event) {
-        var resourcePath = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID).getFile().findResource("resourcepacks/dramaticdoors_datapack");
-        var pack = Pack.readMetaAndCreate("builtin/dramaticdoors_datapack", Component.literal("Dramatic Doors Compatibility Data Pack"), true,
-                (path) -> new PathPackResources(path, resourcePath, false), PackType.SERVER_DATA, Pack.Position.BOTTOM, PackSource.BUILT_IN);
-        event.addRepositorySource((packConsumer) -> packConsumer.accept(pack));
     }
 }

@@ -1,7 +1,7 @@
-// 1.20.1	2024-09-26T00:31:04.5428843	Arts And Crafts Compatibility/Tags for minecraft:block
+// 1.20.1	2024-09-26T01:41:47.8527412	Arts And Crafts Compatibility/Tags for minecraft:block
 fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
 f56d6f8d22d9f8087fdacf131e598c29900f8c1b data\minecraft\tags\blocks\flower_pots.json
-c5f4775c5d8452661cc5a5d5fd830aebc33f0c70 data\minecraft\tags\blocks\mineable\axe.json
+86dca328b7e901407d93ab81d7ce09989faad2ae data\minecraft\tags\blocks\mineable\axe.json
 142233e7b9fbeaff5b9da1d2c184791cd8d10080 data\minecraft\tags\blocks\mineable\pickaxe.json
 142233e7b9fbeaff5b9da1d2c184791cd8d10080 data\minecraft\tags\blocks\walls.json
 a68f609262a5e4e557301cd696eaf3ea01b2500e data\minecraft\tags\blocks\wooden_stairs.json

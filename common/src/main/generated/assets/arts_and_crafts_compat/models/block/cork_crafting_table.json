@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "arts_and_crafts:block/cork_planks",
+    "east": "arts_and_crafts_compat:block/cork_crafting_table_side",
+    "north": "arts_and_crafts_compat:block/cork_crafting_table_front",
+    "particle": "arts_and_crafts_compat:block/cork_crafting_table_front",
+    "south": "arts_and_crafts_compat:block/cork_crafting_table_side",
+    "up": "arts_and_crafts_compat:block/cork_crafting_table_top",
+    "west": "arts_and_crafts_compat:block/cork_crafting_table_front"
+  }
+}

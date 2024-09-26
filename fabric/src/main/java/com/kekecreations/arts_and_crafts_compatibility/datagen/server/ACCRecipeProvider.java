@@ -141,7 +141,8 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
            eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
            eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
        }
-       fourByFourRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), exporter);
+       twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
+       twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
     }
 
 
@@ -155,8 +156,8 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
     }
 
-    public void fourByFourRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+    public void twoByTwoRecipe(ItemLike output, ItemLike input, int count, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, count)
                 .unlockedBy("unlock", has(input))
                 .define('#', input)
                 .pattern("##")

@@ -30,7 +30,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCFabricBlocks.CORK_MOSAIC.get())
                 .add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get())
                 .add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get())
-                .add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
+                .add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL)
                 .add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)

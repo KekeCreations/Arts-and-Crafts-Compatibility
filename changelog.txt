@@ -3,6 +3,7 @@ V1.2.0
 • Dropped Caffeinated Support
 • Added Portuguese Brazilian translations
 • Fixed crashes related to resource pack loading and servers
+• Added Mythic Charms Compat
 
 
 V1.1.0

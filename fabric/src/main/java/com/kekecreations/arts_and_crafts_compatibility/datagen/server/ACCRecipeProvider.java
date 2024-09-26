@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
@@ -9,10 +10,17 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.function.Consumer;
 
@@ -126,6 +134,14 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
 
        createVerticalStairsRecipe(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get(), exporter);
+       carpet(exporter, ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
+       eightDyeRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), EBTags.Items.KNITTED_WOOL, ACItems.BLEACHDEW.get(), exporter);
+       eightDyeRecipe(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), EBTags.Items.KNITTED_CARPET, ACItems.BLEACHDEW.get(), exporter);
+       for (DyeColor colour : DyeColor.values()) {
+           eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
+           eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
+       }
+       fourByFourRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), exporter);
     }
 
 
@@ -137,5 +153,36 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .pattern("## ")
                 .pattern("#  ")
                 .save(exporter);
+    }
+
+    public void fourByFourRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+                .unlockedBy("unlock", has(input))
+                .define('#', input)
+                .pattern("##")
+                .pattern("##")
+                .save(exporter);
+    }
+
+    public void eightDyeRecipe(ItemLike output, TagKey<Item> input, ItemLike dye, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .unlockedBy("unlock", has(input))
+                .define('#', input)
+                .define('K', dye)
+                .pattern("###")
+                .pattern("#K#")
+                .pattern("###")
+                .save(exporter, getItemName(output) + "_dye_recipe");
+    }
+
+    public void eightDyeRecipe(ItemLike output, ItemLike input, ItemLike dye, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .unlockedBy("unlock", has(input))
+                .define('#', input)
+                .define('K', dye)
+                .pattern("###")
+                .pattern("#K#")
+                .pattern("###")
+                .save(exporter, getItemName(output) + "_dye_recipe");
     }
 }

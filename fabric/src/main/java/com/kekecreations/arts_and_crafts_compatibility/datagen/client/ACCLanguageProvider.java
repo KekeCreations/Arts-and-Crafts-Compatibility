@@ -47,6 +47,8 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), "Cork Mosaic Slab");
         builder.add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(), "Cork Mosaic Stairs");
         builder.add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), "Cork Mosaic Vertical Stairs");
+        builder.add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), "Bleached Knitted Wool");
+        builder.add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), "Bleached Knitted Carpet");
 
 
 

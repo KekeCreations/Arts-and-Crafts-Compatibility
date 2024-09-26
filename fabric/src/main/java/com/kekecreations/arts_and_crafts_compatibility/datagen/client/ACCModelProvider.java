@@ -42,6 +42,7 @@ public class ACCModelProvider extends FabricModelProvider {
         corkMosaic.stairs(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
         corkMosaic.slab(ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
         EBModelGen.EBModels.registerVerticalStairs(generator, ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get());
+        generator.createFullAndCarpetBlocks(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
     }
 
     @Override

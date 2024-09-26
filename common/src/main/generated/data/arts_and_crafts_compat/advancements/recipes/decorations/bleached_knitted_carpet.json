@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bleached_knitted_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts_compat:bleached_knitted_wool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts_compat:bleached_knitted_carpet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bleached_knitted_wool",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts_compat:bleached_knitted_carpet"
+    ]
+  },
+  "sends_telemetry_event": false
+}

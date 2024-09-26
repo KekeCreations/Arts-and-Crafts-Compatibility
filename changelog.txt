@@ -2,6 +2,7 @@ V1.2.0
 • Rewrote the entire mod to fix bugs and to make adding compat easier for me
 • Dropped Caffeinated Support
 • Added Portuguese Brazilian translations
+• Fixed crashes related to resource pack loading and servers
 
 
 V1.1.0

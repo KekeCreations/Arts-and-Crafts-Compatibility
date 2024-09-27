@@ -1,0 +1,22 @@
+{
+  "blocks": "#arts_and_crafts_compat:paintable/knitted_carpet",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "excessive_building:white_knitted_carpet",
+    "arts_and_crafts:light_gray_paintbrush": "excessive_building:light_gray_knitted_carpet",
+    "arts_and_crafts:gray_paintbrush": "excessive_building:gray_knitted_carpet",
+    "arts_and_crafts:black_paintbrush": "excessive_building:black_knitted_carpet",
+    "arts_and_crafts:brown_paintbrush": "excessive_building:brown_knitted_carpet",
+    "arts_and_crafts:red_paintbrush": "excessive_building:red_knitted_carpet",
+    "arts_and_crafts:orange_paintbrush": "excessive_building:orange_knitted_carpet",
+    "arts_and_crafts:yellow_paintbrush": "excessive_building:yellow_knitted_carpet",
+    "arts_and_crafts:lime_paintbrush": "excessive_building:lime_knitted_carpet",
+    "arts_and_crafts:green_paintbrush": "excessive_building:green_knitted_carpet",
+    "arts_and_crafts:cyan_paintbrush": "excessive_building:cyan_knitted_carpet",
+    "arts_and_crafts:light_blue_paintbrush": "excessive_building:light_blue_knitted_carpet",
+    "arts_and_crafts:blue_paintbrush": "excessive_building:blue_knitted_carpet",
+    "arts_and_crafts:purple_paintbrush": "excessive_building:purple_knitted_carpet",
+    "arts_and_crafts:magenta_paintbrush": "excessive_building:magenta_knitted_carpet",
+    "arts_and_crafts:pink_paintbrush": "excessive_building:pink_knitted_carpet",
+    "arts_and_crafts:bleachdew_paintbrush": "arts_and_crafts_compat:bleached_knitted_carpet"
+  }
+}

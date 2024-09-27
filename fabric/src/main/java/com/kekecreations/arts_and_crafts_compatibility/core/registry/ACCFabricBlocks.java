@@ -23,6 +23,7 @@ import java.util.function.Supplier;
 
 public class ACCFabricBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
 
     //DRAMATIC DOORS
     public static final Supplier<Block> SHORT_CORK_DOOR = CompatUtils.registerBlock("short_cork_door",
@@ -48,14 +49,20 @@ public class ACCFabricBlocks {
     public static final Supplier<Block> CORK_LADDER = registerLadder("cork_ladder", () -> new ACCLadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER).sounds(ACSoundTypes.CORK)));
 
     public static final Supplier<Block> TERRACOTTA_SHINGLE_VERTICAL_STAIRS = registerVStairs("terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get())));
+    public static final Supplier<Block> SOAPSTONE_VERTICAL_STAIRS = registerVStairs("soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get())));
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));
+            DYED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get()))));
         }
     }
 
     public static Block getDyedTerracottaShingleVerticalStairs(int colours) {
         return DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedSoapstoneVerticalStairs(int colours) {
+        return DYED_SOAPSTONE_VERTICAL_STAIRS.get(DyeColor.byId(colours)).get();
     }
 
 

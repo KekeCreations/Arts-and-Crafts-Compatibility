@@ -138,6 +138,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
            eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
            eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
            createVerticalStairsRecipe(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()), exporter);
        }
        twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
@@ -146,6 +147,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        createShelfBlock(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), 1, Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()), Ingredient.of(Items.BOOK), exporter);
        createLadderRecipe(ACCFabricBlocks.CORK_LADDER.get(), ACBlocks.CORK_PLANKS.get(), exporter);
        createVerticalStairsRecipe(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get(), exporter);
+        createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get(), exporter);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {

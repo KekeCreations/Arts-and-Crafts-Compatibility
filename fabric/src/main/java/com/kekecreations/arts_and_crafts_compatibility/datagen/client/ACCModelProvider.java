@@ -62,8 +62,10 @@ public class ACCModelProvider extends FabricModelProvider {
         registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "6", ACCFabricBlocks.CORK_MOSAIC.get());
         registerLadder(generator, ACCFabricBlocks.CORK_LADDER.get());
         registerVerticalStairs(generator, ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get());
         for (DyeColor colour : DyeColor.values()) {
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
         }
     }
 

@@ -6,6 +6,8 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricIt
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.world.item.DyeColor;
+import org.apache.commons.lang3.StringUtils;
 
 public class ACCLanguageProvider extends FabricLanguageProvider {
     public ACCLanguageProvider(FabricDataOutput dataOutput) {
@@ -53,6 +55,12 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), "Chiseled Cork Planks");
         builder.add(ACCFabricBlocks.CORK_BOOKSHELF.get(), "Cork Bookshelf");
         builder.add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "Cork Decorative Shelf");
+        builder.add(ACCFabricBlocks.CORK_LADDER.get(), "Cork Ladder");
+        for (DyeColor colour : DyeColor.values()) {
+            String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
+
+            builder.add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
+        }
 
 
 

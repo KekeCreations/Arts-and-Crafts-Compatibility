@@ -34,7 +34,10 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCFabricBlocks.CORK_CRAFTING_TABLE.get())
                 .add(ACCFabricBlocks.CHISELED_CORK_PLANKS.get())
                 .add(ACCFabricBlocks.CORK_BOOKSHELF.get())
-                .add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
+                .add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get())
+                .add(ACCFabricBlocks.CORK_LADDER.get());
+        this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(ACCFabricBlocks.CORK_LADDER.get());
         this.getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get())
                 .add(ACCFabricBlocks.CORK_BOOKSHELF.get());
@@ -42,6 +45,10 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
                 .add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
+        for (DyeColor colour : DyeColor.values()) {
+            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
+        }
     }
 
     private void dramaticDoors() {

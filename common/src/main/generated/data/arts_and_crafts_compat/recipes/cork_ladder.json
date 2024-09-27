@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "@": {
+      "item": "arts_and_crafts:cork_planks"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#@#",
+    "# #"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts_compat:cork_ladder"
+  },
+  "show_notification": true
+}

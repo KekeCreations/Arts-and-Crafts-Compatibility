@@ -137,12 +137,14 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        for (DyeColor colour : DyeColor.values()) {
            eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
            eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
        }
        twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), 2, exporter);
        createShelfBlock(ACCFabricBlocks.CORK_BOOKSHELF.get(), 1, Ingredient.of(ACBlocks.CORK_PLANKS.get()), Ingredient.of(Items.BOOK), exporter);
        createShelfBlock(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), 1, Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()), Ingredient.of(Items.BOOK), exporter);
+       createLadderRecipe(ACCFabricBlocks.CORK_LADDER.get(), ACBlocks.CORK_PLANKS.get(), exporter);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {
@@ -194,5 +196,14 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .pattern("#K#")
                 .pattern("###")
                 .save(exporter, getItemName(output) + "_dye_recipe");
+    }
+    public void createLadderRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 8)
+                .define('#', Ingredient.of(Items.STICK)).define('@', input)
+                .pattern("# #")
+                .pattern("#@#")
+                .pattern("# #")
+                .unlockedBy("unlock", has(input))
+                .save(exporter);
     }
 }

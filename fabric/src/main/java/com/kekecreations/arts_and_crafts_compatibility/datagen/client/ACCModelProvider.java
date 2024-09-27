@@ -9,14 +9,20 @@ import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCMo
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCTextureMapping;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.core.Direction;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.yirmiri.excessive_building.datagen.EBModelGen;
 
 public class ACCModelProvider extends FabricModelProvider {
@@ -54,6 +60,10 @@ public class ACCModelProvider extends FabricModelProvider {
         registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "4", ACCFabricBlocks.CORK_MOSAIC.get());
         registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "5", ACCFabricBlocks.CORK_MOSAIC.get());
         registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "6", ACCFabricBlocks.CORK_MOSAIC.get());
+        registerLadder(generator, ACCFabricBlocks.CORK_LADDER.get());
+        for (DyeColor colour : DyeColor.values()) {
+            registerVerticalStairs(generator, ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+        }
     }
 
     @Override
@@ -62,6 +72,17 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ACCFabricBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
+    }
+
+    public static void registerLadder(BlockModelGenerators generator, Block ladder) {
+        ResourceLocation model = EBModelGen.EBModels.LADDER.create(ladder, TextureMapping.defaultTexture(ladder), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(ladder).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING).select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true)).select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true)).select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true)).select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
+    }
+
+    public static void registerVerticalStairs(BlockModelGenerators generator, Block verticalStairs, Block texture) {
+        ResourceLocation model = EBModelGen.EBModels.VERTICAL_STAIRS.create(verticalStairs, TextureMapping.defaultTexture(texture), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(verticalStairs).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING).select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true)).select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true)).select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true)).select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
     }
 
     private static void registerDecorativeShelfModel(BlockModelGenerators generator, Block bookshelf, String variant, Block planks) {

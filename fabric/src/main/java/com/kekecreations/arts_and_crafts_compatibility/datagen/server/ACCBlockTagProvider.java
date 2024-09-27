@@ -45,6 +45,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
                 .add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
+        this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));

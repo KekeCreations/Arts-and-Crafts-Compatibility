@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
@@ -15,6 +16,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 
 public class FabricArtsAndCraftsCompatibility implements ModInitializer {
     
@@ -81,6 +83,24 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
                 event.addBefore(ACBlocks.CORK_DOOR.get(), ACCFabricBlocks.SHORT_CORK_DOOR.get());
                 event.addAfter(ACBlocks.CORK_DOOR.get(), ACCFabricBlocks.TALL_CORK_DOOR.get());
             });
+        }
+        if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "excessive_building"))).register(event -> {
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "acacia_ladder")), ACCFabricBlocks.CORK_MOSAIC.get());
+                event.addAfter(ACCFabricBlocks.CORK_MOSAIC.get(), ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
+                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
+                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
+                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
+                event.addAfter(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), ACCFabricBlocks.CORK_BOOKSHELF.get());
+                event.addAfter(ACCFabricBlocks.CORK_BOOKSHELF.get(), ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
+                event.addAfter(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
+                event.addAfter(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACCFabricBlocks.CORK_LADDER.get());
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "waxed_oxidized_cut_copper_vertical_stairs")), ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
+                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
+                    event.addAfter(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
+                }
+            });
+
         }
     }
 }

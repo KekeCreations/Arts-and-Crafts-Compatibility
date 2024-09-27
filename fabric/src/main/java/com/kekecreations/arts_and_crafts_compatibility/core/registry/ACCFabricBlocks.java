@@ -47,6 +47,7 @@ public class ACCFabricBlocks {
     public static final Supplier<Block> CORK_DECORATIVE_SHELF = registerDecorativeShelf("cork_decorative_shelf", () -> new FabricDecorativeShelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CORK_LADDER = registerLadder("cork_ladder", () -> new ACCLadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER).sounds(ACSoundTypes.CORK)));
 
+    public static final Supplier<Block> TERRACOTTA_SHINGLE_VERTICAL_STAIRS = registerVStairs("terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get())));
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));

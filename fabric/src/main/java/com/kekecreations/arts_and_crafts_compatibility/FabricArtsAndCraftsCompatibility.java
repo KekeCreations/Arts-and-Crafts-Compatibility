@@ -95,7 +95,10 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
                 event.addAfter(ACCFabricBlocks.CORK_BOOKSHELF.get(), ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
                 event.addAfter(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
                 event.addAfter(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACCFabricBlocks.CORK_LADDER.get());
-                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "waxed_oxidized_cut_copper_vertical_stairs")), ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "waxed_oxidized_cut_copper_vertical_stairs")), ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get());
+                event.addAfter(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
+                event.addAfter(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
+                event.addAfter(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
                     event.addAfter(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
                 }

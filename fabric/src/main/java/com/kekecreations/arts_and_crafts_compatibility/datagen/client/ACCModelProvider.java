@@ -63,6 +63,9 @@ public class ACCModelProvider extends FabricModelProvider {
         registerLadder(generator, ACCFabricBlocks.CORK_LADDER.get());
         registerVerticalStairs(generator, ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
         registerVerticalStairs(generator, ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get());
         for (DyeColor colour : DyeColor.values()) {
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));

@@ -50,6 +50,10 @@ public class ACCFabricBlocks {
 
     public static final Supplier<Block> TERRACOTTA_SHINGLE_VERTICAL_STAIRS = registerVStairs("terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get())));
     public static final Supplier<Block> SOAPSTONE_VERTICAL_STAIRS = registerVStairs("soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get())));
+    public static final Supplier<Block> GYPSUM_VERTICAL_STAIRS = registerVStairs("gypsum_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM.get())));
+    public static final Supplier<Block> POLISHED_GYPSUM_VERTICAL_STAIRS = registerVStairs("polished_gypsum_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_GYPSUM.get())));
+    public static final Supplier<Block> GYPSUM_BRICK_VERTICAL_STAIRS = registerVStairs("gypsum_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM_BRICKS.get())));
+
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));

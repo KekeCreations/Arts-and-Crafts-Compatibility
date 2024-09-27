@@ -58,6 +58,9 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCFabricBlocks.CORK_LADDER.get(), "Cork Ladder");
         builder.add(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(),"Terracotta Shingle Vertical Stairs");
         builder.add(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(),"Soapstone Vertical Stairs");
+        builder.add(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(),"Gypsum Vertical Stairs");
+        builder.add(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(),"Polished Gypsum Vertical Stairs");
+        builder.add(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(),"Gypsum Brick Vertical Stairs");
         for (DyeColor colour : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
 

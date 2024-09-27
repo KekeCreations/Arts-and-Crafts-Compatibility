@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:gypsum"
+    }
+  },
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts_compat:gypsum_vertical_stairs"
+  },
+  "show_notification": true
+}

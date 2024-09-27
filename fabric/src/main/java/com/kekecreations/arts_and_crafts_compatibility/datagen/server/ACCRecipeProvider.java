@@ -147,7 +147,10 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        createShelfBlock(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), 1, Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()), Ingredient.of(Items.BOOK), exporter);
        createLadderRecipe(ACCFabricBlocks.CORK_LADDER.get(), ACBlocks.CORK_PLANKS.get(), exporter);
        createVerticalStairsRecipe(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get(), exporter);
-        createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {

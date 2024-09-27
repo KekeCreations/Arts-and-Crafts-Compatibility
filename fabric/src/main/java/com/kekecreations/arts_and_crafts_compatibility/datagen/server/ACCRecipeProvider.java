@@ -139,6 +139,8 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
            eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
            createVerticalStairsRecipe(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
            createVerticalStairsRecipe(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()), exporter);
        }
        twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
        twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
@@ -151,6 +153,8 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get(), exporter);
        createVerticalStairsRecipe(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get(), exporter);
        createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get(), exporter);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {

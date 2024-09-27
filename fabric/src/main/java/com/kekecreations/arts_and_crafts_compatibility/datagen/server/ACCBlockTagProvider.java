@@ -50,11 +50,15 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get())
                 .add(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get())
                 .add(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get())
-                .add(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
+                .add(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
+                    .add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
         }
     }
 

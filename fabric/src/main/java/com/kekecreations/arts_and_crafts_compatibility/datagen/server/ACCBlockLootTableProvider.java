@@ -63,9 +63,13 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get());
         dropSelf(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
         dropSelf(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
+        dropSelf(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
+        dropSelf(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
             dropSelf(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
             dropSelf(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
         }
     }
 

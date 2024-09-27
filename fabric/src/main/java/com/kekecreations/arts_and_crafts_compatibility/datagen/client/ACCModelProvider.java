@@ -66,9 +66,13 @@ public class ACCModelProvider extends FabricModelProvider {
         registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get());
         registerVerticalStairs(generator, ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get());
         registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get());
         for (DyeColor colour : DyeColor.values()) {
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
+            registerVerticalStairs(generator, ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+            registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
         }
     }
 

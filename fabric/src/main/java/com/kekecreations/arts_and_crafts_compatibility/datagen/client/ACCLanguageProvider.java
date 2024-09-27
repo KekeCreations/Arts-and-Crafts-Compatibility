@@ -70,6 +70,7 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
             builder.add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
             builder.add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");
             builder.add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), stringColour + " Soapstone Brick Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), stringColour + " Mud Brick Vertical Stairs");
         }
 
 

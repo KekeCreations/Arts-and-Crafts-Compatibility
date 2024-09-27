@@ -113,9 +113,9 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
                 event.addAfter(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
                     event.addAfter(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+                    event.addAfter(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(DyeColor.PINK.getId()), ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
                 }
             });
-
         }
     }
 }

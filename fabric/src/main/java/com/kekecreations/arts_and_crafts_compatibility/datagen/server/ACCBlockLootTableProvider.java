@@ -70,6 +70,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
             dropSelf(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
             dropSelf(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+            dropSelf(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
         }
     }
 

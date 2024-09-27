@@ -26,6 +26,7 @@ public class ACCFabricBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_VERTICAL_STAIRS = new HashMap<>();
 
     //DRAMATIC DOORS
     public static final Supplier<Block> SHORT_CORK_DOOR = CompatUtils.registerBlock("short_cork_door",
@@ -60,9 +61,10 @@ public class ACCFabricBlocks {
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));
-            DYED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get()))));
-            DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_polished_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_SOAPSTONE.get()))));
-            DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE_BRICKS.get()))));
+            DYED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstone(colour.getId())))));
+            DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_polished_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedPolishedSoapstone(colour.getId())))));
+            DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstoneBricks(colour.getId())))));
+            DYED_MUD_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_mud_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedMudBricks(colour.getId())))));
         }
     }
 
@@ -78,6 +80,9 @@ public class ACCFabricBlocks {
     }
     public static Block getDyedSoapstoneBrickVerticalStairs(int colours) {
         return DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.get(DyeColor.byId(colours)).get();
+    }
+    public static Block getDyedMudBrickVerticalStairs(int colours) {
+        return DYED_MUD_BRICK_VERTICAL_STAIRS.get(DyeColor.byId(colours)).get();
     }
 
 

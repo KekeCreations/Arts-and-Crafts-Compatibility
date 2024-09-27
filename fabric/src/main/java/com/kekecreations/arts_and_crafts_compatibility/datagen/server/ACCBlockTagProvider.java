@@ -58,7 +58,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+                    .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
         }
     }
 

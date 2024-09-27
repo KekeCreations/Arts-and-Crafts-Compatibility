@@ -1,5 +1,5 @@
 {
-  "parent": "excessive_building:block/template_ladder",
+  "parent": "arts_and_crafts_compat:template/credit_to_yirmiri/template_ladder",
   "textures": {
     "particle": "arts_and_crafts_compat:block/cork_ladder",
     "texture": "arts_and_crafts_compat:block/cork_ladder"

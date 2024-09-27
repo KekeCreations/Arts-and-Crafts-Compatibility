@@ -23,7 +23,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.yirmiri.excessive_building.datagen.EBModelGen;
 
 public class ACCModelProvider extends FabricModelProvider {
     public ACCModelProvider(FabricDataOutput output) {
@@ -48,7 +47,7 @@ public class ACCModelProvider extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider corkMosaic = generator.family(ACCFabricBlocks.CORK_MOSAIC.get());
         corkMosaic.stairs(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
         corkMosaic.slab(ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
-        EBModelGen.EBModels.registerVerticalStairs(generator, ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get());
+        registerVerticalStairs(generator, ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get());
         generator.createFullAndCarpetBlocks(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
         generator.createCraftingTableLike(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), TextureMapping::craftingTable);
         generator.createTrivialBlock(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), TexturedModel.COLUMN);
@@ -87,12 +86,12 @@ public class ACCModelProvider extends FabricModelProvider {
     }
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {
-        ResourceLocation model = EBModelGen.EBModels.LADDER.create(ladder, TextureMapping.defaultTexture(ladder), generator.modelOutput);
+        ResourceLocation model = ACCModelTemplates.LADDER.create(ladder, TextureMapping.defaultTexture(ladder), generator.modelOutput);
         generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(ladder).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING).select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true)).select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true)).select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true)).select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
     }
 
     public static void registerVerticalStairs(BlockModelGenerators generator, Block verticalStairs, Block texture) {
-        ResourceLocation model = EBModelGen.EBModels.VERTICAL_STAIRS.create(verticalStairs, TextureMapping.defaultTexture(texture), generator.modelOutput);
+        ResourceLocation model = ACCModelTemplates.VERTICAL_STAIRS.create(verticalStairs, TextureMapping.defaultTexture(texture), generator.modelOutput);
         generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(verticalStairs).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING).select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true)).select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true)).select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true)).select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
     }
 

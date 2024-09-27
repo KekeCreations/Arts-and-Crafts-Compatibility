@@ -1,0 +1,22 @@
+{
+  "blocks": "#arts_and_crafts_compat:paintable/soapstone_brick_vertical_stairs",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "arts_and_crafts_compat:white_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:light_gray_paintbrush": "arts_and_crafts_compat:light_gray_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:gray_paintbrush": "arts_and_crafts_compat:gray_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:black_paintbrush": "arts_and_crafts_compat:black_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:brown_paintbrush": "arts_and_crafts_compat:brown_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:red_paintbrush": "arts_and_crafts_compat:red_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:orange_paintbrush": "arts_and_crafts_compat:orange_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:yellow_paintbrush": "arts_and_crafts_compat:yellow_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:lime_paintbrush": "arts_and_crafts_compat:lime_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:green_paintbrush": "arts_and_crafts_compat:green_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:cyan_paintbrush": "arts_and_crafts_compat:cyan_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:light_blue_paintbrush": "arts_and_crafts_compat:light_blue_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:blue_paintbrush": "arts_and_crafts_compat:blue_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:purple_paintbrush": "arts_and_crafts_compat:purple_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:magenta_paintbrush": "arts_and_crafts_compat:magenta_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:pink_paintbrush": "arts_and_crafts_compat:pink_soapstone_brick_vertical_stairs",
+    "arts_and_crafts:bleachdew_paintbrush": "arts_and_crafts_compat:soapstone_brick_vertical_stairs"
+  }
+}

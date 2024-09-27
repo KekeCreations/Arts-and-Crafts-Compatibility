@@ -1,0 +1,22 @@
+{
+  "blocks": "#arts_and_crafts_compat:paintable/polished_almentra_slab",
+  "mappings": {
+    "arts_and_crafts:white_paintbrush": "excessive_building:white_polished_almentra_slab",
+    "arts_and_crafts:light_gray_paintbrush": "excessive_building:light_gray_polished_almentra_slab",
+    "arts_and_crafts:gray_paintbrush": "excessive_building:gray_polished_almentra_slab",
+    "arts_and_crafts:black_paintbrush": "excessive_building:black_polished_almentra_slab",
+    "arts_and_crafts:brown_paintbrush": "excessive_building:brown_polished_almentra_slab",
+    "arts_and_crafts:red_paintbrush": "excessive_building:red_polished_almentra_slab",
+    "arts_and_crafts:orange_paintbrush": "excessive_building:orange_polished_almentra_slab",
+    "arts_and_crafts:yellow_paintbrush": "excessive_building:yellow_polished_almentra_slab",
+    "arts_and_crafts:lime_paintbrush": "excessive_building:lime_polished_almentra_slab",
+    "arts_and_crafts:green_paintbrush": "excessive_building:green_polished_almentra_slab",
+    "arts_and_crafts:cyan_paintbrush": "excessive_building:cyan_polished_almentra_slab",
+    "arts_and_crafts:light_blue_paintbrush": "excessive_building:light_blue_polished_almentra_slab",
+    "arts_and_crafts:blue_paintbrush": "excessive_building:blue_polished_almentra_slab",
+    "arts_and_crafts:purple_paintbrush": "excessive_building:purple_polished_almentra_slab",
+    "arts_and_crafts:magenta_paintbrush": "excessive_building:magenta_polished_almentra_slab",
+    "arts_and_crafts:pink_paintbrush": "excessive_building:pink_polished_almentra_slab",
+    "arts_and_crafts:bleachdew_paintbrush": "excessive_building:polished_almentra_slab"
+  }
+}

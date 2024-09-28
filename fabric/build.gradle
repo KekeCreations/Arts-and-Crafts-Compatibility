@@ -21,7 +21,7 @@ dependencies {
     modImplementation "curse.maven:ecologics-570463:4857271"
     modImplementation "curse.maven:cloth-config-348521:4973440"
     modImplementation "curse.maven:dramatic-doors-380617:5476685"
-    modImplementation "curse.maven:excessive-building-845097:5701549"
+    modImplementation "curse.maven:excessive-building-845097:5765499"
     modImplementation "curse.maven:forge-config-api-port-fabric-547434:4583000"
 
     //Optional

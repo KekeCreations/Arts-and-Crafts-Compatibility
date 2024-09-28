@@ -30,13 +30,6 @@ ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="excessive_building"
-mandatory=false
-versionRange="[3.2.4,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
 modId = "forge"
 mandatory = true
 versionRange = "${forge_version_range}"

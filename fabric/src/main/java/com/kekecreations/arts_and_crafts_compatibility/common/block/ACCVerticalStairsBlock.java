@@ -5,9 +5,9 @@ import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.yirmiri.excessive_building.block.VerticalStairsBlock;
 
-public class FabricVerticalStairsBlock extends VerticalStairsBlock {
+public class ACCVerticalStairsBlock extends VerticalStairsBlock {
 
-    public FabricVerticalStairsBlock(Properties settings) {
+    public ACCVerticalStairsBlock(Properties settings) {
         super(settings);
     }
 

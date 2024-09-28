@@ -5,15 +5,15 @@ import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.item.configurable.EBBookshelfBlockItem;
+import net.yirmiri.excessive_building.item.configurable.DecorativeShelfBlockItem;
 
-public class FabricBookshelfBlockItem extends EBBookshelfBlockItem {
+public class ACCDecorativeShelfBlockItem extends DecorativeShelfBlockItem {
 
-    public FabricBookshelfBlockItem(Block block, Properties settings) {
+    public ACCDecorativeShelfBlockItem(Block block, Properties settings) {
         super(block, settings);
     }
 
     public boolean isEnabled(FeatureFlagSet enable) {
-        return Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING) && EBConfig.ENABLE_SHELF_VARIANTS.get();
+        return Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING) && EBConfig.ENABLE_DECORATIVE_SHELVES.get();
     }
 }

@@ -18,7 +18,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.registry.EBBlocks;
-import samebutdifferent.ecologics.registry.ModBlocks;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
@@ -47,31 +46,31 @@ public class ACCFabricBlocks {
     public static final Supplier<Block> CORK_MOSAIC = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "cork_mosaic", () -> new ACCBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CORK_MOSAIC_STAIRS = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "cork_mosaic_stairs", () -> new FlammableStairBlock(CompatUtils.EXCESSIVE_BUILDING, CORK_MOSAIC.get().defaultBlockState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CORK_MOSAIC_SLAB = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "cork_mosaic_slab", () -> new FlammableSlabBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
-    public static final Supplier<Block> CORK_MOSAIC_VERTICAL_STAIRS = registerVStairs("cork_mosaic_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_MOSAIC_VERTICAL_STAIRS = registerVStairs("cork_mosaic_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
 
     public static final Supplier<Block> BLEACHED_KNITTED_WOOL = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "bleached_knitted_wool", () -> new ACCBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(DyeColor.WHITE)));
     public static final Supplier<Block> BLEACHED_KNITTED_CARPET = CompatUtils.registerBlockWithItem(CompatUtils.EXCESSIVE_BUILDING, "bleached_knitted_carpet", () -> new ACCCarpetBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(DyeColor.WHITE)));
 
-    public static final Supplier<Block> CORK_CRAFTING_TABLE = registerCraftingTable("cork_crafting_table", () -> new FabricCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_CRAFTING_TABLE = registerCraftingTable("cork_crafting_table", () -> new ACCCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CHISELED_CORK_PLANKS = registerCraftingTable("chiseled_cork_planks", () -> new ACCBlock(CompatUtils.EXCESSIVE_BUILDING, FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(ACSoundTypes.CORK)));
-    public static final Supplier<Block> CORK_BOOKSHELF = registerBookShelf("cork_bookshelf", () -> new FabricBookshelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
-    public static final Supplier<Block> CORK_DECORATIVE_SHELF = registerDecorativeShelf("cork_decorative_shelf", () -> new FabricDecorativeShelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_BOOKSHELF = registerBookShelf("cork_bookshelf", () -> new ACCBookshelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
+    public static final Supplier<Block> CORK_DECORATIVE_SHELF = registerDecorativeShelf("cork_decorative_shelf", () -> new ACCDecorativeShelfBlock(FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(ACSoundTypes.CORK)));
     public static final Supplier<Block> CORK_LADDER = registerLadder("cork_ladder", () -> new ACCLadderBlock(FabricBlockSettings.copyOf(Blocks.LADDER).sounds(ACSoundTypes.CORK)));
 
-    public static final Supplier<Block> TERRACOTTA_SHINGLE_VERTICAL_STAIRS = registerVStairs("terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get())));
-    public static final Supplier<Block> SOAPSTONE_VERTICAL_STAIRS = registerVStairs("soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get())));
-    public static final Supplier<Block> GYPSUM_VERTICAL_STAIRS = registerVStairs("gypsum_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM.get())));
-    public static final Supplier<Block> POLISHED_GYPSUM_VERTICAL_STAIRS = registerVStairs("polished_gypsum_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_GYPSUM.get())));
-    public static final Supplier<Block> GYPSUM_BRICK_VERTICAL_STAIRS = registerVStairs("gypsum_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM_BRICKS.get())));
-    public static final Supplier<Block> POLISHED_SOAPSTONE_VERTICAL_STAIRS = registerVStairs("polished_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_SOAPSTONE.get())));
-    public static final Supplier<Block> SOAPSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("soapstone_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE_BRICKS.get())));
+    public static final Supplier<Block> TERRACOTTA_SHINGLE_VERTICAL_STAIRS = registerVStairs("terracotta_shingle_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get())));
+    public static final Supplier<Block> SOAPSTONE_VERTICAL_STAIRS = registerVStairs("soapstone_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE.get())));
+    public static final Supplier<Block> GYPSUM_VERTICAL_STAIRS = registerVStairs("gypsum_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM.get())));
+    public static final Supplier<Block> POLISHED_GYPSUM_VERTICAL_STAIRS = registerVStairs("polished_gypsum_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_GYPSUM.get())));
+    public static final Supplier<Block> GYPSUM_BRICK_VERTICAL_STAIRS = registerVStairs("gypsum_brick_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.GYPSUM_BRICKS.get())));
+    public static final Supplier<Block> POLISHED_SOAPSTONE_VERTICAL_STAIRS = registerVStairs("polished_soapstone_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.POLISHED_SOAPSTONE.get())));
+    public static final Supplier<Block> SOAPSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("soapstone_brick_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.SOAPSTONE_BRICKS.get())));
     static {
         for (DyeColor colour : DyeColor.values()) {
-            DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));
-            DYED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstone(colour.getId())))));
-            DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_polished_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedPolishedSoapstone(colour.getId())))));
-            DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstoneBricks(colour.getId())))));
-            DYED_MUD_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_mud_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedMudBricks(colour.getId())))));
+            DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_terracotta_shingle_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.TERRACOTTA_SHINGLES.get()))));
+            DYED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstone(colour.getId())))));
+            DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_polished_soapstone_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedPolishedSoapstone(colour.getId())))));
+            DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_brick_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstoneBricks(colour.getId())))));
+            DYED_MUD_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_mud_brick_vertical_stairs", () -> new ACCVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedMudBricks(colour.getId())))));
 
             DYED_POTTED_ANCIENT_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_ancient_sapling",
                     () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.ANCIENT_SAPLING, colour)));
@@ -131,25 +130,25 @@ public class ACCFabricBlocks {
 
     public static <T extends Block> Supplier<T> registerVStairs(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricVerticalStairsBlockItem(block, new Item.Properties()));
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new ACCVerticalStairsBlockItem(block, new Item.Properties()));
         return () -> block;
     }
 
     public static <T extends Block> Supplier<T> registerCraftingTable(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricCraftingTableBlockItem(block, new Item.Properties()));
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new ACCCraftingTableBlockItem(block, new Item.Properties()));
         return () -> block;
     }
 
     public static <T extends Block> Supplier<T> registerBookShelf(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricBookshelfBlockItem(block, new Item.Properties()));
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new ACCBookshelfBlockItem(block, new Item.Properties()));
         return () -> block;
     }
 
     public static <T extends Block> Supplier<T> registerDecorativeShelf(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), blockSupplier.get());
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new FabricDecorativeShelfBlockItem(block, new Item.Properties()));
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, id), new ACCDecorativeShelfBlockItem(block, new Item.Properties()));
         return () -> block;
     }
 

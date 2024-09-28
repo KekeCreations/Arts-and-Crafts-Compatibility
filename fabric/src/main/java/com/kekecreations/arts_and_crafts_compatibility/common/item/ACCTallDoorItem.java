@@ -11,14 +11,12 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
 
-public class FabricShortDoorItem extends BlockItem {
-
-    public FabricShortDoorItem(Block block, Properties properties) {
+public class ACCTallDoorItem extends BlockItem {
+    public ACCTallDoorItem(Block block, Properties properties) {
         super(block, properties);
     }
-
     public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType) {
-        return stack.is(DDItemTags.SHORT_WOODEN_DOORS) && !stack.is(ItemTags.NON_FLAMMABLE_WOOD) ? 100 : -1;
+        return stack.is(DDItemTags.TALL_WOODEN_DOORS) && !stack.is(ItemTags.NON_FLAMMABLE_WOOD) ? 300 : -1;
     }
 
     @Override

@@ -1,5 +1,5 @@
 {
-  "parent": "decorative_blocks:custom/upside_down_support_horizontal_small",
+  "parent": "arts_and_crafts_compat:template/credit_to_stohun/upside_down_support_horizontal_small",
   "textures": {
     "end": "arts_and_crafts_compat:block/cork_support_end",
     "particle": "arts_and_crafts_compat:block/cork_support_side",

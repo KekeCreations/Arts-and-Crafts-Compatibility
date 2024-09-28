@@ -1,5 +1,5 @@
 {
-  "parent": "twigs:block/template_table_top",
+  "parent": "arts_and_crafts_compat:template/credit_to_ninnih/template_table_top",
   "textures": {
     "side": "arts_and_crafts_compat:block/cork_table",
     "bottom": "arts_and_crafts_compat:block/cork_table_bottom",

@@ -1,5 +1,5 @@
 {
-  "parent": "dramaticdoors:block/door_short_left",
+  "parent": "arts_and_crafts_compat:template/credit_to_fizzware/door_short_left",
   "textures": {
     "texture": "arts_and_crafts_compat:block/short_cork_door"
   }

@@ -1,5 +1,5 @@
 {
-  "parent": "decorative_blocks:custom/seat_inventory",
+  "parent": "arts_and_crafts_compat:template/credit_to_stohun/seat_inventory",
   "textures": {
     "particle": "arts_and_crafts_compat:block/cork_seat",
     "texture": "arts_and_crafts_compat:block/cork_seat"

@@ -73,6 +73,11 @@ public class ACCModelProvider extends FabricModelProvider {
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedRose(colour.getId()), "rose", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
         }
     }
 

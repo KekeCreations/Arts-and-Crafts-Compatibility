@@ -60,6 +60,12 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                    .add(ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedRose(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()));
         }
     }
 

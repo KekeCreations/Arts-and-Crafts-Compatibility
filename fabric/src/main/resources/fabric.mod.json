@@ -33,7 +33,7 @@
     "depends": {
         "fabricloader": ">=0.14",
         "fabric": "*",
-        "arts_and_crafts": ">=1.1.7",
+        "arts_and_crafts": ">=1.1.9",
         "minecraft": "${minecraft_version}",
         "java": ">=17"
     }

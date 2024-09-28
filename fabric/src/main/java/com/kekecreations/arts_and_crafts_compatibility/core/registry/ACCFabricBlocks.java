@@ -17,6 +17,8 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.yirmiri.excessive_building.registry.EBBlocks;
+import samebutdifferent.ecologics.registry.ModBlocks;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
@@ -27,6 +29,11 @@ public class ACCFabricBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_MUD_BRICK_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_ANCIENT_SAPLING = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_GLOOM_SAPLING = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_ROSE = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_CYAN_ROSE = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_WHITE_ROSE = new HashMap<>();
 
     //DRAMATIC DOORS
     public static final Supplier<Block> SHORT_CORK_DOOR = CompatUtils.registerBlock("short_cork_door",
@@ -65,7 +72,43 @@ public class ACCFabricBlocks {
             DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_polished_soapstone_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedPolishedSoapstone(colour.getId())))));
             DYED_SOAPSTONE_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_soapstone_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedSoapstoneBricks(colour.getId())))));
             DYED_MUD_BRICK_VERTICAL_STAIRS.put(colour, registerVStairs(colour + "_mud_brick_vertical_stairs", () -> new FabricVerticalStairsBlock(FabricBlockSettings.copyOf(ACBlocks.getDyedMudBricks(colour.getId())))));
+
+            DYED_POTTED_ANCIENT_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_ancient_sapling",
+                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.ANCIENT_SAPLING, colour)));
+
+            DYED_POTTED_GLOOM_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_gloom_sapling",
+                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.GLOOM_SAPLING, colour)));
+
+            DYED_POTTED_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_rose",
+                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.ROSE, colour)));
+
+            DYED_POTTED_CYAN_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_cyan_rose",
+                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.CYAN_ROSE, colour)));
+
+            DYED_POTTED_WHITE_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_white_rose",
+                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.WHITE_ROSE, colour)));
         }
+
+    }
+
+    public static Block getDyedPottedAncientSapling(int colours) {
+        return DYED_POTTED_ANCIENT_SAPLING.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedPottedGloomSapling(int colours) {
+        return DYED_POTTED_GLOOM_SAPLING.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedPottedRose(int colours) {
+        return DYED_POTTED_ROSE.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedPottedCyanRose(int colours) {
+        return DYED_POTTED_CYAN_ROSE.get(DyeColor.byId(colours)).get();
+    }
+
+    public static Block getDyedPottedWhiteRose(int colours) {
+        return DYED_POTTED_WHITE_ROSE.get(DyeColor.byId(colours)).get();
     }
 
     public static Block getDyedTerracottaShingleVerticalStairs(int colours) {

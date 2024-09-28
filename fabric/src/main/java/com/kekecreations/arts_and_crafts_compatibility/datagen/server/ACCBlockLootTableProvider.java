@@ -71,6 +71,11 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
             dropSelf(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
             dropSelf(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedRose(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()));
         }
     }
 

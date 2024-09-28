@@ -18,7 +18,7 @@ description = '''${description}'''
 [[dependencies.${mod_id}]]
 modId="arts_and_crafts"
 mandatory=true
-versionRange="[1.1.7,)"
+versionRange="[1.1.9,)"
 ordering="AFTER"
 side="BOTH"
 #SOFT DEPENDENCIES
@@ -26,6 +26,13 @@ side="BOTH"
 modId="ecologics"
 mandatory=false
 versionRange="[2.2.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="excessive_building"
+mandatory=false
+versionRange="[3.2.4,)"
 ordering="AFTER"
 side="BOTH"
 

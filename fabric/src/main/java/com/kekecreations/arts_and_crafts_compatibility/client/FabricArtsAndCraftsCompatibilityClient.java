@@ -1,8 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.client;
 
-import com.kekecreations.arts_and_crafts_compatibility.FabricArtsAndCraftsCompatibility;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -25,6 +23,12 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
             BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
+
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.getDyedPottedRose(colour.getId()), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()), RenderType.cutout());
         }
         BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.CORK_LADDER.get(), RenderType.cutout());
     }

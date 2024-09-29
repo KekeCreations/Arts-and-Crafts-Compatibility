@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -25,7 +25,7 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public void excessiveBuilding() {
         this.getOrCreateTagBuilder(EBTags.Items.MOSAIC)
-                .add(ACCFabricBlocks.CORK_MOSAIC.get().asItem());
+                .add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get().asItem());
     }
 
     private void gildedSherds() {

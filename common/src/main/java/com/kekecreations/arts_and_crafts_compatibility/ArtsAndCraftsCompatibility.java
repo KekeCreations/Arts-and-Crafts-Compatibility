@@ -1,12 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.*;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +21,9 @@ public class ArtsAndCraftsCompatibility {
         ACCBlocks.register();
         ACCEntityTypes.register();
         ACCTags.register();
+        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
+            DBBlocks.registerPalisades();
+        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsPatterns.register();
         }

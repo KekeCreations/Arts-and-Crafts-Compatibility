@@ -3,7 +3,8 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.DBBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
@@ -33,7 +34,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     public void decorativeBlocks() {
-        dropSelf(ACCBlocks.CORK_PALISADE.get());
+        dropSelf(DBBlocks.CORK_PALISADE.get());
         dropSelf(ACCBlocks.CORK_BEAM.get());
         dropSelf(ACCBlocks.CORK_SEAT.get());
         dropSelf(ACCBlocks.CORK_SUPPORT.get());
@@ -48,34 +49,34 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     private void excessiveBuilding() {
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC.get());
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
-        add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), createSlabItemTable(ACCFabricBlocks.CORK_MOSAIC_SLAB.get()));
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
-        dropSelf(ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
-        dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
-        dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
-        dropSelf(ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
-        add(ACCFabricBlocks.CORK_BOOKSHELF.get(), createSingleItemTable(Items.BOOK, ConstantValue.exactly(3.0F)));
-        dropSelf(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
-        dropSelf(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_VERTICAL_STAIRS.get());
+        add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_SLAB.get(), createSlabItemTable(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_SLAB.get()));
+        dropSelf(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.CORK_CRAFTING_TABLE.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.CHISELED_CORK_PLANKS.get());
+        add(ExcessiveBuildingCompatRegistry.CORK_BOOKSHELF.get(), createSingleItemTable(Items.BOOK, ConstantValue.exactly(3.0F)));
+        dropSelf(ExcessiveBuildingCompatRegistry.CORK_DECORATIVE_SHELF.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.SOAPSTONE_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.GYPSUM_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.GYPSUM_BRICK_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
+        dropSelf(ExcessiveBuildingCompatRegistry.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
-            dropSelf(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedRose(colour.getId()));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()));
+            dropSelf(ExcessiveBuildingCompatRegistry.getDyedTerracottaShingleVerticalStairs(colour.getId()));
+            dropSelf(ExcessiveBuildingCompatRegistry.getDyedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(ExcessiveBuildingCompatRegistry.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(ExcessiveBuildingCompatRegistry.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+            dropSelf(ExcessiveBuildingCompatRegistry.getDyedMudBrickVerticalStairs(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingCompatRegistry.getDyedPottedAncientSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingCompatRegistry.getDyedPottedGloomSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingCompatRegistry.getDyedPottedRose(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingCompatRegistry.getDyedPottedWhiteRose(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingCompatRegistry.getDyedPottedCyanRose(colour.getId()));
         }
     }
 

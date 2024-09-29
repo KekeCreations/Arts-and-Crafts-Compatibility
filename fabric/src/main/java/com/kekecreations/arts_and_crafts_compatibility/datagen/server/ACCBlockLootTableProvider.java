@@ -3,8 +3,9 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.EcologicsRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DBBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.DecorativeBlocksRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
@@ -34,7 +35,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     public void decorativeBlocks() {
-        dropSelf(DBBlocks.CORK_PALISADE.get());
+        dropSelf(DecorativeBlocksRegistry.CORK_PALISADE.get());
         dropSelf(ACCBlocks.CORK_BEAM.get());
         dropSelf(ACCBlocks.CORK_SEAT.get());
         dropSelf(ACCBlocks.CORK_SUPPORT.get());
@@ -42,9 +43,9 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     public void ecologics() {
         for (DyeColor colour : DyeColor.values()) {
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCBlocks.getDyedPottedWalnutSapling(colour));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCBlocks.getDyedPottedAzaleaFlower(colour));
-            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACCBlocks.getDyedPottedCoconutSeedling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), EcologicsRegistry.getDyedPottedWalnutSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), EcologicsRegistry.getDyedPottedAzaleaFlower(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), EcologicsRegistry.getDyedPottedCoconutSeedling(colour));
         }
     }
 

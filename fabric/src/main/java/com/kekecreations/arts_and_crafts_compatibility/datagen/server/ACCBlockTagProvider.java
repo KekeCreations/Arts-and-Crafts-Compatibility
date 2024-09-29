@@ -1,9 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DramaticDoorsCompatRegistry;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DBBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -80,15 +77,15 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void decorativeBlocks() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(ACCBlocks.CORK_BEAM.get())
-                .add(DBBlocks.CORK_PALISADE.get())
+                .add(DecorativeBlocksRegistry.CORK_PALISADE.get())
                 .add(ACCBlocks.CORK_SEAT.get())
                 .add(ACCBlocks.CORK_SUPPORT.get());
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(DBBlocks.CORK_PALISADE.get());
+                .add(DecorativeBlocksRegistry.CORK_PALISADE.get());
         this.getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(ACCBlocks.CORK_BEAM.get());
         this.getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(DBBlocks.CORK_PALISADE.get());
+                .add(DecorativeBlocksRegistry.CORK_PALISADE.get());
     }
 
     private void farmersDelight() {
@@ -100,9 +97,9 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void ecologics() {
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(ACCBlocks.getDyedPottedAzaleaFlower(colour))
-                    .add(ACCBlocks.getDyedPottedWalnutSapling(colour))
-                    .add(ACCBlocks.getDyedPottedCoconutSeedling(colour));
+                    .add(EcologicsRegistry.getDyedPottedAzaleaFlower(colour))
+                    .add(EcologicsRegistry.getDyedPottedWalnutSapling(colour))
+                    .add(EcologicsRegistry.getDyedPottedCoconutSeedling(colour));
         }
     }
     private void built() {

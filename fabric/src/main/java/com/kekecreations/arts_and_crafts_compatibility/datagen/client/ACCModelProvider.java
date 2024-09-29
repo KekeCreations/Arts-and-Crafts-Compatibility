@@ -1,7 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.EcologicsRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
@@ -33,9 +32,9 @@ public class ACCModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators generator) {
         for (DyeColor colour : DyeColor.values()) {
             //ECOLOGICS
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsRegistry.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsRegistry.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsRegistry.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
         }
         //BUILT
         generator.createTrivialBlock(ACCBlocks.CORK_COMPACT_PLANKS.get(), TexturedModel.CUBE);

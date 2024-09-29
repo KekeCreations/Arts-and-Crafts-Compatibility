@@ -11,7 +11,7 @@ import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
 
-public class DecorativeBlocksRegistry {
+public class DBBlocks {
 
     public static final Supplier<Block> CORK_PALISADE = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_palisade",
             () -> new ACCPalisadeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F, 4.0F).sound(ACSoundTypes.CORK).ignitedByLava(), VanillaWoodTypes.OAK));

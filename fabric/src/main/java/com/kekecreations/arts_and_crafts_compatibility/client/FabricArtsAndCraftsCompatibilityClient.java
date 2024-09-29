@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts_compatibility.client;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.EcologicsRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.fabricmc.api.ClientModInitializer;
@@ -21,9 +20,9 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
 
     public static void registerBlockLayers() {
         for (DyeColor colour : DyeColor.values()) {
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsRegistry.getDyedPottedWalnutSapling(colour), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsRegistry.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsRegistry.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
 
             BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingCompatRegistry.getDyedPottedAncientSapling(colour.getId()), RenderType.cutout());
             BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingCompatRegistry.getDyedPottedGloomSapling(colour.getId()), RenderType.cutout());

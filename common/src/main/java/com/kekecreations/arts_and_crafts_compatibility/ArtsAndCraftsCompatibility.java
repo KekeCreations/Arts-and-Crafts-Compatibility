@@ -21,11 +21,8 @@ public class ArtsAndCraftsCompatibility {
         ACCBlocks.register();
         ACCEntityTypes.register();
         ACCTags.register();
-        if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
-            EcologicsRegistry.register();
-        }
         if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
-            DecorativeBlocksRegistry.registerPalisades();
+            DBBlocks.registerPalisades();
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsPatterns.register();

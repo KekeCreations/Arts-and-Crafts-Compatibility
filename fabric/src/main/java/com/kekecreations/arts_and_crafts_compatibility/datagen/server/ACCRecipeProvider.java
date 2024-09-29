@@ -62,7 +62,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_log", has(ACBlocks.STRIPPED_CORK_LOG.get()))
                 .save(exporter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DecorativeBlocksRegistry.CORK_PALISADE.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DBBlocks.CORK_PALISADE.get(), 6)
                 .pattern("xx ")
                 .define('x', ACBlocks.CORK_LOG.get())
                 .unlockedBy("has_log", has(ACBlocks.CORK_LOG.get()))

@@ -1,9 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DramaticDoorsCompatRegistry;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ExcessiveBuildingCompatRegistry;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DBBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -29,66 +27,66 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void excessiveBuilding() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_SLAB.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_CRAFTING_TABLE.get())
-                .add(ExcessiveBuildingCompatRegistry.CHISELED_CORK_PLANKS.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_BOOKSHELF.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_DECORATIVE_SHELF.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_LADDER.get());
+                .add(ACCFabricBlocks.CORK_MOSAIC.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get())
+                .add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.CORK_CRAFTING_TABLE.get())
+                .add(ACCFabricBlocks.CHISELED_CORK_PLANKS.get())
+                .add(ACCFabricBlocks.CORK_BOOKSHELF.get())
+                .add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get())
+                .add(ACCFabricBlocks.CORK_LADDER.get());
         this.getOrCreateTagBuilder(BlockTags.CLIMBABLE)
-                .add(ExcessiveBuildingCompatRegistry.CORK_LADDER.get());
+                .add(ACCFabricBlocks.CORK_LADDER.get());
         this.getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
-                .add(ExcessiveBuildingCompatRegistry.CORK_DECORATIVE_SHELF.get())
-                .add(ExcessiveBuildingCompatRegistry.CORK_BOOKSHELF.get());
+                .add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get())
+                .add(ACCFabricBlocks.CORK_BOOKSHELF.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL)
-                .add(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get());
+                .add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
         this.getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
-                .add(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get());
+                .add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ExcessiveBuildingCompatRegistry.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.SOAPSTONE_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.GYPSUM_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.POLISHED_GYPSUM_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.GYPSUM_BRICK_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get())
-                .add(ExcessiveBuildingCompatRegistry.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
+                .add(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get())
+                .add(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(ExcessiveBuildingCompatRegistry.getDyedTerracottaShingleVerticalStairs(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedSoapstoneVerticalStairs(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedMudBrickVerticalStairs(colour.getId()));
+                    .add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPottedAncientSapling(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPottedGloomSapling(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPottedRose(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPottedCyanRose(colour.getId()))
-                    .add(ExcessiveBuildingCompatRegistry.getDyedPottedWhiteRose(colour.getId()));
+                    .add(ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedRose(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()))
+                    .add(ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()));
         }
     }
 
     private void dramaticDoors() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(DramaticDoorsCompatRegistry.SHORT_CORK_DOOR.get())
-                .add(DramaticDoorsCompatRegistry.TALL_CORK_DOOR.get());
+                .add(ACCFabricBlocks.SHORT_CORK_DOOR.get())
+                .add(ACCFabricBlocks.TALL_CORK_DOOR.get());
     }
 
     private void decorativeBlocks() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(ACCBlocks.CORK_BEAM.get())
-                .add(DBBlocks.CORK_PALISADE.get())
+                .add(ACCBlocks.CORK_PALISADE.get())
                 .add(ACCBlocks.CORK_SEAT.get())
                 .add(ACCBlocks.CORK_SUPPORT.get());
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(DBBlocks.CORK_PALISADE.get());
+                .add(ACCBlocks.CORK_PALISADE.get());
         this.getOrCreateTagBuilder(BlockTags.LOGS)
                 .add(ACCBlocks.CORK_BEAM.get());
         this.getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(DBBlocks.CORK_PALISADE.get());
+                .add(ACCBlocks.CORK_PALISADE.get());
     }
 
     private void farmersDelight() {

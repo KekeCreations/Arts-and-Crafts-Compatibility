@@ -1,11 +1,11 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DBBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.DramaticDoorsCompatRegistry;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCForgeBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCForgeItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -33,9 +33,8 @@ public class ForgeArtsAndCraftsCompatibility {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         ArtsAndCraftsCompatibility.init();
-        if (isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
-            DramaticDoorsCompatRegistry.register();
-        }
+        ACCForgeBlocks.register();
+        ACCForgeItems.register();
 
         modEventBus.addListener(this::creativeItemGroups);
     }
@@ -89,7 +88,7 @@ public class ForgeArtsAndCraftsCompatibility {
             if (event.getTabKey() == ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "general"))) {
                 addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_seat")), ACCBlocks.CORK_SEAT.get());
                 addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_support")), ACCBlocks.CORK_SUPPORT.get());
-                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_palisade")), DBBlocks.CORK_PALISADE.get());
+                addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_palisade")), ACCBlocks.CORK_PALISADE.get());
                 addAfter(event, ForgeRegistries.ITEMS.getValue(new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "acacia_beam")), ACCBlocks.CORK_BEAM.get());
             }
         }
@@ -103,8 +102,8 @@ public class ForgeArtsAndCraftsCompatibility {
         }
         if (isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-                addBefore(event, ACBlocks.CORK_DOOR.get(), DramaticDoorsCompatRegistry.SHORT_CORK_DOOR.get());
-                addAfter(event, ACBlocks.CORK_DOOR.get(), DramaticDoorsCompatRegistry.TALL_CORK_DOOR.get());
+                addBefore(event, ACBlocks.CORK_DOOR.get(), ACCForgeBlocks.SHORT_CORK_DOOR.get());
+                addAfter(event, ACBlocks.CORK_DOOR.get(), ACCForgeBlocks.TALL_CORK_DOOR.get());
             }
         }
     }

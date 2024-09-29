@@ -1,6 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.*;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.world.item.DyeColor;
@@ -32,42 +35,42 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCBlocks.CORK_CABINET.get(), "Cork Cabinet");
 
         //DECORATIVE BLOCKS
-        builder.add(DBBlocks.CORK_PALISADE.get(), "Cork Palisade");
+        builder.add(ACCBlocks.CORK_PALISADE.get(), "Cork Palisade");
         builder.add(ACCBlocks.CORK_BEAM.get(), "Cork Beam");
         builder.add(ACCBlocks.CORK_SEAT.get(), "Cork Seat");
         builder.add(ACCBlocks.CORK_SUPPORT.get(), "Cork Support");
 
         //DRAMATIC DOORS
-        builder.add(DramaticDoorsCompatRegistry.SHORT_CORK_DOOR.get(), "Short Cork Door");
-        builder.add(DramaticDoorsCompatRegistry.TALL_CORK_DOOR.get(), "Tall Cork Door");
+        builder.add(ACCFabricItems.CORK_SHORT_DOOR.get(), "Short Cork Door");
+        builder.add(ACCFabricItems.TALL_CORK_DOOR.get(), "Tall Cork Door");
 
         //EXCESSIVE BUILDING
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get(), "Cork Mosaic");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_SLAB.get(), "Cork Mosaic Slab");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_STAIRS.get(), "Cork Mosaic Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_VERTICAL_STAIRS.get(), "Cork Mosaic Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get(), "Bleached Knitted Wool");
-        builder.add(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get(), "Bleached Knitted Carpet");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_CRAFTING_TABLE.get(), "Cork Crafting Table");
-        builder.add(ExcessiveBuildingCompatRegistry.CHISELED_CORK_PLANKS.get(), "Chiseled Cork Planks");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_BOOKSHELF.get(), "Cork Bookshelf");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_DECORATIVE_SHELF.get(), "Cork Decorative Shelf");
-        builder.add(ExcessiveBuildingCompatRegistry.CORK_LADDER.get(), "Cork Ladder");
-        builder.add(ExcessiveBuildingCompatRegistry.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(),"Terracotta Shingle Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.SOAPSTONE_VERTICAL_STAIRS.get(),"Soapstone Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.GYPSUM_VERTICAL_STAIRS.get(),"Gypsum Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.POLISHED_GYPSUM_VERTICAL_STAIRS.get(),"Polished Gypsum Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.GYPSUM_BRICK_VERTICAL_STAIRS.get(),"Gypsum Brick Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(),"Polished Soapstone Vertical Stairs");
-        builder.add(ExcessiveBuildingCompatRegistry.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(),"Soapstone Brick Vertical Stairs");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC.get(), "Cork Mosaic");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), "Cork Mosaic Slab");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(), "Cork Mosaic Stairs");
+        builder.add(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), "Cork Mosaic Vertical Stairs");
+        builder.add(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), "Bleached Knitted Wool");
+        builder.add(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), "Bleached Knitted Carpet");
+        builder.add(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), "Cork Crafting Table");
+        builder.add(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), "Chiseled Cork Planks");
+        builder.add(ACCFabricBlocks.CORK_BOOKSHELF.get(), "Cork Bookshelf");
+        builder.add(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "Cork Decorative Shelf");
+        builder.add(ACCFabricBlocks.CORK_LADDER.get(), "Cork Ladder");
+        builder.add(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(),"Terracotta Shingle Vertical Stairs");
+        builder.add(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(),"Soapstone Vertical Stairs");
+        builder.add(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(),"Gypsum Vertical Stairs");
+        builder.add(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(),"Polished Gypsum Vertical Stairs");
+        builder.add(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(),"Gypsum Brick Vertical Stairs");
+        builder.add(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(),"Polished Soapstone Vertical Stairs");
+        builder.add(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(),"Soapstone Brick Vertical Stairs");
         for (DyeColor colour : DyeColor.values()) {
             String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
 
-            builder.add(ExcessiveBuildingCompatRegistry.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
-            builder.add(ExcessiveBuildingCompatRegistry.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
-            builder.add(ExcessiveBuildingCompatRegistry.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");
-            builder.add(ExcessiveBuildingCompatRegistry.getDyedSoapstoneBrickVerticalStairs(colour.getId()), stringColour + " Soapstone Brick Vertical Stairs");
-            builder.add(ExcessiveBuildingCompatRegistry.getDyedMudBrickVerticalStairs(colour.getId()), stringColour + " Mud Brick Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), stringColour + " Soapstone Brick Vertical Stairs");
+            builder.add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), stringColour + " Mud Brick Vertical Stairs");
         }
 
 

@@ -2,7 +2,10 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.*;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipes.*;
@@ -27,8 +30,8 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
         //DRAMATIC DOORS
-        stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, DramaticDoorsCompatRegistry.SHORT_CORK_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DramaticDoorsCompatRegistry.TALL_CORK_DOOR.get(), 2)
+        stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACCFabricItems.CORK_SHORT_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCFabricItems.TALL_CORK_DOOR.get(), 2)
                 .pattern("#")
                 .pattern("#")
                 .pattern("#")
@@ -62,7 +65,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy("has_log", has(ACBlocks.STRIPPED_CORK_LOG.get()))
                 .save(exporter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DBBlocks.CORK_PALISADE.get(), 6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCBlocks.CORK_PALISADE.get(), 6)
                 .pattern("xx ")
                 .define('x', ACBlocks.CORK_LOG.get())
                 .unlockedBy("has_log", has(ACBlocks.CORK_LOG.get()))
@@ -110,49 +113,49 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
 
         //EXCESSIVE BUILDING
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCFabricBlocks.CORK_MOSAIC.get(), 1)
                 .define('#', ACBlocks.CORK_SLAB.get())
                 .pattern("#")
                 .pattern("#")
                 .unlockedBy("unlock", has(ACBlocks.CORK_SLAB.get()))
                 .save(exporter);
 
-        stairBuilder(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_STAIRS.get(),
-                Ingredient.of(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get()))
-                .unlockedBy("unlock", has(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get()))
+        stairBuilder(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(),
+                Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .unlockedBy("unlock", has(ACCFabricBlocks.CORK_MOSAIC.get()))
                 .save(exporter);
 
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, ExcessiveBuildingCompatRegistry.CORK_MOSAIC_SLAB.get(),
-                Ingredient.of(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get()))
-                .unlockedBy("unlock", has(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get()))
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, ACCFabricBlocks.CORK_MOSAIC_SLAB.get(),
+                Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()))
+                .unlockedBy("unlock", has(ACCFabricBlocks.CORK_MOSAIC.get()))
                 .save(exporter);
 
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.CORK_MOSAIC_VERTICAL_STAIRS.get(), ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get(), exporter);
-       carpet(exporter, ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get(), ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get());
-       eightDyeRecipe(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get(), EBTags.Items.KNITTED_WOOL, ACItems.BLEACHDEW.get(), exporter);
-       eightDyeRecipe(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get(), EBTags.Items.KNITTED_CARPET, ACItems.BLEACHDEW.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get(), exporter);
+       carpet(exporter, ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
+       eightDyeRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), EBTags.Items.KNITTED_WOOL, ACItems.BLEACHDEW.get(), exporter);
+       eightDyeRecipe(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), EBTags.Items.KNITTED_CARPET, ACItems.BLEACHDEW.get(), exporter);
        for (DyeColor colour : DyeColor.values()) {
-           eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
-           eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
-           createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
-           createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()), exporter);
-           createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()), exporter);
-           createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()), exporter);
-           createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()), exporter);
+           eightDyeRecipe(EBBlocks.getDyedKnittedWools(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), DyeItem.byColor(colour), exporter);
+           eightDyeRecipe(EBBlocks.getDyedKnittedCarpets(colour.getId()), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get(), DyeItem.byColor(colour), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()), exporter);
+           createVerticalStairsRecipe(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()), exporter);
        }
-       twoByTwoRecipe(ExcessiveBuildingCompatRegistry.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
-       twoByTwoRecipe(ExcessiveBuildingCompatRegistry.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
-       twoByTwoRecipe(ExcessiveBuildingCompatRegistry.CHISELED_CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), 2, exporter);
-       createShelfBlock(ExcessiveBuildingCompatRegistry.CORK_BOOKSHELF.get(), 1, Ingredient.of(ACBlocks.CORK_PLANKS.get()), Ingredient.of(Items.BOOK), exporter);
-       createShelfBlock(ExcessiveBuildingCompatRegistry.CORK_DECORATIVE_SHELF.get(), 1, Ingredient.of(ExcessiveBuildingCompatRegistry.CORK_MOSAIC.get()), Ingredient.of(Items.BOOK), exporter);
-       createLadderRecipe(ExcessiveBuildingCompatRegistry.CORK_LADDER.get(), ACBlocks.CORK_PLANKS.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get(), exporter);
-       createVerticalStairsRecipe(ExcessiveBuildingCompatRegistry.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get(), exporter);
+       twoByTwoRecipe(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACBlocks.BLEACHED_WOOL.get(), 4, exporter);
+       twoByTwoRecipe(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), 1, exporter);
+       twoByTwoRecipe(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), ACBlocks.CORK_SLAB.get(), 2, exporter);
+       createShelfBlock(ACCFabricBlocks.CORK_BOOKSHELF.get(), 1, Ingredient.of(ACBlocks.CORK_PLANKS.get()), Ingredient.of(Items.BOOK), exporter);
+       createShelfBlock(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), 1, Ingredient.of(ACCFabricBlocks.CORK_MOSAIC.get()), Ingredient.of(Items.BOOK), exporter);
+       createLadderRecipe(ACCFabricBlocks.CORK_LADDER.get(), ACBlocks.CORK_PLANKS.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get(), exporter);
+       createVerticalStairsRecipe(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get(), exporter);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {

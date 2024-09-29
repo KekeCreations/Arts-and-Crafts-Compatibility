@@ -1,5 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
+import com.fizzware.dramaticdoors.fabric.blocks.ShortDoorBlock;
+import com.fizzware.dramaticdoors.fabric.blocks.TallDoorBlock;
+import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
@@ -19,7 +22,7 @@ import net.yirmiri.excessive_building.registry.EBBlocks;
 import java.util.HashMap;
 import java.util.function.Supplier;
 
-public class ExcessiveBuildingCompatRegistry {
+public class ACCFabricBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_SHINGLE_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POLISHED_SOAPSTONE_VERTICAL_STAIRS = new HashMap<>();
@@ -30,6 +33,13 @@ public class ExcessiveBuildingCompatRegistry {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_ROSE = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_CYAN_ROSE = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_POTTED_WHITE_ROSE = new HashMap<>();
+
+    //DRAMATIC DOORS
+    public static final Supplier<Block> SHORT_CORK_DOOR = CompatUtils.registerBlock("short_cork_door",
+            () -> new ShortDoorBlock(ACBlocks.CORK_DOOR.get(), KekeBlockSetType.CORK));
+
+    public static final Supplier<Block> TALL_CORK_DOOR = CompatUtils.registerBlock("tall_cork_door",
+            () -> new TallDoorBlock(ACBlocks.CORK_DOOR.get(), KekeBlockSetType.CORK));
 
 
     //EXCESSIVE BUILDING

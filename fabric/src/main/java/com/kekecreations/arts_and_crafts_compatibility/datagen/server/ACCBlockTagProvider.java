@@ -2,6 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -61,18 +63,18 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedPottedRose(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()))
-                    .add(ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()));
+                    .add(ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()))
+                    .add(ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()))
+                    .add(ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()))
+                    .add(ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()))
+                    .add(ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()));
         }
     }
 
     private void dramaticDoors() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(ACCFabricBlocks.SHORT_CORK_DOOR.get())
-                .add(ACCFabricBlocks.TALL_CORK_DOOR.get());
+                .add(ACCBlocks.SHORT_CORK_DOOR.get())
+                .add(ACCBlocks.TALL_CORK_DOOR.get());
     }
 
     private void decorativeBlocks() {
@@ -98,9 +100,9 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void ecologics() {
         for (DyeColor colour : DyeColor.values()) {
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(ACCBlocks.getDyedPottedAzaleaFlower(colour))
-                    .add(ACCBlocks.getDyedPottedWalnutSapling(colour))
-                    .add(ACCBlocks.getDyedPottedCoconutSeedling(colour));
+                    .add(EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour))
+                    .add(EcologicsFlowerPots.getDyedPottedWalnutSapling(colour))
+                    .add(EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour));
         }
     }
     private void built() {

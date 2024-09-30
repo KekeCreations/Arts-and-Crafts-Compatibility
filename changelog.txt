@@ -3,6 +3,7 @@ V1.2.0
 • Dropped Caffeinated Support
 • Added Portuguese Brazilian translations
 • Fixed crashes related to resource pack loading and servers
+• Mod is more stable
 • Added Mythic Charms Compat
 • Added Excessive Building Compat
 • Requires Arts & Crafts V1.1.9

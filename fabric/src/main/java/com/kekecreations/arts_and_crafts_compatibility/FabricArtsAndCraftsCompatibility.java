@@ -2,11 +2,11 @@ package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -25,9 +25,11 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         FabricArtsAndCraftsCompatResourcePacks.loadBuiltinResourcePacks();
         ArtsAndCraftsCompatibility.init();
         ACCFabricBlocks.register();
-        ACCFabricItems.register();
         addItemsToTabs();
         flammableAndStrippableBlocks();
+        if (isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            ExcessiveBuildingFlowerPots.register();
+        }
     }
 
     public static boolean isModLoaded(String modId) {
@@ -80,8 +82,8 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(event -> {
-                event.addBefore(ACBlocks.CORK_DOOR.get(), ACCFabricBlocks.SHORT_CORK_DOOR.get());
-                event.addAfter(ACBlocks.CORK_DOOR.get(), ACCFabricBlocks.TALL_CORK_DOOR.get());
+                event.addBefore(ACBlocks.CORK_DOOR.get(), ACCBlocks.SHORT_CORK_DOOR.get());
+                event.addAfter(ACBlocks.CORK_DOOR.get(), ACCBlocks.TALL_CORK_DOOR.get());
             });
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {

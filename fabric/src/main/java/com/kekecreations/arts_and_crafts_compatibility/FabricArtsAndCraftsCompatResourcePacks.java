@@ -29,6 +29,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.EXCESSIVE_BUILDING);
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)) {
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.BUILT);
+            }
         }
     }
 }

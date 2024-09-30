@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.GildedSherdsPatterns;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
@@ -26,6 +27,9 @@ public class ArtsAndCraftsCompatibility {
         ACCTags.register();
         if (Services.PLATFORM.isModLoaded(CompatUtils.GILDED_SHERDS)) {
             GildedSherdsPatterns.register();
+        }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
+            EcologicsFlowerPots.register();
         }
     }
 

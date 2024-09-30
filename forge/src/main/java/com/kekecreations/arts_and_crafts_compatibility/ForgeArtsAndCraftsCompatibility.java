@@ -4,8 +4,6 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.ForgeRegistryHelper;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCForgeBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCForgeItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -33,8 +31,6 @@ public class ForgeArtsAndCraftsCompatibility {
         ForgeRegistryHelper.ITEMS.register(modEventBus);
 
         ArtsAndCraftsCompatibility.init();
-        ACCForgeBlocks.register();
-        ACCForgeItems.register();
 
         modEventBus.addListener(this::creativeItemGroups);
     }
@@ -102,8 +98,8 @@ public class ForgeArtsAndCraftsCompatibility {
         }
         if (isModLoaded(CompatUtils.DRAMATIC_DOORS)) {
             if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-                addBefore(event, ACBlocks.CORK_DOOR.get(), ACCForgeBlocks.SHORT_CORK_DOOR.get());
-                addAfter(event, ACBlocks.CORK_DOOR.get(), ACCForgeBlocks.TALL_CORK_DOOR.get());
+                addBefore(event, ACBlocks.CORK_DOOR.get(), ACCBlocks.SHORT_CORK_DOOR.get());
+                addAfter(event, ACBlocks.CORK_DOOR.get(), ACCBlocks.TALL_CORK_DOOR.get());
             }
         }
     }

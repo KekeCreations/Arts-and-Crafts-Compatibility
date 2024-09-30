@@ -2,6 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
@@ -32,9 +34,9 @@ public class ACCModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators generator) {
         for (DyeColor colour : DyeColor.values()) {
             //ECOLOGICS
-            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, ACCBlocks.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
         }
         //BUILT
         generator.createTrivialBlock(ACCBlocks.CORK_COMPACT_PLANKS.get(), TexturedModel.CUBE);
@@ -73,11 +75,11 @@ public class ACCModelProvider extends FabricModelProvider {
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
             registerVerticalStairs(generator, ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedRose(colour.getId()), "rose", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ACCFabricBlocks.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), "rose", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
+            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
         }
     }
 

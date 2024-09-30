@@ -52,9 +52,12 @@ public class ForgeArtsAndCraftsCompatibilityClient {
 
     @SubscribeEvent
     public static void addPackFinders(AddPackFindersEvent event) {
-        if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
-            if (event.getPackType() == PackType.SERVER_DATA) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            if (Services.PLATFORM.isModLoaded(CompatUtils.TWIGS)) {
                 bpTwigs(event);
+            }
+            if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
+                bpBuilt(event);
             }
         }
     }
@@ -70,6 +73,19 @@ public class ForgeArtsAndCraftsCompatibilityClient {
                         false,
                         (path) -> new PathPackResources(path, file, true),
                         new Pack.Info(Component.literal("Arts & Crafts Compat features for Twigs"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
+                        PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
+    }
+
+    private static void bpBuilt(AddPackFindersEvent event) {
+        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
+        Path file = mod.getFile().findResource("resourcepacks/built_datapack");
+        event.addRepositorySource((packConsumer) ->
+                packConsumer.accept(Pack.create(
+                        "built_datapack",
+                        Component.literal("Built Compatibility Data Pack"),
+                        false,
+                        (path) -> new PathPackResources(path, file, true),
+                        new Pack.Info(Component.literal("Arts & Crafts Compat features for Built"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
                         PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
     }
 }

@@ -2,17 +2,19 @@ package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.ExcessiveBuildingUtils;
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.block.configurable.EBLadderBlock;
+import net.minecraft.world.level.block.LadderBlock;
 
-public class ACCLadderBlock extends EBLadderBlock {
+public class ACCLadderBlock extends LadderBlock {
     public ACCLadderBlock(Properties settings) {
         super(settings);
     }
 
-    @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING) && EBConfig.ENABLE_LADDER_VARIANTS.get();
+        if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            return ExcessiveBuildingUtils.ladderVariants();
+        }
+        return false;
     }
 }

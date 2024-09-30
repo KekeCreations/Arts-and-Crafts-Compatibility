@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
-import lilypuree.decorative_blocks.blocks.state.ModBlockProperties;
-import lilypuree.decorative_blocks.blocks.state.SupportFaceShape;
-import lilypuree.decorative_blocks.items.SwitchableBlockItem;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DBProperties;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DecorativeBlockUtils;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.SupportFaceShape;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
@@ -83,8 +83,8 @@ public class SupportBlock extends HorizontalDirectionalBlock implements SimpleWa
         boolean flag = ifluidstate.is(FluidTags.WATER) && ifluidstate.getAmount() == 8;
         BlockState blockstate = (BlockState)((BlockState)this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite())).setValue(WATERLOGGED, flag);
         ItemStack stack = context.getItemInHand();
-        if (stack.getItem() instanceof SwitchableBlockItem) {
-            blockstate = ((SwitchableBlockItem)stack.getItem()).getSwitchedState(blockstate, stack);
+        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
+            DecorativeBlockUtils.switchableBlockItem(stack, blockstate);
         }
 
         if (!(Boolean)blockstate.getValue(UP)) {
@@ -181,8 +181,8 @@ public class SupportBlock extends HorizontalDirectionalBlock implements SimpleWa
     static {
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
         UP = BlockStateProperties.UP;
-        HORIZONTAL_SHAPE = ModBlockProperties.HORIZONTAL_SHAPE;
-        VERTICAL_SHAPE = ModBlockProperties.VERTICAL_SHAPE;
+        HORIZONTAL_SHAPE = DBProperties.HORIZONTAL_SHAPE;
+        VERTICAL_SHAPE = DBProperties.VERTICAL_SHAPE;
         verticalSmall = new EnumMap(Direction.class);
         verticalLarge = new EnumMap(Direction.class);
         Plane.HORIZONTAL.stream().forEach((dir) -> {

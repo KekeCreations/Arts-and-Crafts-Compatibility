@@ -1,11 +1,13 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.PathPackResources;
@@ -14,6 +16,8 @@ import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -27,6 +31,13 @@ import java.nio.file.Path;
 @Mod.EventBusSubscriber(modid = ArtsAndCraftsCompatibility.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ForgeArtsAndCraftsCompatibilityClient {
 
+
+    @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        // Entity Renderers
+        event.registerEntityRenderer(ACCEntityTypes.ENTITY_FOR_SITTING.get(), NoopRenderer::new);
+    }
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {

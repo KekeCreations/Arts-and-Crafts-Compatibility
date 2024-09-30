@@ -2,8 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.ACCDecorativeBlocksWoodTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
-import lilypuree.decorative_blocks.blocks.types.VanillaWoodTypes;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -45,7 +45,7 @@ public class ACCBlocks {
 
     //DECORATIVE BLOCKS COMPAT
     public static final Supplier<Block> CORK_PALISADE = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_palisade",
-            () -> new ACCPalisadeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F, 4.0F).sound(ACSoundTypes.CORK).ignitedByLava(), VanillaWoodTypes.OAK));
+            () -> new ACCPalisadeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(2.0F, 4.0F).sound(ACSoundTypes.CORK).ignitedByLava(), ACCDecorativeBlocksWoodTypes.CORK));
 
     public static final Supplier<Block> CORK_SEAT = CompatUtils.registerBlockWithItem(CompatUtils.DECORATIVE_BLOCKS, "cork_seat",
             () -> new SeatBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.2F).sound(ACSoundTypes.CORK).ignitedByLava()));

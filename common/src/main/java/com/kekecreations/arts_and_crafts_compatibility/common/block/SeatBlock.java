@@ -1,11 +1,11 @@
 package com.kekecreations.arts_and_crafts_compatibility.common.block;
 
+import com.kekecreations.arts_and_crafts_compatibility.common.entity.EntityForSitting;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.DBProperties;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
-import lilypuree.decorative_blocks.core.Registration;
-import lilypuree.decorative_blocks.entity.DummyEntityForSitting;
-import lilypuree.decorative_blocks.items.SwitchableBlockItem;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DecorativeBlockUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.FluidTags;
@@ -103,8 +103,8 @@ public class SeatBlock extends HorizontalDirectionalBlock implements SimpleWater
         }
 
         BlockState blockstate = this.defaultBlockState().setValue(FACING, placementDir).setValue(WATERLOGGED, waterloggedFlag).setValue(OCCUPIED, false).setValue(ATTACHED, attachedFlag);
-        if (stack.getItem() instanceof SwitchableBlockItem) {
-            blockstate = ((SwitchableBlockItem<?, ?>) stack.getItem()).getSwitchedState(blockstate, stack);
+        if (Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS)) {
+            DecorativeBlockUtils.switchableBlockItem(stack, blockstate);
         }
         return blockstate;
     }
@@ -153,7 +153,7 @@ public class SeatBlock extends HorizontalDirectionalBlock implements SimpleWater
         boolean canAttachLantern = hit.getDirection() == Direction.DOWN && isSeatAttachableItem && worldIn.getBlockState(pos.below()).isAir();
         if (!worldIn.isClientSide()) {
             if (canSit) {
-                DummyEntityForSitting seat = Registration.DUMMY_ENTITY_TYPE.get().create(worldIn);
+                EntityForSitting seat = ACCEntityTypes.ENTITY_FOR_SITTING.get().create(worldIn);
                 seat.setSeatPos(pos);
                 worldIn.addFreshEntity(seat);
                 player.startRiding(seat);
@@ -187,8 +187,8 @@ public class SeatBlock extends HorizontalDirectionalBlock implements SimpleWater
         double x = pos.getX();
         double y = pos.getY();
         double z = pos.getZ();
-        List<DummyEntityForSitting> entities = worldIn.getEntitiesOfClass(DummyEntityForSitting.class, new AABB(x, y, z, x + 1, y + 1, z + 1));
-        for (DummyEntityForSitting entity : entities) {
+        List<EntityForSitting> entities = worldIn.getEntitiesOfClass(EntityForSitting.class, new AABB(x, y, z, x + 1, y + 1, z + 1));
+        for (EntityForSitting entity : entities) {
             entity.remove(Entity.RemovalReason.DISCARDED);
         }
         super.onRemove(state, worldIn, pos, newState, isMoving);

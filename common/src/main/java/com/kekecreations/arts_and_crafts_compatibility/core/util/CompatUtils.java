@@ -4,6 +4,8 @@ import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPot
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -52,6 +54,10 @@ public class CompatUtils {
 
     public static <T extends BlockEntity> Supplier<BlockEntityType<T>> registerBlockEntityType(String name, Supplier<BlockEntityType<T>> type) {
         return Services.REGISTRY.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, name, type);
+    }
+
+    public static <T extends Entity> Supplier<EntityType<T>> registerEntityType(String name, Supplier<EntityType<T>> type) {
+        return Services.REGISTRY.register(BuiltInRegistries.ENTITY_TYPE, name, type);
     }
 
     public static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(IPlatformHelper.BlockEntitySupplier<T> blockEntitySupplier, Block... blocks) {

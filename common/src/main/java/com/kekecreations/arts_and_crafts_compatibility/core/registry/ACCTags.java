@@ -14,6 +14,9 @@ public class ACCTags {
     //GILDED SHERDS COMPAT
     public static TagKey<Item> GILDED_SHERDS = TagKey.create(Registries.ITEM, new ResourceLocation(CompatUtils.GILDED_SHERDS, "gilded_sherds"));
 
+    //DECORATIVE BLOCKS COMPAT
+    public static TagKey<Block> PALISADES = TagKey.create(Registries.BLOCK, new ResourceLocation(CompatUtils.DECORATIVE_BLOCKS, "palisades"));
+
     //TWIGS COMPAT
     public static TagKey<Block> TABLES_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(CompatUtils.TWIGS, "tables"));
 

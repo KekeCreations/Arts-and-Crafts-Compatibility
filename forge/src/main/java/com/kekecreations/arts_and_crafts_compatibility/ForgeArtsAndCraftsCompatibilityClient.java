@@ -1,6 +1,7 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
@@ -43,9 +44,9 @@ public class ForgeArtsAndCraftsCompatibilityClient {
     public static void clientSetup(FMLClientSetupEvent event) {
         for (DyeColor colour : DyeColor.values()) {
             if (ForgeArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
-                ItemBlockRenderTypes.setRenderLayer(ACCBlocks.getDyedPottedWalnutSapling(colour), RenderType.cutout());
-                ItemBlockRenderTypes.setRenderLayer(ACCBlocks.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
-                ItemBlockRenderTypes.setRenderLayer(ACCBlocks.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
+                ItemBlockRenderTypes.setRenderLayer(EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+                ItemBlockRenderTypes.setRenderLayer(EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
+                ItemBlockRenderTypes.setRenderLayer(EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
             }
         }
     }

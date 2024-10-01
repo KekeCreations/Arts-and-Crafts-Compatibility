@@ -1,10 +1,11 @@
 package com.kekecreations.arts_and_crafts_compatibility.client;
 
+import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -29,16 +30,21 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
 
     public static void registerBlockLayers() {
         for (DyeColor colour : DyeColor.values()) {
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
-
-            BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), RenderType.cutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), RenderType.cutout());
+            if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
+                BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), RenderType.cutout());
+            }
+            if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+                BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), RenderType.cutout());
+            }
         }
-        BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.CORK_LADDER.get(), RenderType.cutout());
+        if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.CORK_LADDER.get(), RenderType.cutout());
+        }
     }
 }

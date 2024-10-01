@@ -1,11 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client.util;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
 
 public class ACCTextureMapping {
 

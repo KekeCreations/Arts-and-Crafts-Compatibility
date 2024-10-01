@@ -40,13 +40,14 @@ public class ACCDecorativeShelfBlock extends Block {
 
 
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter context, List<Component> tooltip, TooltipFlag options) {
-        if (ExcessiveBuildingUtils.customTooltips()) {
-            super.appendHoverText(stack, context, tooltip, options);
-            tooltip.add(CommonComponents.EMPTY);
-            tooltip.add(Component.translatable("tooltip.block.interact").withStyle(ChatFormatting.GRAY));
-            tooltip.add(CommonComponents.space().append(Component.translatable("tooltip.block.variant").withStyle(ChatFormatting.BLUE)));
+        if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            if (ExcessiveBuildingUtils.customTooltips()) {
+                super.appendHoverText(stack, context, tooltip, options);
+                tooltip.add(CommonComponents.EMPTY);
+                tooltip.add(Component.translatable("tooltip.block.interact").withStyle(ChatFormatting.GRAY));
+                tooltip.add(CommonComponents.space().append(Component.translatable("tooltip.block.variant").withStyle(ChatFormatting.BLUE)));
+            }
         }
-
     }
 
     public @NotNull InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {

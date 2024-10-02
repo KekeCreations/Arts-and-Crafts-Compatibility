@@ -31,6 +31,9 @@ public class ArtsAndCraftsCompatibility {
         if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
             EcologicsFlowerPots.register();
         }
+        if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
+            //ExcessiveBuildingFlowerPots.register();
+        }
     }
 
     public static ResourceLocation id(String name) {

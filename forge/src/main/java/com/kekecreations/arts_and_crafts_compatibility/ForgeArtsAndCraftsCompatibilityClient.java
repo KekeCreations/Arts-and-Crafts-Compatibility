@@ -4,7 +4,6 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTy
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import net.minecraft.SharedConstants;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;

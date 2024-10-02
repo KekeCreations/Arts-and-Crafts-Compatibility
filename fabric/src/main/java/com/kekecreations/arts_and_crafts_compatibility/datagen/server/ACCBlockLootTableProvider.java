@@ -2,10 +2,8 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
@@ -16,6 +14,8 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+
+import static com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks.*;
 
 public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     public ACCBlockLootTableProvider(FabricDataOutput dataOutput) {
@@ -31,14 +31,14 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     public void twigs() {
-        dropSelf(ACCBlocks.CORK_TABLE.get());
+        dropSelf(CORK_TABLE.get());
     }
 
     public void decorativeBlocks() {
-        dropSelf(ACCBlocks.CORK_PALISADE.get());
-        dropSelf(ACCBlocks.CORK_BEAM.get());
-        dropSelf(ACCBlocks.CORK_SEAT.get());
-        dropSelf(ACCBlocks.CORK_SUPPORT.get());
+        dropSelf(CORK_PALISADE.get());
+        dropSelf(CORK_BEAM.get());
+        dropSelf(CORK_SEAT.get());
+        dropSelf(CORK_SUPPORT.get());
     }
 
     public void ecologics() {
@@ -50,29 +50,29 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     private void excessiveBuilding() {
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC.get());
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
-        add(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), createSlabItemTable(ACCFabricBlocks.CORK_MOSAIC_SLAB.get()));
-        dropSelf(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
-        dropSelf(ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
-        dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get());
-        dropSelf(ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
-        dropSelf(ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
-        add(ACCFabricBlocks.CORK_BOOKSHELF.get(), createSingleItemTable(Items.BOOK, ConstantValue.exactly(3.0F)));
-        dropSelf(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
-        dropSelf(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
-        dropSelf(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
+        dropSelf(CORK_MOSAIC.get());
+        dropSelf(CORK_MOSAIC_VERTICAL_STAIRS.get());
+        add(CORK_MOSAIC_SLAB.get(), createSlabItemTable(CORK_MOSAIC_SLAB.get()));
+        dropSelf(CORK_MOSAIC_STAIRS.get());
+        dropSelf(CORK_CRAFTING_TABLE.get());
+        dropSelf(BLEACHED_KNITTED_WOOL.get());
+        dropSelf(BLEACHED_KNITTED_CARPET.get());
+        dropSelf(CHISELED_CORK_PLANKS.get());
+        add(CORK_BOOKSHELF.get(), createSingleItemTable(Items.BOOK, ConstantValue.exactly(3.0F)));
+        dropSelf(CORK_DECORATIVE_SHELF.get());
+        dropSelf(TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
+        dropSelf(SOAPSTONE_VERTICAL_STAIRS.get());
+        dropSelf(GYPSUM_VERTICAL_STAIRS.get());
+        dropSelf(POLISHED_GYPSUM_VERTICAL_STAIRS.get());
+        dropSelf(GYPSUM_BRICK_VERTICAL_STAIRS.get());
+        dropSelf(POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
+        dropSelf(SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
-            dropSelf(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
-            dropSelf(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
+            dropSelf(getDyedTerracottaShingleVerticalStairs(colour.getId()));
+            dropSelf(getDyedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
+            dropSelf(getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+            dropSelf(getDyedMudBrickVerticalStairs(colour.getId()));
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()));
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()));
             dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()));

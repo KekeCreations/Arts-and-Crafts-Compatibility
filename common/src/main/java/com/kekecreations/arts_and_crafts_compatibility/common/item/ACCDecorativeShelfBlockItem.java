@@ -6,8 +6,6 @@ import com.kekecreations.arts_and_crafts_compatibility.core.util.ExcessiveBuildi
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
-import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.item.configurable.DecorativeShelfBlockItem;
 
 public class ACCDecorativeShelfBlockItem extends BlockItem {
 

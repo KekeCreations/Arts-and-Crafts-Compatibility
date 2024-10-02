@@ -1,9 +1,8 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
@@ -46,35 +45,35 @@ public class ACCModelProvider extends FabricModelProvider {
 
 
         //EXCESSIVE BUILDING
-        BlockModelGenerators.BlockFamilyProvider corkMosaic = generator.family(ACCFabricBlocks.CORK_MOSAIC.get());
-        corkMosaic.stairs(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
-        corkMosaic.slab(ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC.get());
-        generator.createFullAndCarpetBlocks(ACCFabricBlocks.BLEACHED_KNITTED_WOOL.get(), ACCFabricBlocks.BLEACHED_KNITTED_CARPET.get());
-        generator.createCraftingTableLike(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), TextureMapping::craftingTable);
-        generator.createTrivialBlock(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), TexturedModel.COLUMN);
-        registerEBBookshelf(generator, ACCFabricBlocks.CORK_BOOKSHELF.get(), ACBlocks.CORK_PLANKS.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "0", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "1", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "2", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "3", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "4", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "5", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerDecorativeShelfModel(generator, ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), "6", ACCFabricBlocks.CORK_MOSAIC.get());
-        registerLadder(generator, ACCFabricBlocks.CORK_LADDER.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get());
-        registerVerticalStairs(generator, ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get());
+        BlockModelGenerators.BlockFamilyProvider corkMosaic = generator.family(ACCBlocks.CORK_MOSAIC.get());
+        corkMosaic.stairs(ACCBlocks.CORK_MOSAIC_STAIRS.get());
+        corkMosaic.slab(ACCBlocks.CORK_MOSAIC_SLAB.get());
+        registerVerticalStairs(generator, ACCBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCBlocks.CORK_MOSAIC.get());
+        generator.createFullAndCarpetBlocks(ACCBlocks.BLEACHED_KNITTED_WOOL.get(), ACCBlocks.BLEACHED_KNITTED_CARPET.get());
+        generator.createCraftingTableLike(ACCBlocks.CORK_CRAFTING_TABLE.get(), ACBlocks.CORK_PLANKS.get(), TextureMapping::craftingTable);
+        generator.createTrivialBlock(ACCBlocks.CHISELED_CORK_PLANKS.get(), TexturedModel.COLUMN);
+        registerEBBookshelf(generator, ACCBlocks.CORK_BOOKSHELF.get(), ACBlocks.CORK_PLANKS.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "0", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "1", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "2", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "3", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "4", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "5", ACCBlocks.CORK_MOSAIC.get());
+        registerDecorativeShelfModel(generator, ACCBlocks.CORK_DECORATIVE_SHELF.get(), "6", ACCBlocks.CORK_MOSAIC.get());
+        registerLadder(generator, ACCBlocks.CORK_LADDER.get());
+        registerVerticalStairs(generator, ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACBlocks.TERRACOTTA_SHINGLES.get());
+        registerVerticalStairs(generator, ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE.get());
+        registerVerticalStairs(generator, ACCBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM.get());
+        registerVerticalStairs(generator, ACCBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_GYPSUM.get());
+        registerVerticalStairs(generator, ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get());
+        registerVerticalStairs(generator, ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get());
+        registerVerticalStairs(generator, ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get());
         for (DyeColor colour : DyeColor.values()) {
-            registerVerticalStairs(generator, ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
-            registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
-            registerVerticalStairs(generator, ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
-            registerVerticalStairs(generator, ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
-            registerVerticalStairs(generator, ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+            registerVerticalStairs(generator, ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
+            registerVerticalStairs(generator, ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+            registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
+            registerVerticalStairs(generator, ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
             this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
             this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
             this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), "rose", colour, generator);
@@ -89,7 +88,7 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ACCFabricBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ACCBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
     }
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {

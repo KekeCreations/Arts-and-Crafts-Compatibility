@@ -2,11 +2,10 @@ package com.kekecreations.arts_and_crafts_compatibility;
 
 import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -24,7 +23,6 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
     public void onInitialize() {
         FabricArtsAndCraftsCompatResourcePacks.loadBuiltinResourcePacks();
         ArtsAndCraftsCompatibility.init();
-        ACCFabricBlocks.register();
         addItemsToTabs();
         flammableAndStrippableBlocks();
         if (isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
@@ -88,34 +86,34 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         }
         if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
             ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "excessive_building"))).register(event -> {
-                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "acacia_ladder")), ACCFabricBlocks.CORK_MOSAIC.get());
-                event.addAfter(ACCFabricBlocks.CORK_MOSAIC.get(), ACCFabricBlocks.CORK_MOSAIC_STAIRS.get());
-                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
-                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCFabricBlocks.CORK_MOSAIC_SLAB.get());
-                event.addAfter(ACCFabricBlocks.CORK_MOSAIC_SLAB.get(), ACCFabricBlocks.CHISELED_CORK_PLANKS.get());
-                event.addAfter(ACCFabricBlocks.CHISELED_CORK_PLANKS.get(), ACCFabricBlocks.CORK_BOOKSHELF.get());
-                event.addAfter(ACCFabricBlocks.CORK_BOOKSHELF.get(), ACCFabricBlocks.CORK_DECORATIVE_SHELF.get());
-                event.addAfter(ACCFabricBlocks.CORK_DECORATIVE_SHELF.get(), ACCFabricBlocks.CORK_CRAFTING_TABLE.get());
-                event.addAfter(ACCFabricBlocks.CORK_CRAFTING_TABLE.get(), ACCFabricBlocks.CORK_LADDER.get());
-                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "waxed_oxidized_cut_copper_vertical_stairs")), ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get());
-                event.addAfter(ACCFabricBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
-                event.addAfter(ACCFabricBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
-                event.addAfter(ACCFabricBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "acacia_ladder")), ACCBlocks.CORK_MOSAIC.get());
+                event.addAfter(ACCBlocks.CORK_MOSAIC.get(), ACCBlocks.CORK_MOSAIC_STAIRS.get());
+                event.addAfter(ACCBlocks.CORK_MOSAIC_STAIRS.get(), ACCBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.CORK_MOSAIC_VERTICAL_STAIRS.get(), ACCBlocks.CORK_MOSAIC_SLAB.get());
+                event.addAfter(ACCBlocks.CORK_MOSAIC_SLAB.get(), ACCBlocks.CHISELED_CORK_PLANKS.get());
+                event.addAfter(ACCBlocks.CHISELED_CORK_PLANKS.get(), ACCBlocks.CORK_BOOKSHELF.get());
+                event.addAfter(ACCBlocks.CORK_BOOKSHELF.get(), ACCBlocks.CORK_DECORATIVE_SHELF.get());
+                event.addAfter(ACCBlocks.CORK_DECORATIVE_SHELF.get(), ACCBlocks.CORK_CRAFTING_TABLE.get());
+                event.addAfter(ACCBlocks.CORK_CRAFTING_TABLE.get(), ACCBlocks.CORK_LADDER.get());
+                event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "waxed_oxidized_cut_copper_vertical_stairs")), ACCBlocks.GYPSUM_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACCBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCFabricBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
+                    event.addAfter(ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCFabricBlocks.getDyedTerracottaShingleVerticalStairs(DyeColor.PINK.getId()), ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.getDyedTerracottaShingleVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCFabricBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
+                    event.addAfter(ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCFabricBlocks.getDyedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.getDyedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCFabricBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
+                    event.addAfter(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
+                event.addAfter(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
                 for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCFabricBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
-                    event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "mud_brick_vertical_stairs")), ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
+                    event.addAfter(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+                    event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "mud_brick_vertical_stairs")), ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
                 }
             });
         }

@@ -1,11 +1,11 @@
 package com.kekecreations.arts_and_crafts_compatibility.client;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCFabricBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
+import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -44,7 +44,7 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
             }
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
-            BlockRenderLayerMap.INSTANCE.putBlock(ACCFabricBlocks.CORK_LADDER.get(), RenderType.cutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(ACCBlocks.CORK_LADDER.get(), RenderType.cutout());
         }
     }
 }

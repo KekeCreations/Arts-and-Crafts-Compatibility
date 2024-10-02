@@ -19,7 +19,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -33,7 +32,7 @@ import java.util.List;
 public class ACCDecorativeShelfBlock extends Block {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 6);
 
-    public ACCDecorativeShelfBlock(BlockBehaviour.Properties settings) {
+    public ACCDecorativeShelfBlock(Properties settings) {
         super(settings);
         this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(VARIANT, 0));
     }

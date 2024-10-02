@@ -1,4 +1,4 @@
-package com.kekecreations.arts_and_crafts_compatibility.core.registry.compat;
+package com.kekecreations.arts_and_crafts_compatibility.registry.compat;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import net.minecraft.world.item.DyeColor;

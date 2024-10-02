@@ -19,7 +19,6 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        ecologics();
         built();
         farmersDelight();
         decorativeBlocks();
@@ -62,12 +61,6 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACCFabricBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()))
                     .add(ACCFabricBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
-            this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()))
-                    .add(ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()))
-                    .add(ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()))
-                    .add(ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()))
-                    .add(ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()));
         }
     }
 
@@ -97,14 +90,6 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ACCBlocks.CORK_CABINET.get());
     }
 
-    private void ecologics() {
-        for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                    .add(EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour))
-                    .add(EcologicsFlowerPots.getDyedPottedWalnutSapling(colour))
-                    .add(EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour));
-        }
-    }
     private void built() {
         this.getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ACCBlocks.CORK_SHAKES.get())

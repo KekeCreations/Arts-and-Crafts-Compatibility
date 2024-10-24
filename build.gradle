@@ -53,6 +53,25 @@ subprojects {
             name = 'Curse Maven'
             url = "https://cursemaven.com"
         }
+        //so dye mod doesn't crash
+        maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
+        maven { url = "https://maven.blamejared.com/" } // JEI
+        maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
+        maven { url = "https://maven.quiltmc.org/repository/release" } // Quilt Mappings
+        maven { url = "https://api.modrinth.com/maven" } // LazyDFU
+        maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu
+        maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
+        maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
+        maven { url = "https://jitpack.io" } // Mixin Extras, Fabric ASM
+        maven { url = "https://maven.tterrag.com/" } // Flywheel
+        maven { url = 'https://maven.ladysnake.org/releases' }
+        maven { url = "https://dvs1.progwml6.com/files/maven/" } // location of the maven that hosts JEI files before January 2023
+        maven { url = "https://maven.blamejared.com/" } // location of the maven that hosts JEI files since January 2023
+        maven { url = "https://modmaven.dev" } // location of a maven mirror for JEI files, as a fallback
+        maven { url = "https://maven.architectury.dev" }
+        maven { url = "https://mvn.devos.one/snapshots/" } 	// Create, Porting Lib, Forge Tags, Milk Lib, Registrate
+        maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } // Geckolib
     }
 
     tasks.withType(JavaCompile).configureEach {

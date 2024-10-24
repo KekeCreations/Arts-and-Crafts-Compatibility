@@ -11,6 +11,14 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.Optional;
 
 public class FabricArtsAndCraftsCompatResourcePacks {
+    private static void registerBuiltinResourcePack(ModContainer modContainer, String forModID) {
+        ResourceManagerHelper.registerBuiltinResourcePack(
+                new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, forModID + "_resource_pack"),
+                modContainer,
+                Component.translatable("pack." + ArtsAndCraftsCompatibility.MOD_ID + "." + forModID),
+                ResourcePackActivationType.ALWAYS_ENABLED
+        );
+    }
     private static void registerBuiltinDataPack(ModContainer modContainer, String packId) {
         ResourceManagerHelper.registerBuiltinResourcePack(
                 new ResourceLocation(ArtsAndCraftsCompatibility.MOD_ID, packId + "_datapack"),
@@ -31,6 +39,10 @@ public class FabricArtsAndCraftsCompatResourcePacks {
             }
             if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.BUILT)) {
                 registerBuiltinDataPack(modContainer.get(), CompatUtils.BUILT);
+            }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.MINT)) {
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.MINT);
+                registerBuiltinResourcePack(modContainer.get(), CompatUtils.MINT);
             }
         }
     }

@@ -19,6 +19,9 @@ public class ACCMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("PalisadeBlockMixin")) {
             return Services.PLATFORM.isModLoaded(CompatUtils.DECORATIVE_BLOCKS);
         }
+        if (mixinClassName.contains("BlockEntityTypeMixin")) {
+            return Services.PLATFORM.isModLoaded(CompatUtils.MINT);
+        }
         return true;
     }
 

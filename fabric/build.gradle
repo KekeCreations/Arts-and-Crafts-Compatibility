@@ -24,6 +24,33 @@ dependencies {
     modImplementation "curse.maven:dramatic-doors-380617:5476685"
     modImplementation "curse.maven:excessive-building-845097:5765499"
     modImplementation "curse.maven:forge-config-api-port-fabric-547434:4583000"
+    modImplementation "curse.maven:el-and-ls-dyes-1122454:5816277"
+    modImplementation "curse.maven:geckolib-388172:5675212"
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.12.3+kotlin.2.0.21")
+    modImplementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}")
+    modImplementation "org.jetbrains.kotlin:kotlin-reflect:2.0.21"
+    implementation("com.eliotlash.mclib:mclib:${mclib_version}")
+
+    //so dye mod doesn't crash
+    // REI
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:$rei_version")
+    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:$rei_version")
+    //BetterEnd
+    modCompileOnly("maven.modrinth:gc8OEnCC:${betterend_version}")
+    modCompileOnly("com.github.quiqueck:BCLib:${bclib_version}")
+    modCompileOnly("com.github.quiqueck:WunderLib:${wunderlib_version}")
+    // Botania  	// this doesn't run here with modImpl but it does run in prod. So I'm chill with it.
+    modCompileOnly("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${cca_version}")
+    modCompileOnly("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${cca_version}")
+    modCompileOnly("maven.modrinth:trinkets:${trinkets_version}")
+    modCompileOnly("me.zeroeightsix:fiber:${fiber_version}")
+    modCompileOnly("com.github.emilyploszaj:step-height-entity-attribute:${step_height_version}")
+    modCompileOnly("maven.modrinth:patchouli:${patchouli_version}")
+    modCompileOnly("maven.modrinth:botania:${botania_version}")
+    // Create - dependencies are added transitively
+    modCompileOnly("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
+    include(modImplementation('com.github.Chocohead:Fabric-ASM:v2.3'))
+    //-----------------------------------
 
     //Optional
     modImplementation "curse.maven:gilded-sherds-935749:4975224"

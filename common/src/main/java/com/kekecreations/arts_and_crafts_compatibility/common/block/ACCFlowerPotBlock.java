@@ -17,6 +17,6 @@ public class ACCFlowerPotBlock extends ACFlowerPotBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet $$0) {
-        return Services.PLATFORM.isModLoaded(modID);
+        return Services.PLATFORM.isModLoaded(modID) && com.kekecreations.arts_and_crafts.core.platform.Services.CONFIG.areDyedFlowerPotsEnabled();
     }
 }

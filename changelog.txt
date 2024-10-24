@@ -1,3 +1,10 @@
+V1.3.0
+• Dyed Compat Flower Pots are no longer enabled if Dyed Flower Pots are disabled.
+• This update works with Arts & Crafts V1.3.0+
+
+
+
+
 V1.2.2
 • Fixed a mixin crash when Decorative Blocks is installed.
 

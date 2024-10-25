@@ -1,7 +1,10 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
+import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
+import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
@@ -26,6 +29,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class ACCModelProvider extends FabricModelProvider {
     public ACCModelProvider(FabricDataOutput output) {
@@ -90,8 +94,24 @@ public class ACCModelProvider extends FabricModelProvider {
             soapstone.wall(ACBlocks.getDyedSoapstoneWall(colour.getId()));
             generator.delegateItemModel(ACBlocks.getDyedSoapstone(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_soapstone"));
 
+            BlockModelGenerators.BlockFamilyProvider soapstoneBricks = generator.family(ACBlocks.getDyedSoapstoneBricks(colour.getId()));
+            soapstoneBricks.stairs(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
+            soapstoneBricks.slab(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()));
+            soapstoneBricks.wall(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedSoapstoneBricks(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_soapstone_bricks"));
+
+            BlockModelGenerators.BlockFamilyProvider polishedSoapstone = generator.family(ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+            polishedSoapstone.stairs(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()));
+            polishedSoapstone.slab(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()));
+            polishedSoapstone.wall(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedPolishedSoapstone(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_polished_soapstone"));
+
             generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
             generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
+
+            if (colour == ModDyeColor.VELVET) {
+                registerChalkDust(generator, (ChalkDustBlock) ACBlocks.getChalkDust(colour.getId()));
+            }
         }
     }
 
@@ -104,7 +124,38 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
 
         for (DyeColor colour : ModDyeColor.VALUES) {
+            itemModelGenerator.generateFlatItem(ACItems.getChalkStick(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
         }
+    }
+    public static void registerChalkDust(BlockModelGenerators generator, ChalkDustBlock dust) {
+
+        // create more of these later for variants
+        ResourceLocation model = ACCModelTemplates.CHALK_DUST.create(dust, ACCTextureMapping.chalkDustTextureMappings(dust), generator.modelOutput);
+        //fix rotations
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(dust)
+                .with(PropertyDispatch.property(BlockStateProperties.FACING)
+                        .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0)
+                                .with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.EAST, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
+                                .with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.WEST, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+                                .with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
+                                .with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.UP, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+                                .with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.DOWN, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
+                                .with(VariantProperties.UV_LOCK, true))));
     }
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {

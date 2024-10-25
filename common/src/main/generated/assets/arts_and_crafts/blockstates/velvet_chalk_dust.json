@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 0
+    },
+    "facing=south": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=west": {
+      "model": "arts_and_crafts:block/velvet_chalk_dust",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

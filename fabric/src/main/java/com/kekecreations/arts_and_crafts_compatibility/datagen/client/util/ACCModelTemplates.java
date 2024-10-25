@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client.util;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts_compatibility.ArtsAndCraftsCompatibility;
 import net.minecraft.data.models.model.ModelTemplate;
 import net.minecraft.data.models.model.TextureSlot;
@@ -10,6 +11,7 @@ import java.util.Optional;
 public class ACCModelTemplates {
     public static final ModelTemplate VERTICAL_STAIRS;
     public static final ModelTemplate LADDER;
+    public static final ModelTemplate CHALK_DUST;
 
     public static final ModelTemplate FLOWER_POT = createFlowerPot(TextureSlot.PARTICLE, ACCTextureSlots.FLOWER_POT, TextureSlot.PLANT);
 
@@ -21,5 +23,6 @@ public class ACCModelTemplates {
     static {
         VERTICAL_STAIRS = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCraftsCompatibility.MOD_ID, "template_vertical_stairs").withPrefix("template/credit_to_yirmiri/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
         LADDER = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCraftsCompatibility.MOD_ID, "template_ladder").withPrefix("template/credit_to_yirmiri/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
+        CHALK_DUST = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCrafts.MOD_ID, "chalk_dust")), Optional.empty(), new TextureSlot[]{ACCTextureSlots.DUST, TextureSlot.PARTICLE});
     }
 }

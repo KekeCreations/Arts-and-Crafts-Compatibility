@@ -1,0 +1,7 @@
+{
+  "parent": "arts_and_crafts_compat:template/credit_to_yirmiri/template_vertical_stairs",
+  "textures": {
+    "particle": "arts_and_crafts:block/periwinkle_soapstone",
+    "texture": "arts_and_crafts:block/periwinkle_soapstone"
+  }
+}

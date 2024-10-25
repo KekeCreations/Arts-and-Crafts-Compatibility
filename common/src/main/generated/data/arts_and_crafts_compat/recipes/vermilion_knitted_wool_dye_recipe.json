@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts_compat:bleached_knitted_wool"
+    },
+    "K": {
+      "item": "mint:vermilion_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "excessive_building:vermilion_knitted_wool"
+  },
+  "show_notification": true
+}

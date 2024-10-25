@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts_compat:indigo_soapstone_brick_vertical_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "unlock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:indigo_soapstone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "unlock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts_compat:indigo_soapstone_brick_vertical_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

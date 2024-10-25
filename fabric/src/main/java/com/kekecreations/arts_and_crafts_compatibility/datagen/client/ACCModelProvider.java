@@ -1,15 +1,17 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
+import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCModelTemplates;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCTextureMapping;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.core.Direction;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
@@ -80,6 +82,17 @@ public class ACCModelProvider extends FabricModelProvider {
             this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
             this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
         }
+        //DYE MOD STUFF
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            BlockModelGenerators.BlockFamilyProvider soapstone = generator.family(ACBlocks.getDyedSoapstone(colour.getId()));
+            soapstone.stairs(ACBlocks.getDyedSoapstoneStairs(colour.getId()));
+            soapstone.slab(ACBlocks.getDyedSoapstoneSlab(colour.getId()));
+            soapstone.wall(ACBlocks.getDyedSoapstoneWall(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedSoapstone(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_soapstone"));
+
+            generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
+            generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
+        }
     }
 
     @Override
@@ -89,6 +102,9 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
+
+        for (DyeColor colour : ModDyeColor.VALUES) {
+        }
     }
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {

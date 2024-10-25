@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "arts_and_crafts_compat:block/banana_mud_brick_vertical_stairs",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "arts_and_crafts_compat:block/banana_mud_brick_vertical_stairs",
+      "uvlock": true,
+      "y": 0
+    },
+    "facing=south": {
+      "model": "arts_and_crafts_compat:block/banana_mud_brick_vertical_stairs",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "arts_and_crafts_compat:block/banana_mud_brick_vertical_stairs",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

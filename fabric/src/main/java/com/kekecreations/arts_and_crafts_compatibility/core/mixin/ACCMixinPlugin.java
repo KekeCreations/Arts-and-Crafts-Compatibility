@@ -22,6 +22,9 @@ public class ACCMixinPlugin implements IMixinConfigPlugin {
         if (mixinClassName.contains("BlockEntityTypeMixin")) {
             return Services.PLATFORM.isModLoaded(CompatUtils.MINT);
         }
+        if (mixinClassName.contains("CreativeCategoryUtilsMixin")) {
+            return Services.PLATFORM.isModLoaded(CompatUtils.MINT) && Services.PLATFORM.isModLoaded(CompatUtils.ARTS_AND_CRAFTS);
+        }
         return true;
     }
 

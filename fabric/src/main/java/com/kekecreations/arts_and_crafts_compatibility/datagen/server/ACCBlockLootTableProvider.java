@@ -6,6 +6,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.Ecol
 import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
@@ -28,6 +29,13 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
         twigs();
         decorativeBlocks();
         excessiveBuilding();
+        mint();
+    }
+
+    public void mint() {
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            dropSelf(ACBlocks.getChalk(colour.getId()));
+        }
     }
 
     public void twigs() {

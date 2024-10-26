@@ -1,8 +1,12 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DyeColor;
@@ -24,6 +28,18 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         decorativeBlocks();
         dramaticDoors();
         excessiveBuilding();
+        mint();
+    }
+
+    private void mint() {
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
+                    .add(ACBlocks.getChalkDust(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(ACBlocks.getChalk(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.CHALK)
+                    .add(ACBlocks.getChalk(colour.getId()));
+        }
     }
 
     private void excessiveBuilding() {

@@ -6,6 +6,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
@@ -27,6 +28,10 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+        //MINT
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACItems.getChalkStick(colour.getId()), ACBlocks.getChalk(colour.getId()));
+        }
         //DRAMATIC DOORS
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACCItems.CORK_SHORT_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCItems.TALL_CORK_DOOR.get(), 2)

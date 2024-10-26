@@ -1,11 +1,13 @@
-// 1.20.1	2024-10-25T21:12:59.4721283	Arts And Crafts Compatibility/Tags for minecraft:block
-fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
+// 1.20.1	2024-10-26T22:25:26.6763642	Arts And Crafts Compatibility/Tags for minecraft:block
 24b6cb58794cecc7c5a1bc789d1176d1363dfeee data\minecraft\tags\blocks\wool.json
+fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
+a5bcfbc26b111c59330c477d0ce2fe89af24f9a7 data\arts_and_crafts\tags\blocks\chalk_dust.json
 266aef111f301ab21d708853eb938c39e45a7b13 data\minecraft\tags\blocks\climbable.json
-df2124c902da530942b980832f868a06781711c6 data\minecraft\tags\blocks\enchantment_power_provider.json
 b7459c67536776b3af997d165875b8b9903833dd data\minecraft\tags\blocks\mineable\axe.json
-bb05f4dd6a91d01ca9ca4ec0b80e0d10a2bb979c data\minecraft\tags\blocks\mineable\pickaxe.json
 142233e7b9fbeaff5b9da1d2c184791cd8d10080 data\minecraft\tags\blocks\walls.json
+ffc83f7ffef24a06bc945b89114538f64a15f00b data\arts_and_crafts_compat\tags\blocks\paintable\chalk.json
+df2124c902da530942b980832f868a06781711c6 data\minecraft\tags\blocks\enchantment_power_provider.json
+64487e7dc5cec3e4c16d41c00a002e0d5bbe6293 data\minecraft\tags\blocks\mineable\pickaxe.json
 a68f609262a5e4e557301cd696eaf3ea01b2500e data\minecraft\tags\blocks\wooden_stairs.json
 c5d9a4a25c93c40288ea6463319d1f730c966644 data\minecraft\tags\blocks\wooden_slabs.json
 de019b30cff250921d79aab24106e042bd931fa3 data\minecraft\tags\blocks\logs.json

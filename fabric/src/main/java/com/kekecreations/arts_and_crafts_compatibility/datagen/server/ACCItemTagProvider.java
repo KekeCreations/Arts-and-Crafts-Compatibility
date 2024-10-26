@@ -1,12 +1,16 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.DyeColor;
 import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,6 +25,14 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void addTags(HolderLookup.Provider arg) {
         gildedSherds();
         excessiveBuilding();
+        mint();
+    }
+
+    public void mint() {
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
+                    .add(ACItems.getChalkStick(colour.getId()));
+        }
     }
 
     public void excessiveBuilding() {

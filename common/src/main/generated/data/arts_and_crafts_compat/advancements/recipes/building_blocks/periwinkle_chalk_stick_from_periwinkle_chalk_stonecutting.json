@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_periwinkle_chalk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:periwinkle_chalk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:periwinkle_chalk_stick_from_periwinkle_chalk_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_periwinkle_chalk",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:periwinkle_chalk_stick_from_periwinkle_chalk_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

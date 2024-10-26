@@ -108,10 +108,6 @@ public class ACCModelProvider extends FabricModelProvider {
 
             generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
             generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
-
-            if (colour == ModDyeColor.VELVET) {
-                registerChalkDust(generator, (ChalkDustBlock) ACBlocks.getChalkDust(colour.getId()));
-            }
         }
     }
 
@@ -126,36 +122,6 @@ public class ACCModelProvider extends FabricModelProvider {
         for (DyeColor colour : ModDyeColor.VALUES) {
             itemModelGenerator.generateFlatItem(ACItems.getChalkStick(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
         }
-    }
-    public static void registerChalkDust(BlockModelGenerators generator, ChalkDustBlock dust) {
-
-        // create more of these later for variants
-        ResourceLocation model = ACCModelTemplates.CHALK_DUST.create(dust, ACCTextureMapping.chalkDustTextureMappings(dust), generator.modelOutput);
-        //fix rotations
-        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(dust)
-                .with(PropertyDispatch.property(BlockStateProperties.FACING)
-                        .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0)
-                                .with(VariantProperties.UV_LOCK, true))
-                        .select(Direction.EAST, Variant.variant()
-                                .with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90)
-                                .with(VariantProperties.UV_LOCK, true))
-                        .select(Direction.WEST, Variant.variant()
-                                .with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-                                .with(VariantProperties.UV_LOCK, true))
-                        .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180)
-                                .with(VariantProperties.UV_LOCK, true))
-                        .select(Direction.UP, Variant.variant()
-                                .with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-                                .with(VariantProperties.UV_LOCK, true))
-                        .select(Direction.DOWN, Variant.variant()
-                                .with(VariantProperties.MODEL, model)
-                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270)
-                                .with(VariantProperties.UV_LOCK, true))));
     }
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {

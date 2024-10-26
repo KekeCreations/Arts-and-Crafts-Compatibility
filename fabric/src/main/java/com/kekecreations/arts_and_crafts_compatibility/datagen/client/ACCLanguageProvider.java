@@ -1,9 +1,12 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
+import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
+import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.world.item.DyeColor;
 import org.apache.commons.lang3.StringUtils;
 
@@ -14,6 +17,16 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder builder) {
+        //MINT
+        builder.add("advancements.adventure.board_planning_insane.description", "I said collect ALL chalk sticks");
+        builder.add("advancements.adventure.board_planning_insane.title", "Board Planning: Insane Edition");
+        for (DyeColor colour : ModDyeColor.VALUES) {
+            String stringColour = StringUtils.capitalize(colour.getName());
+
+            builder.add(ACBlocks.getChalk(colour.getId()), stringColour + " Chalk");
+            builder.add(ACBlocks.getChalkDust(colour.getId()), stringColour + " Chalk Dust");
+            builder.add(ACItems.getChalkStick(colour.getId()), stringColour + " Chalk Stick");
+        }
         //BUILT
         builder.add(ACCBlocks.CORK_SHAKES.get(), "Cork Shakes");
         builder.add(ACCBlocks.CORK_SHAKES_SLAB.get(), "Cork Shakes Slab");

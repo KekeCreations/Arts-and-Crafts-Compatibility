@@ -188,6 +188,26 @@
     "arts_and_crafts_compat:mold_soapstone_vertical_stairs",
     "arts_and_crafts_compat:mold_polished_soapstone_vertical_stairs",
     "arts_and_crafts_compat:mold_soapstone_brick_vertical_stairs",
-    "arts_and_crafts_compat:mold_mud_brick_vertical_stairs"
+    "arts_and_crafts_compat:mold_mud_brick_vertical_stairs",
+    "arts_and_crafts:mint_chalk",
+    "arts_and_crafts:peach_chalk",
+    "arts_and_crafts:periwinkle_chalk",
+    "arts_and_crafts:artichoke_chalk",
+    "arts_and_crafts:fuchsia_chalk",
+    "arts_and_crafts:vermilion_chalk",
+    "arts_and_crafts:shamrock_chalk",
+    "arts_and_crafts:indigo_chalk",
+    "arts_and_crafts:banana_chalk",
+    "arts_and_crafts:cerulean_chalk",
+    "arts_and_crafts:acorn_chalk",
+    "arts_and_crafts:mauve_chalk",
+    "arts_and_crafts:maroon_chalk",
+    "arts_and_crafts:grape_chalk",
+    "arts_and_crafts:navy_chalk",
+    "arts_and_crafts:sap_chalk",
+    "arts_and_crafts:amber_chalk",
+    "arts_and_crafts:sage_chalk",
+    "arts_and_crafts:velvet_chalk",
+    "arts_and_crafts:mold_chalk"
   ]
 }

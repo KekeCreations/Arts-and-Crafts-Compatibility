@@ -1,0 +1,120 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "chalk",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    [
+      {
+        "item": "arts_and_crafts:white_chalk"
+      },
+      {
+        "item": "arts_and_crafts:orange_chalk"
+      },
+      {
+        "item": "arts_and_crafts:magenta_chalk"
+      },
+      {
+        "item": "arts_and_crafts:light_blue_chalk"
+      },
+      {
+        "item": "arts_and_crafts:yellow_chalk"
+      },
+      {
+        "item": "arts_and_crafts:pink_chalk"
+      },
+      {
+        "item": "arts_and_crafts:gray_chalk"
+      },
+      {
+        "item": "arts_and_crafts:light_gray_chalk"
+      },
+      {
+        "item": "arts_and_crafts:cyan_chalk"
+      },
+      {
+        "item": "arts_and_crafts:purple_chalk"
+      },
+      {
+        "item": "arts_and_crafts:blue_chalk"
+      },
+      {
+        "item": "arts_and_crafts:brown_chalk"
+      },
+      {
+        "item": "arts_and_crafts:green_chalk"
+      },
+      {
+        "item": "arts_and_crafts:red_chalk"
+      },
+      {
+        "item": "arts_and_crafts:black_chalk"
+      },
+      {
+        "item": "arts_and_crafts:mint_chalk"
+      },
+      {
+        "item": "arts_and_crafts:peach_chalk"
+      },
+      {
+        "item": "arts_and_crafts:periwinkle_chalk"
+      },
+      {
+        "item": "arts_and_crafts:artichoke_chalk"
+      },
+      {
+        "item": "arts_and_crafts:fuchsia_chalk"
+      },
+      {
+        "item": "arts_and_crafts:vermilion_chalk"
+      },
+      {
+        "item": "arts_and_crafts:shamrock_chalk"
+      },
+      {
+        "item": "arts_and_crafts:indigo_chalk"
+      },
+      {
+        "item": "arts_and_crafts:banana_chalk"
+      },
+      {
+        "item": "arts_and_crafts:cerulean_chalk"
+      },
+      {
+        "item": "arts_and_crafts:acorn_chalk"
+      },
+      {
+        "item": "arts_and_crafts:mauve_chalk"
+      },
+      {
+        "item": "arts_and_crafts:maroon_chalk"
+      },
+      {
+        "item": "arts_and_crafts:grape_chalk"
+      },
+      {
+        "item": "arts_and_crafts:navy_chalk"
+      },
+      {
+        "item": "arts_and_crafts:sap_chalk"
+      },
+      {
+        "item": "arts_and_crafts:amber_chalk"
+      },
+      {
+        "item": "arts_and_crafts:sage_chalk"
+      },
+      {
+        "item": "arts_and_crafts:velvet_chalk"
+      },
+      {
+        "item": "arts_and_crafts:mold_chalk"
+      }
+    ]
+  ],
+  "result": {
+    "item": "arts_and_crafts:lime_chalk"
+  }
+}

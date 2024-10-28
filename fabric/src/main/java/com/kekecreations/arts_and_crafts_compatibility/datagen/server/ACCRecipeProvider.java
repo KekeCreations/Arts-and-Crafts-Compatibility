@@ -30,10 +30,22 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
         //MINT
+        List<Item> dyeList = new ArrayList<>(List.of());
+        List<Item> everyChalkStickList = new ArrayList<>(List.of());
+        List<Item> chalkStickList = new ArrayList<>(List.of());
+        List<Item> everyChalkList = new ArrayList<>(List.of());
+        List<Item> chalkList = new ArrayList<>(List.of());
         List<Item> soapstoneList = new ArrayList<>(List.of());
         List<Item> soapstoneBrickList = new ArrayList<>(List.of());
         List<Item> polishedSoapstoneList = new ArrayList<>(List.of());
+        for (DyeColor colour : DyeColor.values()) {
+            dyeList.add(DyeItem.byColor(colour));
+            everyChalkStickList.add(ACItems.getChalkStick(colour.getId()));
+            everyChalkList.add(ACBlocks.getChalk(colour.getId()).asItem());
+        }
         for (DyeColor colour : ModDyeColor.VALUES) {
+            chalkList.add(ACBlocks.getChalk(colour.getId()).asItem());
+            chalkStickList.add(ACItems.getChalkStick(colour.getId()));
             soapstoneList.add(ACBlocks.getDyedSoapstone(colour.getId()).asItem());
             polishedSoapstoneList.add(ACBlocks.getDyedPolishedSoapstone(colour.getId()).asItem());
             soapstoneBrickList.add(ACBlocks.getDyedSoapstoneBricks(colour.getId()).asItem());
@@ -79,9 +91,14 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             bleachBlockAlt(exporter, colour, soapstoneList, ACBlocks.SOAPSTONE.get().asItem(), "soapstone");
             bleachBlockAlt(exporter, colour, polishedSoapstoneList, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), "polished_soapstone");
             bleachBlockAlt(exporter, colour, soapstoneBrickList, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), "soapstone_bricks");
+            bleachBlock(exporter, colour, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get().asItem(), "chalk_sticks");
+            bleachBlock(exporter, colour, chalkList, ACBlocks.BLEACHED_CHALK.get().asItem(), "chalk");
 
             paintbrushRecipe(colour, ACItems.getPaintBrush(colour.getId()), exporter);
         }
+        colorBlockWithDye(exporter, dyeList, everyChalkStickList, "chalk_sticks");
+        colorBlockWithDye(exporter, dyeList, everyChalkList, "chalk");
+
         //DRAMATIC DOORS
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACCItems.CORK_SHORT_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ACCItems.TALL_CORK_DOOR.get(), 2)
@@ -299,6 +316,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .save(exporter, getItemName(output) + "_dye_recipe");
     }
+
     public void createLadderRecipe(ItemLike output, ItemLike input, Consumer<FinishedRecipe> exporter) {
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 8)
                 .define('#', Ingredient.of(Items.STICK)).define('@', input)
@@ -309,12 +327,12 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
     }
 
-    protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
+    protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_, DyeColor dyeColor, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bleachedBlock)
                 .requires(Ingredient.of(p_289675_.stream().map(ItemStack::new)))
                 .requires(ACItems.BLEACHDEW.get())
                 .group(p_289641_)
-                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_compat_" + p_289641_);
+                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + dyeColor + "to_bleach_" + p_289641_);
     }
 
     protected static void bleachBlockAlt(Consumer<FinishedRecipe> p_289666_, DyeColor dyeColor, List<Item> itemList, ItemLike bleachedBlock, String string) {

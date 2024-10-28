@@ -112,6 +112,13 @@ public class ACCModelProvider extends FabricModelProvider {
             mudBricks.wall(ACBlocks.getDyedMudBrickWall(colour.getId()));
             generator.delegateItemModel(ACBlocks.getDyedMudBricks(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_mud_bricks"));
 
+            BlockModelGenerators.BlockFamilyProvider shingles = generator.family(ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            shingles.stairs(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()));
+            shingles.slab(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()));
+            shingles.wall(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedTerracottaShingles(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_terracotta_shingles"));
+
+
             generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
             generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
         }

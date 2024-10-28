@@ -40,6 +40,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         List<Item> soapstoneBrickList = new ArrayList<>(List.of());
         List<Item> polishedSoapstoneList = new ArrayList<>(List.of());
         List<Item> mudBrickList = new ArrayList<>(List.of());
+        List<Item> terracottaShingleList = new ArrayList<>(List.of());
         for (DyeColor colour : DyeColor.values()) {
             dyeList.add(DyeItem.byColor(colour));
             everyChalkStickList.add(ACItems.getChalkStick(colour.getId()));
@@ -52,6 +53,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             polishedSoapstoneList.add(ACBlocks.getDyedPolishedSoapstone(colour.getId()).asItem());
             soapstoneBrickList.add(ACBlocks.getDyedSoapstoneBricks(colour.getId()).asItem());
             mudBrickList.add(ACBlocks.getDyedMudBricks(colour.getId()).asItem());
+            terracottaShingleList.add(ACBlocks.getDyedTerracottaShingles(colour.getId()).asItem());
         }
         for (DyeColor colour : ModDyeColor.VALUES) {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACItems.getChalkStick(colour.getId()), ACBlocks.getChalk(colour.getId()));
@@ -105,6 +107,18 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBrickStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBrickWall(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
 
+            //SHINGLE
+            stairRecipe(ACBlocks.getDyedTerracottaShingles(colour.getId()), ACBlocks.getDyedTerracottaShingleStairs(colour.getId()), exporter);
+            slabRecipe(ACBlocks.getDyedTerracottaShingles(colour.getId()), ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), exporter);
+            wallRecipe(ACBlocks.getDyedTerracottaShingles(colour.getId()), ACBlocks.getDyedTerracottaShingleWall(colour.getId()), exporter);
+            eightDyeRecipe(ACBlocks.getDyedTerracottaShingles(colour.getId()), ACBlocks.TERRACOTTA_SHINGLES.get(), DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()), ACBlocks.TERRACOTTA_SHINGLE_STAIRS.get(), DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), ACBlocks.TERRACOTTA_SHINGLE_SLAB.get(), DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedTerracottaShingleWall(colour.getId()), ACBlocks.TERRACOTTA_SHINGLE_WALL.get(), DyeItem.byColor(colour), exporter);
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleWall(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+
 
 
             paintbrushRecipe(colour, ACItems.getPaintBrush(colour.getId()), exporter);
@@ -115,6 +129,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         bleachBlock(exporter, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get().asItem(), "chalk_sticks");
         bleachBlock(exporter, chalkList, ACBlocks.BLEACHED_CHALK.get().asItem(), "chalk");
         bleachBlockAlt(exporter, mudBrickList, Blocks.MUD_BRICKS, "mud_bricks");
+        bleachBlockAlt(exporter, terracottaShingleList, ACBlocks.TERRACOTTA_SHINGLES.get(), "terracotta_shingles");
 
         colorBlockWithDye(exporter, dyeList, everyChalkStickList, "chalk_sticks");
         colorBlockWithDye(exporter, dyeList, everyChalkList, "chalk");

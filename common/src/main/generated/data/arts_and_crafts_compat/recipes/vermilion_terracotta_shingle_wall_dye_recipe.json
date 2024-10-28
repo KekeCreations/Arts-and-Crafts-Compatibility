@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:terracotta_shingle_wall"
+    },
+    "K": {
+      "item": "mint:vermilion_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:vermilion_terracotta_shingle_wall"
+  },
+  "show_notification": true
+}

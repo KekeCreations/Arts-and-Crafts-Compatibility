@@ -52,6 +52,11 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(ACBlocks.getDyedMudBrickStairs(colour.getId()));
             dropSelf(ACBlocks.getDyedMudBrickWall(colour.getId()));
             add(ACBlocks.getDyedMudBrickSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedMudBrickSlab(colour.getId())));
+
+            dropSelf(ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            dropSelf(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()));
+            dropSelf(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
+            add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedTerracottaShingleSlab(colour.getId())));
         }
     }
 

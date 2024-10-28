@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:terracotta_shingle_stairs"
+    },
+    "K": {
+      "item": "mint:navy_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:navy_terracotta_shingle_stairs"
+  },
+  "show_notification": true
+}

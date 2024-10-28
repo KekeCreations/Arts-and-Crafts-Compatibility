@@ -52,18 +52,25 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACBlocks.getDyedMudBricks(colour.getId()))
                     .add(ACBlocks.getDyedMudBrickSlab(colour.getId()))
                     .add(ACBlocks.getDyedMudBrickStairs(colour.getId()))
-                    .add(ACBlocks.getDyedMudBrickWall(colour.getId()));
+                    .add(ACBlocks.getDyedMudBrickWall(colour.getId()))
+                    .add(ACBlocks.getDyedTerracottaShingles(colour.getId()))
+                    .add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()))
+                    .add(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()))
+                    .add(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(ACBlocks.getDyedTerracottaShingleWall(colour.getId()))
                     .add(ACBlocks.getDyedMudBrickWall(colour.getId()))
                     .add(ACBlocks.getDyedSoapstoneWall(colour.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()))
                     .add(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.STAIRS)
+                    .add(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()))
                     .add(ACBlocks.getDyedMudBrickStairs(colour.getId()))
                     .add(ACBlocks.getDyedSoapstoneStairs(colour.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()))
                     .add(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.SLABS)
+                    .add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()))
                     .add(ACBlocks.getDyedMudBrickSlab(colour.getId()))
                     .add(ACBlocks.getDyedSoapstoneSlab(colour.getId()))
                     .add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()))
@@ -104,6 +111,14 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACBlocks.getDyedMudBrickWall(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.MUD_BRICK_SLAB)
                     .add(ACBlocks.getDyedMudBrickSlab(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.TERRACOTTA_SHINGLES)
+                    .add(ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.TERRACOTTA_SHINGLE_STAIRS)
+                    .add(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.TERRACOTTA_SHINGLE_SLAB)
+                    .add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.TERRACOTTA_SHINGLE_WALL)
+                    .add(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
         }
     }
 

@@ -30,6 +30,10 @@ public class ACCTags {
     public static final TagKey<Block> MUD_BRICK_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_stairs"));
     public static final TagKey<Block> MUD_BRICK_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_slab"));
     public static final TagKey<Block> MUD_BRICK_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_wall"));
+    public static final TagKey<Block> TERRACOTTA_SHINGLES = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/terracotta_shingles"));
+    public static final TagKey<Block> TERRACOTTA_SHINGLE_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/terracotta_shingle_stairs"));
+    public static final TagKey<Block> TERRACOTTA_SHINGLE_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/terracotta_shingle_slab"));
+    public static final TagKey<Block> TERRACOTTA_SHINGLE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/terracotta_shingle_wall"));
 
 
     //GILDED SHERDS COMPAT

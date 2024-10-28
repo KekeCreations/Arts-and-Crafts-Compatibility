@@ -1,8 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
 import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
-import com.kekecreations.arts_and_crafts.common.block.ChalkDustBlock;
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockStateProperties;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
@@ -29,7 +27,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public class ACCModelProvider extends FabricModelProvider {
     public ACCModelProvider(FabricDataOutput output) {

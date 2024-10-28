@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:sap_terracotta_shingles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sap_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:sap_terracotta"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "sap_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:sap_terracotta_shingles"
+    ]
+  },
+  "sends_telemetry_event": false
+}

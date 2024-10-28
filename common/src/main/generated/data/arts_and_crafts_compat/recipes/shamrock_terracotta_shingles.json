@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "mint:shamrock_terracotta"
+    }
+  },
+  "pattern": [
+    "KK",
+    "KK"
+  ],
+  "result": {
+    "count": 4,
+    "item": "arts_and_crafts:shamrock_terracotta_shingles"
+  },
+  "show_notification": true
+}

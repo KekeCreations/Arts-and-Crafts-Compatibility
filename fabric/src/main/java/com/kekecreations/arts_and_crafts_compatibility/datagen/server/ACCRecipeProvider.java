@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DyeModDyedBlockLists;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.leafenzo.mint.util.ModDyeColor;
@@ -93,6 +94,9 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             wallRecipe(ACBlocks.getDyedPolishedSoapstone(colour.getId()), ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()), exporter);
             wallRecipe(ACBlocks.getDyedSoapstoneBricks(colour.getId()), ACBlocks.getDyedSoapstoneBrickWall(colour.getId()), exporter);
 
+            typeRecipe(ACBlocks.getDyedSoapstone(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()), exporter);
+            typeRecipe(ACBlocks.getDyedPolishedSoapstone(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()), exporter);
+
 
 
             //MUD
@@ -118,6 +122,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedTerracottaShingleWall(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+            typeRecipe(DyeModDyedBlockLists.getDyeModTerracotta(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
 
 
 
@@ -261,6 +266,15 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        createVerticalStairsRecipe(ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
        createVerticalStairsRecipe(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get(), exporter);
        createVerticalStairsRecipe(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get(), exporter);
+    }
+
+    protected static void typeRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
+                .pattern("KK")
+                .pattern("KK")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(craftingBlock), has(craftingBlock))
+                .save(recipeConsumer);
     }
 
     protected static void stairRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> recipeConsumer) {

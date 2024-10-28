@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:peach_terracotta_shingles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "peach_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:peach_terracotta"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "peach_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:peach_terracotta_shingles"
+    ]
+  },
+  "sends_telemetry_event": false
+}

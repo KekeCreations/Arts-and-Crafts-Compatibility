@@ -5,6 +5,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
+import com.kekecreations.arts_and_crafts_compatibility.core.util.DyeModDyedBlockLists;
 import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -27,6 +28,9 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
         flammableAndStrippableBlocks();
         if (isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {
             ExcessiveBuildingFlowerPots.register();
+        }
+        if (isModLoaded(CompatUtils.MINT)) {
+            DyeModDyedBlockLists.add();
         }
     }
 

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:navy_terracotta_shingles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "navy_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:navy_terracotta"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "navy_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:navy_terracotta_shingles"
+    ]
+  },
+  "sends_telemetry_event": false
+}

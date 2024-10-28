@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:mauve_terracotta_shingles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "mauve_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:mauve_terracotta"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "mauve_terracotta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:mauve_terracotta_shingles"
+    ]
+  },
+  "sends_telemetry_event": false
+}

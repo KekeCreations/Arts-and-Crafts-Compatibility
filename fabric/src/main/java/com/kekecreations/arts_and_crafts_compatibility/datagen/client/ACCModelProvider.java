@@ -5,7 +5,7 @@ import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCModelTemplates;

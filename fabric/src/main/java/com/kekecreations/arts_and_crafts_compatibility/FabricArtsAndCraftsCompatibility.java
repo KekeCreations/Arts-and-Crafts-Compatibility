@@ -6,7 +6,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.DyeModDyedBlockLists;
-import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;

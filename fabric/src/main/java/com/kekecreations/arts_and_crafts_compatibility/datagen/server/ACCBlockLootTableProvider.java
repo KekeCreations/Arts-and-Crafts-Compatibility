@@ -3,7 +3,7 @@ package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.leafenzo.mint.util.ModDyeColor;

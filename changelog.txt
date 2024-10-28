@@ -1,6 +1,6 @@
 V1.3.0
+• This update only works with Arts & Crafts V1.3.1+
 • Dyed Compat Flower Pots are no longer enabled if Dyed Flower Pots are disabled.
-• This update works with Arts & Crafts V1.3.0+
 
 
 

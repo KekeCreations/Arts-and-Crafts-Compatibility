@@ -57,6 +57,8 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()));
             dropSelf(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
             add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedTerracottaShingleSlab(colour.getId())));
+
+            dropSelf(ACBlocks.getDyedPlaster(colour.getId()));
         }
     }
 

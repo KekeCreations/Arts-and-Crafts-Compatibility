@@ -42,6 +42,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         List<Item> polishedSoapstoneList = new ArrayList<>(List.of());
         List<Item> mudBrickList = new ArrayList<>(List.of());
         List<Item> terracottaShingleList = new ArrayList<>(List.of());
+        List<Item> plasterList = new ArrayList<>(List.of());
         for (DyeColor colour : DyeColor.values()) {
             dyeList.add(DyeItem.byColor(colour));
             everyChalkStickList.add(ACItems.getChalkStick(colour.getId()));
@@ -55,6 +56,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             soapstoneBrickList.add(ACBlocks.getDyedSoapstoneBricks(colour.getId()).asItem());
             mudBrickList.add(ACBlocks.getDyedMudBricks(colour.getId()).asItem());
             terracottaShingleList.add(ACBlocks.getDyedTerracottaShingles(colour.getId()).asItem());
+            plasterList.add(ACBlocks.getDyedPlaster(colour.getId()).asItem());
         }
         for (DyeColor colour : ModDyeColor.VALUES) {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACItems.getChalkStick(colour.getId()), ACBlocks.getChalk(colour.getId()));
@@ -125,6 +127,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             typeRecipe(DyeModDyedBlockLists.getDyeModTerracotta(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()), exporter);
 
 
+            eightDyeRecipe(ACBlocks.getDyedPlaster(colour.getId()), ACBlocks.PLASTER.get(), DyeItem.byColor(colour), exporter);
 
             paintbrushRecipe(colour, ACItems.getPaintBrush(colour.getId()), exporter);
         }
@@ -135,6 +138,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         bleachBlock(exporter, chalkList, ACBlocks.BLEACHED_CHALK.get().asItem(), "chalk");
         bleachBlockAlt(exporter, mudBrickList, Blocks.MUD_BRICKS, "mud_bricks");
         bleachBlockAlt(exporter, terracottaShingleList, ACBlocks.TERRACOTTA_SHINGLES.get(), "terracotta_shingles");
+        bleachBlockAlt(exporter, plasterList, ACBlocks.PLASTER.get(), "plaster");
 
         colorBlockWithDye(exporter, dyeList, everyChalkStickList, "chalk_sticks");
         colorBlockWithDye(exporter, dyeList, everyChalkList, "chalk");

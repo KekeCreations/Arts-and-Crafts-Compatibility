@@ -118,6 +118,8 @@ public class ACCModelProvider extends FabricModelProvider {
             shingles.wall(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
             generator.delegateItemModel(ACBlocks.getDyedTerracottaShingles(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_terracotta_shingles"));
 
+            plasterBlock(generator, ACBlocks.getDyedPlaster(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedPlaster(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_plaster"));
 
             generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
             generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
@@ -137,6 +139,31 @@ public class ACCModelProvider extends FabricModelProvider {
             itemModelGenerator.generateFlatItem(ACItems.getPaintBrush(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
         }
     }
+
+    public static void plasterBlock(BlockModelGenerators generator, Block plaster) {
+        ResourceLocation model = ACCModelTemplates.PLASTER.create(plaster, ACCTextureMapping.plasterTextureMappings(plaster), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(plaster)
+                .with(PropertyDispatch.property(BlockStateProperties.FACING)
+                        .select(Direction.NORTH, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                        .select(Direction.EAST, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                        .select(Direction.WEST, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                        .select(Direction.SOUTH, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                        .select(Direction.UP, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.X_ROT, VariantProperties.Rotation.R90))
+                        .select(Direction.DOWN, Variant.variant()
+                                .with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.X_ROT, VariantProperties.Rotation.R270))));
+    }
+
 
     public static void registerLadder(BlockModelGenerators generator, Block ladder) {
         ResourceLocation model = ACCModelTemplates.LADDER.create(ladder, TextureMapping.defaultTexture(ladder), generator.modelOutput);

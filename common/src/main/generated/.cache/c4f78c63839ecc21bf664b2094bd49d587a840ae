@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-28T11:34:42.8860579	Arts And Crafts Compatibility/Tags for minecraft:block
+// 1.20.1	2024-10-28T12:19:44.3908791	Arts And Crafts Compatibility/Tags for minecraft:block
 fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
 599eeca5a1b2be9d1befe274b94c7b053058076c data\arts_and_crafts\tags\blocks\paintable\terracotta_shingles.json
 64483a729cad640651d4e7f2f1ad9f2f3aff0d23 data\arts_and_crafts\tags\blocks\paintable\polished_soapstone_slab.json
@@ -26,10 +26,11 @@ a5bcfbc26b111c59330c477d0ce2fe89af24f9a7 data\arts_and_crafts\tags\blocks\painta
 c712b7cbf153486a0de37c1b83ba0b568405aab3 data\arts_and_crafts\tags\blocks\paintable\soapstone_brick_wall.json
 6def5019cedb2fcc592be970d24fc6dce835fe36 data\arts_and_crafts\tags\blocks\paintable\soapstone_brick_stairs.json
 06d711d97d2ec4052a9fff7d9de7163a54b2c34e data\arts_and_crafts\tags\blocks\paintable\soapstone_stairs.json
+702981d0a421d3005708394baa2c6df4b5ada08d data\arts_and_crafts\tags\blocks\paintable\plaster.json
 fd6970592a1ca35e5ffa416aa79a69bc8214ad59 data\arts_and_crafts\tags\blocks\paintable\soapstone.json
 d4bdd7e880a09c166be94770caf6d2a95cd1ad45 data\arts_and_crafts\tags\blocks\paintable\soapstone_slab.json
 df2124c902da530942b980832f868a06781711c6 data\minecraft\tags\blocks\enchantment_power_provider.json
-24ddaac8503ac1b9782281ce59fb80a757dafddd data\minecraft\tags\blocks\mineable\pickaxe.json
+4c55df5537913c86700cd12e39a74230f1b8c40a data\minecraft\tags\blocks\mineable\pickaxe.json
 28b08fb20d90cd767b2f3267bf59a9cad50b8fa2 data\arts_and_crafts\tags\blocks\paintable\soapstone_bricks.json
 99c6e3bd5985d441c67129745413e46fba943152 data\minecraft\tags\blocks\slabs.json
 5425461fb61d8d016f12fa13e6c5e047f3f37408 data\minecraft\tags\blocks\wool_carpets.json

@@ -50,6 +50,8 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
             builder.add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), stringColour + " Terracotta Shingle Slab");
             builder.add(ACBlocks.getDyedTerracottaShingleStairs(colour.getId()), stringColour + " Terracotta Shingle Stairs");
             builder.add(ACBlocks.getDyedTerracottaShingleWall(colour.getId()), stringColour + " Terracotta Shingle Wall");
+
+            builder.add(ACBlocks.getDyedPlaster(colour.getId()), stringColour + " Plaster");
         }
         //BUILT
         builder.add(ACCBlocks.CORK_SHAKES.get(), "Cork Shakes");

@@ -4,6 +4,7 @@ import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 
 public class ACCTextureMapping {
 
@@ -12,6 +13,12 @@ public class ACCTextureMapping {
                 .put(TextureSlot.PARTICLE, getFlowerPotTexture(colour))
                 .put(ACCTextureSlots.FLOWER_POT, getFlowerPotTexture(colour))
                 .put(TextureSlot.PLANT, getPlantTexture(plant, modID));
+    }
+
+    public static TextureMapping plasterTextureMappings(Block block) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(block))
+                .put(ACCTextureSlots.PLASTER, TextureMapping.getBlockTexture(block));
     }
 
     public static ResourceLocation getPlantTexture(String plant, String modID) {

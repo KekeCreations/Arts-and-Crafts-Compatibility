@@ -11,7 +11,7 @@ import java.util.Optional;
 public class ACCModelTemplates {
     public static final ModelTemplate VERTICAL_STAIRS;
     public static final ModelTemplate LADDER;
-    public static final ModelTemplate CHALK_DUST;
+    public static final ModelTemplate PLASTER;
 
     public static final ModelTemplate FLOWER_POT = createFlowerPot(TextureSlot.PARTICLE, ACCTextureSlots.FLOWER_POT, TextureSlot.PLANT);
 
@@ -23,6 +23,6 @@ public class ACCModelTemplates {
     static {
         VERTICAL_STAIRS = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCraftsCompatibility.MOD_ID, "template_vertical_stairs").withPrefix("template/credit_to_yirmiri/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
         LADDER = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCraftsCompatibility.MOD_ID, "template_ladder").withPrefix("template/credit_to_yirmiri/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
-        CHALK_DUST = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCrafts.MOD_ID, "chalk_dust")), Optional.empty(), new TextureSlot[]{ACCTextureSlots.DUST, TextureSlot.PARTICLE});
+        PLASTER = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ArtsAndCrafts.MOD_ID, "plaster_model").withPrefix("block/")), Optional.empty(), new TextureSlot[]{ACCTextureSlots.PLASTER, TextureSlot.PARTICLE});
     }
 }

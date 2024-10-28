@@ -5,5 +5,5 @@ import net.minecraft.data.models.model.TextureSlot;
 public class ACCTextureSlots {
 
     public static final TextureSlot FLOWER_POT = TextureSlot.create("flowerpot");
-    public static final TextureSlot DUST = TextureSlot.create("dust");
+    public static final TextureSlot PLASTER = TextureSlot.create("plaster");
 }

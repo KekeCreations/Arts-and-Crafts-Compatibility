@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:polished_soapstone"
+    },
+    "K": {
+      "item": "mint:mint_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:mint_polished_soapstone"
+  },
+  "show_notification": true
+}

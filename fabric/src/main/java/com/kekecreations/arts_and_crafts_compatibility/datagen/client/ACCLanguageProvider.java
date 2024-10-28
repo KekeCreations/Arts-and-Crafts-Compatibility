@@ -27,6 +27,19 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
             builder.add(ACBlocks.getChalk(colour.getId()), stringColour + " Chalk");
             builder.add(ACBlocks.getChalkDust(colour.getId()), stringColour + " Chalk Dust");
             builder.add(ACItems.getChalkStick(colour.getId()), stringColour + " Chalk Stick");
+
+            builder.add(ACBlocks.getDyedSoapstone(colour.getId()), stringColour + " Soapstone");
+            builder.add(ACBlocks.getDyedSoapstoneSlab(colour.getId()), stringColour + " Soapstone Slab");
+            builder.add(ACBlocks.getDyedSoapstoneStairs(colour.getId()), stringColour + " Soapstone Stairs");
+            builder.add(ACBlocks.getDyedSoapstoneWall(colour.getId()), stringColour + " Soapstone Wall");
+            builder.add(ACBlocks.getDyedSoapstoneBricks(colour.getId()), stringColour + " Soapstone Bricks");
+            builder.add(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()), stringColour + " Soapstone Brick Slab");
+            builder.add(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()), stringColour + " Soapstone Brick Stairs");
+            builder.add(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()), stringColour + " Soapstone Brick Wall");
+            builder.add(ACBlocks.getDyedPolishedSoapstone(colour.getId()), stringColour + " Polished Soapstone");
+            builder.add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()), stringColour + " Polished Soapstone Slab");
+            builder.add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()), stringColour + " Polished Soapstone Stairs");
+            builder.add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()), stringColour + " Polished Soapstone Wall");
         }
         //BUILT
         builder.add(ACCBlocks.CORK_SHAKES.get(), "Cork Shakes");

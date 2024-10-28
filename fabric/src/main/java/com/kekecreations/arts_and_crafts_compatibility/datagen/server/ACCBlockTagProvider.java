@@ -36,11 +36,59 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
                     .add(ACBlocks.getChalkDust(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(ACBlocks.getChalk(colour.getId()));
+                    .add(ACBlocks.getChalk(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstone(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneSlab(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneStairs(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneWall(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstone(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBricks(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(ACBlocks.getDyedSoapstoneWall(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.STAIRS)
+                    .add(ACBlocks.getDyedSoapstoneStairs(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.SLABS)
+                    .add(ACBlocks.getDyedSoapstoneSlab(colour.getId()))
+                    .add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()))
+                    .add(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.CHALK)
                     .add(ACBlocks.getChalk(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.CHALK_DUST)
                     .add(ACBlocks.getChalkDust(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE)
+                    .add(ACBlocks.getDyedSoapstone(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_BRICKS)
+                    .add(ACBlocks.getDyedSoapstoneBricks(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.POLISHED_SOAPSTONE)
+                    .add(ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_STAIRS)
+                    .add(ACBlocks.getDyedSoapstoneStairs(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_BRICK_STAIRS)
+                    .add(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.POLISHED_SOAPSTONE_STAIRS)
+                    .add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_SLAB)
+                    .add(ACBlocks.getDyedSoapstoneSlab(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_BRICK_SLAB)
+                    .add(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.POLISHED_SOAPSTONE_SLAB)
+                    .add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_WALL)
+                    .add(ACBlocks.getDyedSoapstoneWall(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.SOAPSTONE_BRICK_WALL)
+                    .add(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.POLISHED_SOAPSTONE_WALL)
+                    .add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()));
         }
     }
 

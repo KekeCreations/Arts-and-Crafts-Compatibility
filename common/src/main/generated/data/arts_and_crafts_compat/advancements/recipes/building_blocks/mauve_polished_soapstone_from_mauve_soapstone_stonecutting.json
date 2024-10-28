@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mauve_soapstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:mauve_soapstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mauve_polished_soapstone_from_mauve_soapstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_mauve_soapstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mauve_polished_soapstone_from_mauve_soapstone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

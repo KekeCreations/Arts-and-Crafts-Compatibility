@@ -14,7 +14,18 @@ public class ACCTags {
     //MINT - PAINTABLE TAGS
     public static final TagKey<Block> CHALK = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/chalk"));
     public static final TagKey<Block> CHALK_DUST = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/chalk_dust"));
-
+    public static final TagKey<Block> SOAPSTONE = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone"));
+    public static final TagKey<Block> SOAPSTONE_BRICKS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_bricks"));
+    public static final TagKey<Block> POLISHED_SOAPSTONE = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/polished_soapstone"));
+    public static final TagKey<Block> SOAPSTONE_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_stairs"));
+    public static final TagKey<Block> SOAPSTONE_BRICK_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_brick_stairs"));
+    public static final TagKey<Block> POLISHED_SOAPSTONE_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/polished_soapstone_stairs"));
+    public static final TagKey<Block> SOAPSTONE_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_slab"));
+    public static final TagKey<Block> SOAPSTONE_BRICK_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_brick_slab"));
+    public static final TagKey<Block> POLISHED_SOAPSTONE_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/polished_soapstone_slab"));
+    public static final TagKey<Block> SOAPSTONE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_wall"));
+    public static final TagKey<Block> SOAPSTONE_BRICK_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_brick_wall"));
+    public static final TagKey<Block> POLISHED_SOAPSTONE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/polished_soapstone_wall"));
     //GILDED SHERDS COMPAT
     public static TagKey<Item> GILDED_SHERDS = TagKey.create(Registries.ITEM, new ResourceLocation(CompatUtils.GILDED_SHERDS, "gilded_sherds"));
 

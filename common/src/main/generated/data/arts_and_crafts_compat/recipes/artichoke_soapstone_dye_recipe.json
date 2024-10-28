@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "arts_and_crafts:soapstone"
+    },
+    "K": {
+      "item": "mint:artichoke_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:artichoke_soapstone"
+  },
+  "show_notification": true
+}

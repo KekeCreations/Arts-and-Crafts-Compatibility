@@ -1,0 +1,82 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "polished_soapstone",
+  "key": {
+    "K": [
+      {
+        "item": "arts_and_crafts:mint_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:peach_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:periwinkle_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:artichoke_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:fuchsia_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:vermilion_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:shamrock_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:indigo_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:banana_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:cerulean_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:acorn_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:mauve_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:maroon_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:grape_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:navy_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:sap_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:amber_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:sage_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:velvet_polished_soapstone"
+      },
+      {
+        "item": "arts_and_crafts:mold_polished_soapstone"
+      }
+    ],
+    "Q": {
+      "item": "arts_and_crafts:bleachdew"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KQK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:polished_soapstone"
+  },
+  "show_notification": true
+}

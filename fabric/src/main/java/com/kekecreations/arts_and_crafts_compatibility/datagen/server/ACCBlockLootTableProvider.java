@@ -35,6 +35,18 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     public void mint() {
         for (DyeColor colour : ModDyeColor.VALUES) {
             dropSelf(ACBlocks.getChalk(colour.getId()));
+            dropSelf(ACBlocks.getDyedSoapstone(colour.getId()));
+            dropSelf(ACBlocks.getDyedSoapstoneStairs(colour.getId()));
+            dropSelf(ACBlocks.getDyedSoapstoneWall(colour.getId()));
+            add(ACBlocks.getDyedSoapstoneSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedSoapstoneSlab(colour.getId())));
+            dropSelf(ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+            dropSelf(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()));
+            dropSelf(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()));
+            add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId())));
+            dropSelf(ACBlocks.getDyedSoapstoneBricks(colour.getId()));
+            dropSelf(ACBlocks.getDyedSoapstoneBrickStairs(colour.getId()));
+            dropSelf(ACBlocks.getDyedSoapstoneBrickWall(colour.getId()));
+            add(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedSoapstoneBrickSlab(colour.getId())));
         }
     }
 

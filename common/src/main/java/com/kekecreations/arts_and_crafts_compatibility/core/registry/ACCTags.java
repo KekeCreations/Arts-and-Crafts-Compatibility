@@ -26,6 +26,12 @@ public class ACCTags {
     public static final TagKey<Block> SOAPSTONE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_wall"));
     public static final TagKey<Block> SOAPSTONE_BRICK_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/soapstone_brick_wall"));
     public static final TagKey<Block> POLISHED_SOAPSTONE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/polished_soapstone_wall"));
+    public static final TagKey<Block> MUD_BRICKS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_bricks"));
+    public static final TagKey<Block> MUD_BRICK_STAIRS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_stairs"));
+    public static final TagKey<Block> MUD_BRICK_SLAB = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_slab"));
+    public static final TagKey<Block> MUD_BRICK_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/mud_brick_wall"));
+
+
     //GILDED SHERDS COMPAT
     public static TagKey<Item> GILDED_SHERDS = TagKey.create(Registries.ITEM, new ResourceLocation(CompatUtils.GILDED_SHERDS, "gilded_sherds"));
 

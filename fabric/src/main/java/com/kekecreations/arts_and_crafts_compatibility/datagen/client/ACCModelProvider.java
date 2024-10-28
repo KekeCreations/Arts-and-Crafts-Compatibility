@@ -106,6 +106,12 @@ public class ACCModelProvider extends FabricModelProvider {
             polishedSoapstone.wall(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()));
             generator.delegateItemModel(ACBlocks.getDyedPolishedSoapstone(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_polished_soapstone"));
 
+            BlockModelGenerators.BlockFamilyProvider mudBricks = generator.family(ACBlocks.getDyedMudBricks(colour.getId()));
+            mudBricks.stairs(ACBlocks.getDyedMudBrickStairs(colour.getId()));
+            mudBricks.slab(ACBlocks.getDyedMudBrickSlab(colour.getId()));
+            mudBricks.wall(ACBlocks.getDyedMudBrickWall(colour.getId()));
+            generator.delegateItemModel(ACBlocks.getDyedMudBricks(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_mud_bricks"));
+
             generator.createTrivialBlock(ACBlocks.getChalk(colour.getId()), TexturedModel.CUBE);
             generator.delegateItemModel(ACBlocks.getChalk(colour.getId()), new ResourceLocation(ArtsAndCrafts.MOD_ID, "block/" + colour + "_chalk"));
         }

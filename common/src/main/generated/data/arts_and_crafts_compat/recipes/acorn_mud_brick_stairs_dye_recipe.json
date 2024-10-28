@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:mud_brick_stairs"
+    },
+    "K": {
+      "item": "mint:acorn_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:acorn_mud_brick_stairs"
+  },
+  "show_notification": true
+}

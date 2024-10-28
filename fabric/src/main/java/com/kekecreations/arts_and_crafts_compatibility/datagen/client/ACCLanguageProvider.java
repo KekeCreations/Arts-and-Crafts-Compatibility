@@ -40,6 +40,11 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
             builder.add(ACBlocks.getDyedPolishedSoapstoneSlab(colour.getId()), stringColour + " Polished Soapstone Slab");
             builder.add(ACBlocks.getDyedPolishedSoapstoneStairs(colour.getId()), stringColour + " Polished Soapstone Stairs");
             builder.add(ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()), stringColour + " Polished Soapstone Wall");
+
+            builder.add(ACBlocks.getDyedMudBricks(colour.getId()), stringColour + " Mud Bricks");
+            builder.add(ACBlocks.getDyedMudBrickSlab(colour.getId()), stringColour + " Mud Brick Slab");
+            builder.add(ACBlocks.getDyedMudBrickStairs(colour.getId()), stringColour + " Mud Brick Stairs");
+            builder.add(ACBlocks.getDyedMudBrickWall(colour.getId()), stringColour + " Mud Brick Wall");
         }
         //BUILT
         builder.add(ACCBlocks.CORK_SHAKES.get(), "Cork Shakes");

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:mud_brick_wall"
+    },
+    "K": {
+      "item": "mint:sap_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#K#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "arts_and_crafts:sap_mud_brick_wall"
+  },
+  "show_notification": true
+}

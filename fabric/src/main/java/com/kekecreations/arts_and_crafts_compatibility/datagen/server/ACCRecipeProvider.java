@@ -14,6 +14,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBTags;
 
@@ -38,6 +39,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         List<Item> soapstoneList = new ArrayList<>(List.of());
         List<Item> soapstoneBrickList = new ArrayList<>(List.of());
         List<Item> polishedSoapstoneList = new ArrayList<>(List.of());
+        List<Item> mudBrickList = new ArrayList<>(List.of());
         for (DyeColor colour : DyeColor.values()) {
             dyeList.add(DyeItem.byColor(colour));
             everyChalkStickList.add(ACItems.getChalkStick(colour.getId()));
@@ -49,6 +51,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             soapstoneList.add(ACBlocks.getDyedSoapstone(colour.getId()).asItem());
             polishedSoapstoneList.add(ACBlocks.getDyedPolishedSoapstone(colour.getId()).asItem());
             soapstoneBrickList.add(ACBlocks.getDyedSoapstoneBricks(colour.getId()).asItem());
+            mudBrickList.add(ACBlocks.getDyedMudBricks(colour.getId()).asItem());
         }
         for (DyeColor colour : ModDyeColor.VALUES) {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACItems.getChalkStick(colour.getId()), ACBlocks.getChalk(colour.getId()));
@@ -88,14 +91,31 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
             wallRecipe(ACBlocks.getDyedPolishedSoapstone(colour.getId()), ACBlocks.getDyedPolishedSoapstoneWall(colour.getId()), exporter);
             wallRecipe(ACBlocks.getDyedSoapstoneBricks(colour.getId()), ACBlocks.getDyedSoapstoneBrickWall(colour.getId()), exporter);
 
-            bleachBlockAlt(exporter, colour, soapstoneList, ACBlocks.SOAPSTONE.get().asItem(), "soapstone");
-            bleachBlockAlt(exporter, colour, polishedSoapstoneList, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), "polished_soapstone");
-            bleachBlockAlt(exporter, colour, soapstoneBrickList, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), "soapstone_bricks");
-            bleachBlock(exporter, colour, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get().asItem(), "chalk_sticks");
-            bleachBlock(exporter, colour, chalkList, ACBlocks.BLEACHED_CHALK.get().asItem(), "chalk");
+
+
+            //MUD
+            stairRecipe(ACBlocks.getDyedMudBricks(colour.getId()), ACBlocks.getDyedMudBrickStairs(colour.getId()), exporter);
+            slabRecipe(ACBlocks.getDyedMudBricks(colour.getId()), ACBlocks.getDyedMudBrickSlab(colour.getId()), exporter);
+            wallRecipe(ACBlocks.getDyedMudBricks(colour.getId()), ACBlocks.getDyedMudBrickWall(colour.getId()), exporter);
+            eightDyeRecipe(ACBlocks.getDyedMudBricks(colour.getId()), Blocks.MUD_BRICKS, DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedMudBrickStairs(colour.getId()), Blocks.MUD_BRICK_STAIRS, DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedMudBrickSlab(colour.getId()), Blocks.MUD_BRICK_SLAB, DyeItem.byColor(colour), exporter);
+            eightDyeRecipe(ACBlocks.getDyedMudBrickWall(colour.getId()), Blocks.MUD_BRICK_WALL, DyeItem.byColor(colour), exporter);
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBrickSlab(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBrickStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACBlocks.getDyedMudBrickWall(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+
+
 
             paintbrushRecipe(colour, ACItems.getPaintBrush(colour.getId()), exporter);
         }
+        bleachBlockAlt(exporter, soapstoneList, ACBlocks.SOAPSTONE.get().asItem(), "soapstone");
+        bleachBlockAlt(exporter, polishedSoapstoneList, ACBlocks.POLISHED_SOAPSTONE.get().asItem(), "polished_soapstone");
+        bleachBlockAlt(exporter, soapstoneBrickList, ACBlocks.SOAPSTONE_BRICKS.get().asItem(), "soapstone_bricks");
+        bleachBlock(exporter, chalkStickList, ACItems.BLEACHED_CHALK_STICK.get().asItem(), "chalk_sticks");
+        bleachBlock(exporter, chalkList, ACBlocks.BLEACHED_CHALK.get().asItem(), "chalk");
+        bleachBlockAlt(exporter, mudBrickList, Blocks.MUD_BRICKS, "mud_bricks");
+
         colorBlockWithDye(exporter, dyeList, everyChalkStickList, "chalk_sticks");
         colorBlockWithDye(exporter, dyeList, everyChalkList, "chalk");
 
@@ -327,15 +347,15 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .save(exporter);
     }
 
-    protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_, DyeColor dyeColor, List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
+    protected static void bleachBlock(Consumer<FinishedRecipe> p_289666_,  List<Item> p_289675_, ItemLike bleachedBlock, String p_289641_) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, bleachedBlock)
                 .requires(Ingredient.of(p_289675_.stream().map(ItemStack::new)))
                 .requires(ACItems.BLEACHDEW.get())
                 .group(p_289641_)
-                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + dyeColor + "to_bleach_" + p_289641_);
+                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + p_289641_);
     }
 
-    protected static void bleachBlockAlt(Consumer<FinishedRecipe> p_289666_, DyeColor dyeColor, List<Item> itemList, ItemLike bleachedBlock, String string) {
+    protected static void bleachBlockAlt(Consumer<FinishedRecipe> p_289666_, List<Item> itemList, ItemLike bleachedBlock, String string) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, bleachedBlock, 8)
                 .pattern("KKK")
                 .pattern("KQK")
@@ -343,7 +363,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
                 .define('K', Ingredient.of(itemList.stream().map(ItemStack::new)))
                 .define('Q', ACItems.BLEACHDEW.get())
                 .group(string)
-                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + dyeColor + "to_bleach_" + string);
+                .unlockedBy("has_needed_dye", has(ACItems.BLEACHDEW.get())).save(p_289666_, "arts_and_crafts:" + "bleach_" + string);
     }
 
 }

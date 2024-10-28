@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:sap_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sap_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:sap_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "sap_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:sap_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

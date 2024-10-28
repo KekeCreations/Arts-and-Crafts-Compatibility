@@ -121,6 +121,7 @@ public class ACCModelProvider extends FabricModelProvider {
 
         for (DyeColor colour : ModDyeColor.VALUES) {
             itemModelGenerator.generateFlatItem(ACItems.getChalkStick(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
+            itemModelGenerator.generateFlatItem(ACItems.getPaintBrush(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
         }
     }
 

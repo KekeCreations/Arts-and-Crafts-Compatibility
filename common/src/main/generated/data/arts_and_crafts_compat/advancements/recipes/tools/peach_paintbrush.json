@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:peach_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "peach_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:peach_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "peach_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:peach_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -39,6 +39,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACBlocks.getChalk(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.CHALK)
                     .add(ACBlocks.getChalk(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.CHALK_DUST)
+                    .add(ACBlocks.getChalkDust(colour.getId()));
         }
     }
 

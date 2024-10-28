@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "paintbrush",
+  "key": {
+    "K": {
+      "item": "mint:velvet_dye"
+    },
+    "Q": {
+      "item": "minecraft:brush"
+    }
+  },
+  "pattern": [
+    "KK",
+    "KQ"
+  ],
+  "result": {
+    "item": "arts_and_crafts:velvet_paintbrush"
+  },
+  "show_notification": true
+}

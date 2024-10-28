@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:sage_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sage_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:sage_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "sage_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:sage_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

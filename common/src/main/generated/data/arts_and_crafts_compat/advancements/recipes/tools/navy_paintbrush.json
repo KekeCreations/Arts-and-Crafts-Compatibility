@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:navy_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "navy_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:navy_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "navy_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:navy_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

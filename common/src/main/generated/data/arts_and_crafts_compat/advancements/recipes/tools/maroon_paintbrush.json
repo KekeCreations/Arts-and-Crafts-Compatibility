@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:maroon_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "maroon_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:maroon_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "maroon_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:maroon_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

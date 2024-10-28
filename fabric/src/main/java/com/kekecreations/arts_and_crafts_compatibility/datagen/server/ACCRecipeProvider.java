@@ -1,5 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.item.PaintbrushItem;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
@@ -31,6 +32,7 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
         //MINT
         for (DyeColor colour : ModDyeColor.VALUES) {
             stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACItems.getChalkStick(colour.getId()), ACBlocks.getChalk(colour.getId()));
+            paintbrushRecipe(colour, ACItems.getPaintBrush(colour.getId()), exporter);
         }
         //DRAMATIC DOORS
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, ACCItems.CORK_SHORT_DOOR.get(), ACBlocks.CORK_DOOR.get(), 2);
@@ -159,6 +161,17 @@ public class ACCRecipeProvider extends FabricRecipeProvider {
        createVerticalStairsRecipe(ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACBlocks.GYPSUM_BRICKS.get(), exporter);
        createVerticalStairsRecipe(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get(), exporter);
        createVerticalStairsRecipe(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get(), exporter);
+    }
+
+    protected static void paintbrushRecipe(DyeColor dyeColour, PaintbrushItem paintbrushItem, Consumer<FinishedRecipe> recipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, paintbrushItem, 1)
+                .pattern("KK")
+                .pattern("KQ")
+                .define('K', DyeItem.byColor(dyeColour))
+                .define('Q', Items.BRUSH)
+                .group("paintbrush")
+                .unlockedBy(getItemName(DyeItem.byColor(dyeColour)), has(DyeItem.byColor(dyeColour)))
+                .save(recipeConsumer);
     }
 
     public void createShelfBlock(ItemLike output, int count, Ingredient input, Ingredient input2, Consumer<FinishedRecipe> exporter) {

@@ -23,6 +23,7 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         for (DyeColor colour : ModDyeColor.VALUES) {
             String stringColour = StringUtils.capitalize(colour.getName());
 
+            builder.add(ACItems.getPaintBrush(colour.getId()), stringColour + " Paintbrush");
             builder.add(ACBlocks.getChalk(colour.getId()), stringColour + " Chalk");
             builder.add(ACBlocks.getChalkDust(colour.getId()), stringColour + " Chalk Dust");
             builder.add(ACItems.getChalkStick(colour.getId()), stringColour + " Chalk Stick");

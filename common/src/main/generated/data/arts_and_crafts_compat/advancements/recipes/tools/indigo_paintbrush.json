@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "arts_and_crafts:indigo_paintbrush"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "indigo_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mint:indigo_dye"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "indigo_dye",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "arts_and_crafts:indigo_paintbrush"
+    ]
+  },
+  "sends_telemetry_event": false
+}

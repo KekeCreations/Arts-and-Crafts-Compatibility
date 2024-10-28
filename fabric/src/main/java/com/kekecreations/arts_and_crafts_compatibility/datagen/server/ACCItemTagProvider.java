@@ -32,6 +32,8 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
         for (DyeColor colour : ModDyeColor.VALUES) {
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
                     .add(ACItems.getChalkStick(colour.getId()));
+            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
+                    .add(ACItems.getPaintBrush(colour.getId()));
         }
     }
 

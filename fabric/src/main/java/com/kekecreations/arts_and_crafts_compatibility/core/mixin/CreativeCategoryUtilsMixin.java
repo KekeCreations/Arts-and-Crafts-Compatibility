@@ -9,12 +9,10 @@ import org.spongepowered.asm.mixin.Shadow;
 
 import java.util.ArrayList;
 
-import static com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils.colourOrder;
-
 @Mixin(CreativeCategoryUtils.class)
 public class CreativeCategoryUtilsMixin {
 
-    @Shadow public static ArrayList<DyeColor> colourOrder;
+    @Shadow(remap = false) public static ArrayList<DyeColor> colourOrder;
 
     /**
      * @author KekeCreations

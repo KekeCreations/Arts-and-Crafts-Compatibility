@@ -4,6 +4,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCEntityTypes;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.MintFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
 import net.fabricmc.api.ClientModInitializer;
@@ -41,6 +42,17 @@ public class FabricArtsAndCraftsCompatibilityClient implements ClientModInitiali
                 BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), RenderType.cutout());
                 BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), RenderType.cutout());
                 BlockRenderLayerMap.INSTANCE.putBlock(ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), RenderType.cutout());
+            }
+            if (Services.PLATFORM.isModLoaded(CompatUtils.MINT)) {
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedWildMint(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedWintergreenSapling(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedPeachSapling(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedHypericum(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedHidcoteLavender(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedThistleFlower(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedWaxcapMushroom(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedCordyline(colour.getId()), RenderType.cutout());
+                BlockRenderLayerMap.INSTANCE.putBlock(MintFlowerPots.getDyedPottedPlumCordyline(colour.getId()), RenderType.cutout());
             }
         }
         if (Services.PLATFORM.isModLoaded(CompatUtils.EXCESSIVE_BUILDING)) {

@@ -1,9 +1,11 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
+import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.MintFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.leafenzo.mint.util.ModDyeColor;
@@ -59,6 +61,55 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
             add(ACBlocks.getDyedTerracottaShingleSlab(colour.getId()), createSlabItemTable(ACBlocks.getDyedTerracottaShingleSlab(colour.getId())));
 
             dropSelf(ACBlocks.getDyedPlaster(colour.getId()));
+
+            //FLOWER POTS
+            dropSelf(ACBlocks.getDyedFlowerPot(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCorkSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedOakSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCrimsonFungus(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCrimsonRoots(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedWarpedFungus(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedWarpedRoots(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedSpruceSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedBirchSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedJungleSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedAcaciaSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCherrySapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedDarkOakSapling(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedMangrovePropagule(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedFern(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedDandelion(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedPoppy(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedBlueOrchid(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedAllium(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedAzureBluet(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedRedTulip(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedOrangeTulip(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedWhiteTulip(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedPinkTulip(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedOxeyeDaisy(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCornflower(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedLilyOfTheValley(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedWitherRose(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedRedMushroom(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedBrownMushroom(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedDeadBush(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedCactus(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedBamboo(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedAzalea(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedFloweringAzalea(colour));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), ACBlocks.getDyedPottedTorchFlower(colour));
+        }
+        for (DyeColor colour : DyeColor.values()) {
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedWildMint(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedWintergreenSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedPeachSapling(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedHypericum(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedHidcoteLavender(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedThistleFlower(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedWaxcapMushroom(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedCordyline(colour.getId()));
+            dropDyedPotContents(ACBlocks.getDyedFlowerPot(colour.getId()), MintFlowerPots.getDyedPottedPlumCordyline(colour.getId()));
         }
     }
 
@@ -115,7 +166,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     public void dropDyedPotContents(Block flowerPot, Block flowerPotWithPlant) {
         this.add(flowerPotWithPlant, (blockx) -> {
-            return this.createDyedPotFlowerItemTable(flowerPot, ((ACCFlowerPotBlock)blockx).getContent());
+            return this.createDyedPotFlowerItemTable(flowerPot, ((ACFlowerPotBlock)blockx).getContent());
         });
     }
 

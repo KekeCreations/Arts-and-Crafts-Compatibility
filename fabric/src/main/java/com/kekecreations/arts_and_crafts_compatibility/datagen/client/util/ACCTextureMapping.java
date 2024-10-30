@@ -15,6 +15,12 @@ public class ACCTextureMapping {
                 .put(TextureSlot.PLANT, getPlantTexture(plant, modID));
     }
 
+    public static TextureMapping emptyFlowerPotTextureMappings(DyeColor colour) {
+        return (new TextureMapping())
+                .put(TextureSlot.PARTICLE, getFlowerPotTexture(colour))
+                .put(ACCTextureSlots.FLOWER_POT, getFlowerPotTexture(colour));
+    }
+
     public static TextureMapping plasterTextureMappings(Block block) {
         return (new TextureMapping())
                 .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(block))

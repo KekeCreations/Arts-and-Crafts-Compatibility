@@ -35,6 +35,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         for (DyeColor colour : ModDyeColor.VALUES) {
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
                     .add(ACBlocks.getChalkDust(colour.getId()));
+            this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                    .add(ACBlocks.getDyedFlowerPot(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(ACBlocks.getChalk(colour.getId()))
                     .add(ACBlocks.getDyedSoapstone(colour.getId()))
@@ -122,6 +124,7 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(ACBlocks.getDyedTerracottaShingleWall(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.PLASTER)
                     .add(ACBlocks.getDyedPlaster(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.FLOWER_POTS).add(ACBlocks.getDyedFlowerPot(colour.getId()));
         }
     }
 

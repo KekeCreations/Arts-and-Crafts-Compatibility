@@ -27,8 +27,8 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         farmersDelight();
         decorativeBlocks();
         dramaticDoors();
-        excessiveBuilding();
-        mint();
+        //excessiveBuilding();
+        //mint();
     }
 
     private void mint() {
@@ -158,12 +158,14 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(POLISHED_SOAPSTONE_VERTICAL_STAIRS.get())
                 .add(SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
         for (DyeColor colour : DyeColor.values()) {
-            this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(getDyedTerracottaShingleVerticalStairs(colour.getId()))
-                    .add(getDyedSoapstoneVerticalStairs(colour.getId()))
-                    .add(getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
-                    .add(getDyedSoapstoneBrickVerticalStairs(colour.getId()))
-                    .add(getDyedMudBrickVerticalStairs(colour.getId()));
+            if (colour.getId() <= 16) {
+                this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                        .add(getDyedTerracottaShingleVerticalStairs(colour.getId()))
+                        .add(getDyedSoapstoneVerticalStairs(colour.getId()))
+                        .add(getDyedPolishedSoapstoneVerticalStairs(colour.getId()))
+                        .add(getDyedSoapstoneBrickVerticalStairs(colour.getId()))
+                        .add(getDyedMudBrickVerticalStairs(colour.getId()));
+            }
         }
     }
 

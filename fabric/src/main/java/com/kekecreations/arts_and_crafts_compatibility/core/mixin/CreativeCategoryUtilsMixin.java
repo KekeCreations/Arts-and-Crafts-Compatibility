@@ -14,10 +14,7 @@ public class CreativeCategoryUtilsMixin {
 
     @Shadow(remap = false) public static ArrayList<DyeColor> colourOrder;
 
-    /**
-     * @author KekeCreations
-     * @reason It is a method from my mod.
-     */
+
     @Overwrite(remap = false)
     public static void addVanillaDyesToColourOrder() {
         colourOrder.add(DyeColor.PINK);

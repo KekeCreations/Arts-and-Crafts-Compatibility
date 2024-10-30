@@ -24,8 +24,8 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider arg) {
         gildedSherds();
-        excessiveBuilding();
-        mint();
+        //excessiveBuilding();
+        //mint();
     }
 
     public void mint() {

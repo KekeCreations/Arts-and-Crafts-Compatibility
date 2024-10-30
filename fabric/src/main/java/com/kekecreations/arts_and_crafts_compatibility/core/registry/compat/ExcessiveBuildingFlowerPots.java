@@ -19,19 +19,19 @@ public class ExcessiveBuildingFlowerPots {
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_POTTED_ANCIENT_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_ancient_sapling",
-                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.ANCIENT_SAPLING, colour)));
+                    () -> CompatUtils.flowerPot(EBBlocks.ANCIENT_SAPLING, colour)));
 
             DYED_POTTED_GLOOM_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_gloom_sapling",
-                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.GLOOM_SAPLING, colour)));
+                    () -> CompatUtils.flowerPot(EBBlocks.GLOOM_SAPLING, colour)));
 
             DYED_POTTED_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_rose",
-                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.ROSE, colour)));
+                    () -> CompatUtils.flowerPot(EBBlocks.ROSE, colour)));
 
             DYED_POTTED_CYAN_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_cyan_rose",
-                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.CYAN_ROSE, colour)));
+                    () -> CompatUtils.flowerPot(EBBlocks.CYAN_ROSE, colour)));
 
             DYED_POTTED_WHITE_ROSE.put(colour, CompatUtils.registerBlock(colour + "_potted_white_rose",
-                    () -> CompatUtils.flowerPot(CompatUtils.EXCESSIVE_BUILDING, EBBlocks.WHITE_ROSE, colour)));
+                    () -> CompatUtils.flowerPot(EBBlocks.WHITE_ROSE, colour)));
         }
     }
     public static Block getDyedPottedAncientSapling(int colours) {

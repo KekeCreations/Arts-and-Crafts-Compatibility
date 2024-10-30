@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.util;
 
-import com.kekecreations.arts_and_crafts_compatibility.common.block.ACCFlowerPotBlock;
+import com.kekecreations.arts_and_crafts.common.block.ACFlowerPotBlock;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.Services;
 import com.kekecreations.arts_and_crafts_compatibility.core.platform.services.IPlatformHelper;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -19,11 +19,9 @@ import java.util.function.Supplier;
 public class CompatUtils {
     public static final String ARTS_AND_CRAFTS = "arts_and_crafts";
     public static final String GILDED_SHERDS = "gildedsherds";
-    public static final String OH_MY_SHERD = "ohmysherd";
     public static final String BUILT = "built";
     public static final String FARMERS_DELIGHT = "farmersdelight";
     public static final String TWIGS = "twigs";
-    public static final String CAFFEINATED = "caffeinated";
     public static final String DECORATIVE_BLOCKS = "decorative_blocks";
     public static final String NEAPOLITAN = "neapolitan";
     public static final String SPAWN = "spawn";
@@ -32,11 +30,7 @@ public class CompatUtils {
     public static final String ECOLOGICS = "ecologics";
     public static final String YAPPING_TOOLTIPS = "yapping_tooltips";
     public static final String DRAMATIC_DOORS = "dramaticdoors";
-    public static final String DISCS_WHERE_DISCS_SHOULD_NOT_BE = "dwdsb";
-    public static final String MORE_POTTERY_SHERD = "more_pottery_sherd";
-    public static final String COBBLEMON = "cobblemon";
     public static final String NETHER_EXPANSION = "netherexp";
-    public static final String MYTHIC_CHARMS = "mythic_charms";
     public static final String EXCESSIVE_BUILDING = "excessive_building";
     public static final String MINT = "mint";
 
@@ -66,8 +60,8 @@ public class CompatUtils {
     }
 
 
-    public static ACCFlowerPotBlock flowerPot(String modID, Block block, DyeColor dyeColor) {
+    public static ACFlowerPotBlock flowerPot(Block block, DyeColor dyeColor) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
-        return new ACCFlowerPotBlock(modID, block, dyeColor, properties);
+        return new ACFlowerPotBlock(block, dyeColor, properties);
     }
 }

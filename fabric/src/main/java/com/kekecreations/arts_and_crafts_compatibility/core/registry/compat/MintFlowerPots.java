@@ -25,31 +25,31 @@ public class MintFlowerPots {
     static {
         for (DyeColor colour : DyeColor.values()) {
             DYED_POTTED_WILD_MINT.put(colour, CompatUtils.registerBlock(colour + "_potted_wild_mint",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.WILD_MINT, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.WILD_MINT, colour)));
 
             DYED_POTTED_WINTERGREEN_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_wintergreen_sapling",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.WINTERGREEN_WOODSET.getSapling(), colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.WINTERGREEN_WOODSET.getSapling(), colour)));
 
             DYED_POTTED_PEACH_SAPLING.put(colour, CompatUtils.registerBlock(colour + "_potted_peach_sapling",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.PEACH_SAPLING, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.PEACH_SAPLING, colour)));
 
             DYED_POTTED_HYPERICUM.put(colour, CompatUtils.registerBlock(colour + "_potted_hypericum",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.HYPERICUM, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.HYPERICUM, colour)));
 
             DYED_POTTED_HIDCOTE_LAVENDER.put(colour, CompatUtils.registerBlock(colour + "_potted_hidcote_lavender",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.HIDCOTE_LAVENDER, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.HIDCOTE_LAVENDER, colour)));
 
             DYED_POTTED_THISTLE_FLOWER.put(colour, CompatUtils.registerBlock(colour + "_potted_thistle_flower",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.THISTLE_FLOWER, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.THISTLE_FLOWER, colour)));
 
             DYED_POTTED_WAXCAP_MUSHROOM.put(colour, CompatUtils.registerBlock(colour + "_potted_waxcap_mushroom",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.WAXCAP_MUSHROOM, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.WAXCAP_MUSHROOM, colour)));
 
             DYED_POTTED_CORDYLINE.put(colour, CompatUtils.registerBlock(colour + "_potted_cordyline",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.CORDYLINE, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.CORDYLINE, colour)));
 
             DYED_POTTED_PLUM_CORDYLINE.put(colour, CompatUtils.registerBlock(colour + "_potted_plum_cordyline",
-                    () -> CompatUtils.flowerPot(CompatUtils.MINT, ModBlocks.PLUM_CORDYLINE, colour)));
+                    () -> CompatUtils.flowerPot(ModBlocks.PLUM_CORDYLINE, colour)));
         }
     }
     public static Block getDyedPottedWildMint(int colours) {

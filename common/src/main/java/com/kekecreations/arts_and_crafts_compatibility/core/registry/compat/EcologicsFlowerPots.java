@@ -1,8 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.registry.compat;
 
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import samebutdifferent.ecologics.registry.ModBlocks;
@@ -21,11 +19,11 @@ public class EcologicsFlowerPots {
         for (DyeColor colours : DyeColor.values()) {
             //ECOLOGICS COMPAT
             DYED_WALNUT_SAPLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_walnut_sapling",
-                    () -> CompatUtils.flowerPot(CompatUtils.ECOLOGICS, ModBlocks.WALNUT_SAPLING.get(), colours)));
+                    () -> CompatUtils.flowerPot(ModBlocks.WALNUT_SAPLING.get(), colours)));
             DYED_AZALEA_FLOWER_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_azalea_flower",
-                    () -> CompatUtils.flowerPot(CompatUtils.ECOLOGICS, ModBlocks.AZALEA_FLOWER.get(), colours)));
+                    () -> CompatUtils.flowerPot(ModBlocks.AZALEA_FLOWER.get(), colours)));
             DYED_COCONUT_SEEDLING_FLOWER_POTS.put(colours, CompatUtils.registerBlock(colours + "_potted_coconut_seedling",
-                    () -> CompatUtils.flowerPot(CompatUtils.ECOLOGICS, ModBlocks.COCONUT_SEEDLING.get(), colours)));
+                    () -> CompatUtils.flowerPot(ModBlocks.COCONUT_SEEDLING.get(), colours)));
         }
     }
 

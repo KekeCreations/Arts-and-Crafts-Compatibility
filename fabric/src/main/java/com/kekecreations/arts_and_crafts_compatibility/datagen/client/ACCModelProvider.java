@@ -1,19 +1,15 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
-import com.kekecreations.arts_and_crafts.ArtsAndCrafts;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.EcologicsFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
-import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.MintFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCModelTemplates;
 import com.kekecreations.arts_and_crafts_compatibility.datagen.client.util.ACCTextureMapping;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.core.Direction;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
@@ -50,6 +46,7 @@ public class ACCModelProvider extends FabricModelProvider {
         corkShakes.slab(ACCBlocks.CORK_SHAKES_SLAB.get());
 
 
+
         //EXCESSIVE BUILDING
         BlockModelGenerators.BlockFamilyProvider corkMosaic = generator.family(ACCBlocks.CORK_MOSAIC.get());
         corkMosaic.stairs(ACCBlocks.CORK_MOSAIC_STAIRS.get());
@@ -75,17 +72,21 @@ public class ACCModelProvider extends FabricModelProvider {
         registerVerticalStairs(generator, ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACBlocks.POLISHED_SOAPSTONE.get());
         registerVerticalStairs(generator, ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACBlocks.SOAPSTONE_BRICKS.get());
         for (DyeColor colour : DyeColor.values()) {
-            registerVerticalStairs(generator, ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
-            registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
-            registerVerticalStairs(generator, ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
-            registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
-            registerVerticalStairs(generator, ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), "rose", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
-            this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
+            if (colour.getId() <= 16) {
+                registerVerticalStairs(generator, ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), ACBlocks.getDyedTerracottaShingles(colour.getId()));
+                registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstone(colour.getId()));
+                registerVerticalStairs(generator, ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), ACBlocks.getDyedPolishedSoapstone(colour.getId()));
+                registerVerticalStairs(generator, ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), ACBlocks.getDyedSoapstoneBricks(colour.getId()));
+                registerVerticalStairs(generator, ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()), ACBlocks.getDyedMudBricks(colour.getId()));
+                this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedAncientSapling(colour.getId()), "ancient_sapling", colour, generator);
+                this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedGloomSapling(colour.getId()), "gloom_sapling", colour, generator);
+                this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedRose(colour.getId()), "rose", colour, generator);
+                this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedCyanRose(colour.getId()), "cyan_rose", colour, generator);
+                this.createFlowerPot(CompatUtils.EXCESSIVE_BUILDING, ExcessiveBuildingFlowerPots.getDyedPottedWhiteRose(colour.getId()), "white_rose", colour, generator);
+            }
         }
+
+        /*
         //DYE MOD STUFF
         for (DyeColor colour : ModDyeColor.VALUES) {
             BlockModelGenerators.BlockFamilyProvider soapstone = generator.family(ACBlocks.getDyedSoapstone(colour.getId()));
@@ -174,6 +175,8 @@ public class ACCModelProvider extends FabricModelProvider {
             createFlowerPot(CompatUtils.MINT, MintFlowerPots.getDyedPottedCordyline(colour.getId()), "cordyline", colour, generator);
             createFlowerPot(CompatUtils.MINT, MintFlowerPots.getDyedPottedPlumCordyline(colour.getId()), "plum_cordyline", colour, generator);
         }
+
+         */
     }
 
     @Override
@@ -182,13 +185,16 @@ public class ACCModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_RUINED_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_GATEWAY_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(ACCItems.GILDED_ROLL_POTTERY_SHERD.get(), ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(ACCBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
+        //itemModelGenerator.generateFlatItem(ACCBlocks.CORK_LADDER.get().asItem(), ModelTemplates.FLAT_ITEM);
 
+        /*
         for (DyeColor colour : ModDyeColor.VALUES) {
             itemModelGenerator.generateFlatItem(ACItems.getChalkStick(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
             itemModelGenerator.generateFlatItem(ACItems.getPaintBrush(colour.getId()), ModelTemplates.FLAT_HANDHELD_ITEM);
             itemModelGenerator.generateFlatItem(ACBlocks.getDyedFlowerPot(colour.getId()).asItem(), ModelTemplates.FLAT_ITEM);
         }
+
+         */
     }
 
     public static void plasterBlock(BlockModelGenerators generator, Block plaster) {

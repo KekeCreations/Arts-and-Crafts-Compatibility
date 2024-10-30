@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cerulean_chalk": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arts_and_crafts:cerulean_chalk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cerulean_chalk_stick_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cerulean_chalk",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cerulean_chalk_stick_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

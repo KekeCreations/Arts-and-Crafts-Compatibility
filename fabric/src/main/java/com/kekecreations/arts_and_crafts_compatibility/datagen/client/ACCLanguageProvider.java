@@ -1,12 +1,9 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.client;
 
-import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
-import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.leafenzo.mint.util.ModDyeColor;
 import net.minecraft.world.item.DyeColor;
 import org.apache.commons.lang3.StringUtils;
 
@@ -18,6 +15,7 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder builder) {
         //MINT
+        /*
         builder.add("advancements.adventure.board_planning_insane.description", "I said collect ALL chalk sticks");
         builder.add("advancements.adventure.board_planning_insane.title", "Board Planning: Insane Edition");
         for (DyeColor colour : ModDyeColor.VALUES) {
@@ -55,6 +53,10 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
             builder.add(ACBlocks.getDyedFlowerPot(colour.getId()), stringColour + " Flower Pot");
             builder.add(ACBlocks.getDyedDecoratedPot(colour.getId()), stringColour + " Decorated Pot");
         }
+
+         */
+
+
         //BUILT
         builder.add(ACCBlocks.CORK_SHAKES.get(), "Cork Shakes");
         builder.add(ACCBlocks.CORK_SHAKES_SLAB.get(), "Cork Shakes Slab");
@@ -83,6 +85,11 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCItems.CORK_SHORT_DOOR.get(), "Short Cork Door");
         builder.add(ACCItems.TALL_CORK_DOOR.get(), "Tall Cork Door");
 
+
+
+
+
+
         //EXCESSIVE BUILDING
         builder.add(ACCBlocks.CORK_MOSAIC.get(), "Cork Mosaic");
         builder.add(ACCBlocks.CORK_MOSAIC_SLAB.get(), "Cork Mosaic Slab");
@@ -103,16 +110,16 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(),"Polished Soapstone Vertical Stairs");
         builder.add(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(),"Soapstone Brick Vertical Stairs");
         for (DyeColor colour : DyeColor.values()) {
-            String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray" ,"Gray"), "_", " "));
+            if (colour.getId() > 16) {
+                String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray", "Gray"), "_", " "));
 
-            builder.add(ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
-            builder.add(ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
-            builder.add(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");
-            builder.add(ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), stringColour + " Soapstone Brick Vertical Stairs");
-            builder.add(ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()), stringColour + " Mud Brick Vertical Stairs");
+                builder.add(ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
+                builder.add(ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
+                builder.add(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");
+                builder.add(ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()), stringColour + " Soapstone Brick Vertical Stairs");
+                builder.add(ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()), stringColour + " Mud Brick Vertical Stairs");
+            }
         }
-
-
 
         //YAPPING TOOLTIPS
         builder.add("yapping_tooltips.item.arts_and_crafts.bleachdew.desc", "I don't know why Yirmiri wants to bleach sheep so badly");

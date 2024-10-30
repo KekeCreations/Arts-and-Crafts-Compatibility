@@ -3,6 +3,7 @@ package com.kekecreations.arts_and_crafts_compatibility.core.mixin;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACEntityTypes;
 import net.leafenzo.mint.util.ModDyeColor;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,10 +19,10 @@ public class BlockEntityTypeMixin {
     private void arts_and_crafts_compat_isValid(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         var $this = BlockEntityType.class.cast(this);
         if ($this == ACEntityTypes.CUSTOM_DECORATED_POT_BLOCK_ENTITY.get()) {
-            if (state.is(ACBlocks.getDyedDecoratedPot(ModDyeColor.VERMILION.getId()))) {
-                cir.setReturnValue(true);
-            } else if (state.is(ACBlocks.getDyedDecoratedPot(ModDyeColor.MINT.getId()))) {
-                cir.setReturnValue(true);
+            for (DyeColor colour : ModDyeColor.VALUES) {
+                if (state.is(ACBlocks.getDyedDecoratedPot(colour.getId()))) {
+                    cir.setReturnValue(true);
+                }
             }
         }
     }

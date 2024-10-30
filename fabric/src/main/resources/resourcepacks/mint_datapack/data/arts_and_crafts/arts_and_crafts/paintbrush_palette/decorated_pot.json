@@ -18,7 +18,25 @@
     "arts_and_crafts:magenta_paintbrush": "arts_and_crafts:magenta_decorated_pot",
     "arts_and_crafts:pink_paintbrush": "arts_and_crafts:pink_decorated_pot",
     "arts_and_crafts:bleachdew_paintbrush": "minecraft:decorated_pot",
-    "arts_and_crafts:vermilion_paintbrush": "arts_and_crafts:vermilion_decorated_pot",
-    "arts_and_crafts:mint_paintbrush": "arts_and_crafts:mint_decorated_pot"
+    "arts_and_crafts:acorn_paintbrush": "arts_and_crafts:acorn_decorated_pot",
+    "arts_and_crafts:amber_paintbrush": "arts_and_crafts:amber_decorated_pot",
+    "arts_and_crafts:artichoke_paintbrush": "arts_and_crafts:artichoke_decorated_pot",
+    "arts_and_crafts:banana_paintbrush": "arts_and_crafts:banana_decorated_pot",
+    "arts_and_crafts:cerulean_paintbrush": "arts_and_crafts:cerulean_decorated_pot",
+    "arts_and_crafts:fuchsia_paintbrush": "arts_and_crafts:fuchsia_decorated_pot",
+    "arts_and_crafts:grape_paintbrush": "arts_and_crafts:grape_decorated_pot",
+    "arts_and_crafts:indigo_paintbrush": "arts_and_crafts:indigo_decorated_pot",
+    "arts_and_crafts:maroon_paintbrush": "arts_and_crafts:maroon_decorated_pot",
+    "arts_and_crafts:mauve_paintbrush": "arts_and_crafts:mauve_decorated_pot",
+    "arts_and_crafts:mint_paintbrush": "arts_and_crafts:mint_decorated_pot",
+    "arts_and_crafts:mold_paintbrush": "arts_and_crafts:mold_decorated_pot",
+    "arts_and_crafts:navy_paintbrush": "arts_and_crafts:navy_decorated_pot",
+    "arts_and_crafts:peach_paintbrush": "arts_and_crafts:peach_decorated_pot",
+    "arts_and_crafts:periwinkle_paintbrush": "arts_and_crafts:periwinkle_decorated_pot",
+    "arts_and_crafts:sage_paintbrush": "arts_and_crafts:sage_decorated_pot",
+    "arts_and_crafts:sap_paintbrush": "arts_and_crafts:sap_decorated_pot",
+    "arts_and_crafts:shamrock_paintbrush": "arts_and_crafts:shamrock_decorated_pot",
+    "arts_and_crafts:velvet_paintbrush": "arts_and_crafts:velvet_decorated_pot",
+    "arts_and_crafts:vermilion_paintbrush": "arts_and_crafts:vermilion_decorated_pot"
   }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-30T11:53:34.5995185	Arts And Crafts Compatibility/Tags for minecraft:block
+// 1.20.1	2024-10-30T12:42:19.2840651	Arts And Crafts Compatibility/Tags for minecraft:block
 fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
 599eeca5a1b2be9d1befe274b94c7b053058076c data\arts_and_crafts\tags\blocks\paintable\terracotta_shingles.json
 64483a729cad640651d4e7f2f1ad9f2f3aff0d23 data\arts_and_crafts\tags\blocks\paintable\polished_soapstone_slab.json
@@ -7,6 +7,7 @@ fc110e6640f40d3badef216125da243d619c55b3 data\minecraft\tags\blocks\planks.json
 70dd2b084f63e0c379d0e3cc0e660d922793f19c data\arts_and_crafts\tags\blocks\paintable\mud_bricks.json
 b7459c67536776b3af997d165875b8b9903833dd data\minecraft\tags\blocks\mineable\axe.json
 0d3cf6b2afb7bd5056b0417b8d71b73c3b0d12fb data\arts_and_crafts\tags\blocks\paintable\mud_brick_slab.json
+65bd2f7d0cd0f49d28b5d03b441f4eba4934a4b3 data\arts_and_crafts\tags\blocks\paintable\decorated_pot.json
 627ec1f4fce7ec5d3e10b6223247203ea954ad63 data\arts_and_crafts\tags\blocks\paintable\flower_pot.json
 ffc83f7ffef24a06bc945b89114538f64a15f00b data\arts_and_crafts\tags\blocks\paintable\chalk.json
 a9f735cbd0c4f304b4e44f21dabebd79d560e4ec data\arts_and_crafts\tags\blocks\paintable\polished_soapstone.json
@@ -33,8 +34,8 @@ fd6970592a1ca35e5ffa416aa79a69bc8214ad59 data\arts_and_crafts\tags\blocks\painta
 d4bdd7e880a09c166be94770caf6d2a95cd1ad45 data\arts_and_crafts\tags\blocks\paintable\soapstone_slab.json
 df2124c902da530942b980832f868a06781711c6 data\minecraft\tags\blocks\enchantment_power_provider.json
 4c55df5537913c86700cd12e39a74230f1b8c40a data\minecraft\tags\blocks\mineable\pickaxe.json
-28b08fb20d90cd767b2f3267bf59a9cad50b8fa2 data\arts_and_crafts\tags\blocks\paintable\soapstone_bricks.json
 99c6e3bd5985d441c67129745413e46fba943152 data\minecraft\tags\blocks\slabs.json
+28b08fb20d90cd767b2f3267bf59a9cad50b8fa2 data\arts_and_crafts\tags\blocks\paintable\soapstone_bricks.json
 de019b30cff250921d79aab24106e042bd931fa3 data\minecraft\tags\blocks\logs.json
 5425461fb61d8d016f12fa13e6c5e047f3f37408 data\minecraft\tags\blocks\wool_carpets.json
 555b7c4dc69000411ab36a99e5994a588beeb323 data\arts_and_crafts\tags\blocks\paintable\soapstone_wall.json

@@ -125,6 +125,7 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             this.getOrCreateTagBuilder(ACCTags.PLASTER)
                     .add(ACBlocks.getDyedPlaster(colour.getId()));
             this.getOrCreateTagBuilder(ACCTags.FLOWER_POTS).add(ACBlocks.getDyedFlowerPot(colour.getId()));
+            this.getOrCreateTagBuilder(ACCTags.DECORATED_POTS).add(ACBlocks.getDyedDecoratedPot(colour.getId()));
         }
     }
 

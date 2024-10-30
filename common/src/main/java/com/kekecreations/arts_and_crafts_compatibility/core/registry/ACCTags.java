@@ -36,7 +36,7 @@ public class ACCTags {
     public static final TagKey<Block> TERRACOTTA_SHINGLE_WALL = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/terracotta_shingle_wall"));
     public static final TagKey<Block> PLASTER = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/plaster"));
     public static final TagKey<Block> FLOWER_POTS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/flower_pot"));
-
+    public static final TagKey<Block> DECORATED_POTS = TagKey.create(Registries.BLOCK, new ResourceLocation(ArtsAndCrafts.MOD_ID, "paintable/decorated_pot"));
 
     //GILDED SHERDS COMPAT
     public static TagKey<Item> GILDED_SHERDS = TagKey.create(Registries.ITEM, new ResourceLocation(CompatUtils.GILDED_SHERDS, "gilded_sherds"));

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "mint:mint_concrete",
+    "mint:peach_concrete",
+    "mint:periwinkle_concrete",
+    "mint:artichoke_concrete",
+    "mint:fuchsia_concrete",
+    "mint:vermilion_concrete",
+    "mint:shamrock_concrete",
+    "mint:indigo_concrete",
+    "mint:banana_concrete",
+    "mint:cerulean_concrete",
+    "mint:acorn_concrete",
+    "mint:mauve_concrete",
+    "mint:maroon_concrete",
+    "mint:grape_concrete",
+    "mint:navy_concrete",
+    "mint:sap_concrete",
+    "mint:amber_concrete",
+    "mint:sage_concrete",
+    "mint:velvet_concrete",
+    "mint:mold_concrete"
+  ]
+}

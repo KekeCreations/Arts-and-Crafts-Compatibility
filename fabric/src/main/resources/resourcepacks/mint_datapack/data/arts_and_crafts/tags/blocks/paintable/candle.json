@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "mint:mint_candle",
+    "mint:peach_candle",
+    "mint:periwinkle_candle",
+    "mint:artichoke_candle",
+    "mint:fuchsia_candle",
+    "mint:vermilion_candle",
+    "mint:shamrock_candle",
+    "mint:indigo_candle",
+    "mint:banana_candle",
+    "mint:cerulean_candle",
+    "mint:acorn_candle",
+    "mint:mauve_candle",
+    "mint:maroon_candle",
+    "mint:grape_candle",
+    "mint:navy_candle",
+    "mint:sap_candle",
+    "mint:amber_candle",
+    "mint:sage_candle",
+    "mint:velvet_candle",
+    "mint:mold_candle"
+  ]
+}

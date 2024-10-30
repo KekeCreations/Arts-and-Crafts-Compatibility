@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "mint:mint_stained_glass",
+    "mint:peach_stained_glass",
+    "mint:periwinkle_stained_glass",
+    "mint:artichoke_stained_glass",
+    "mint:fuchsia_stained_glass",
+    "mint:vermilion_stained_glass",
+    "mint:shamrock_stained_glass",
+    "mint:indigo_stained_glass",
+    "mint:banana_stained_glass",
+    "mint:cerulean_stained_glass",
+    "mint:acorn_stained_glass",
+    "mint:mauve_stained_glass",
+    "mint:maroon_stained_glass",
+    "mint:grape_stained_glass",
+    "mint:navy_stained_glass",
+    "mint:sap_stained_glass",
+    "mint:amber_stained_glass",
+    "mint:sage_stained_glass",
+    "mint:velvet_stained_glass",
+    "mint:mold_stained_glass"
+  ]
+}

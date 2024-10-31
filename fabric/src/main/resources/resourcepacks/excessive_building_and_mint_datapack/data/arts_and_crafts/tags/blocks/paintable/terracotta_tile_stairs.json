@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:mint_terracotta_tile_stairs",
+    "excessive_building:peach_terracotta_tile_stairs",
+    "excessive_building:periwinkle_terracotta_tile_stairs",
+    "excessive_building:artichoke_terracotta_tile_stairs",
+    "excessive_building:fuchsia_terracotta_tile_stairs",
+    "excessive_building:vermilion_terracotta_tile_stairs",
+    "excessive_building:shamrock_terracotta_tile_stairs",
+    "excessive_building:indigo_terracotta_tile_stairs",
+    "excessive_building:banana_terracotta_tile_stairs",
+    "excessive_building:cerulean_terracotta_tile_stairs",
+    "excessive_building:acorn_terracotta_tile_stairs",
+    "excessive_building:mauve_terracotta_tile_stairs",
+    "excessive_building:maroon_terracotta_tile_stairs",
+    "excessive_building:grape_terracotta_tile_stairs",
+    "excessive_building:navy_terracotta_tile_stairs",
+    "excessive_building:sap_terracotta_tile_stairs",
+    "excessive_building:amber_terracotta_tile_stairs",
+    "excessive_building:sage_terracotta_tile_stairs",
+    "excessive_building:velvet_terracotta_tile_stairs",
+    "excessive_building:mold_terracotta_tile_stairs"
+  ]
+}

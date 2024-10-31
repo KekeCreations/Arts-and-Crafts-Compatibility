@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:mint_almentra",
+    "excessive_building:peach_almentra",
+    "excessive_building:periwinkle_almentra",
+    "excessive_building:artichoke_almentra",
+    "excessive_building:fuchsia_almentra",
+    "excessive_building:vermilion_almentra",
+    "excessive_building:shamrock_almentra",
+    "excessive_building:indigo_almentra",
+    "excessive_building:banana_almentra",
+    "excessive_building:cerulean_almentra",
+    "excessive_building:acorn_almentra",
+    "excessive_building:mauve_almentra",
+    "excessive_building:maroon_almentra",
+    "excessive_building:grape_almentra",
+    "excessive_building:navy_almentra",
+    "excessive_building:sap_almentra",
+    "excessive_building:amber_almentra",
+    "excessive_building:sage_almentra",
+    "excessive_building:velvet_almentra",
+    "excessive_building:mold_almentra"
+  ]
+}

@@ -7,7 +7,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.Exce
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.MintFlowerPots;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.leafenzo.mint.util.ModDyeColor;
+import net.leafenzo.mint.util.ElsDyeModDyeColor;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
@@ -34,7 +34,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     public void mint() {
-        for (DyeColor colour : ModDyeColor.VALUES) {
+        for (DyeColor colour : ElsDyeModDyeColor.VALUES) {
             dropSelf(ACBlocks.getChalk(colour.getId()));
             dropSelf(ACBlocks.getDyedSoapstone(colour.getId()));
             dropSelf(ACBlocks.getDyedSoapstoneStairs(colour.getId()));

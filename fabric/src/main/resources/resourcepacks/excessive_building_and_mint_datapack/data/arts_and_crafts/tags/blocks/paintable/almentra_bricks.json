@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:mint_almentra_bricks",
+    "excessive_building:peach_almentra_bricks",
+    "excessive_building:periwinkle_almentra_bricks",
+    "excessive_building:artichoke_almentra_bricks",
+    "excessive_building:fuchsia_almentra_bricks",
+    "excessive_building:vermilion_almentra_bricks",
+    "excessive_building:shamrock_almentra_bricks",
+    "excessive_building:indigo_almentra_bricks",
+    "excessive_building:banana_almentra_bricks",
+    "excessive_building:cerulean_almentra_bricks",
+    "excessive_building:acorn_almentra_bricks",
+    "excessive_building:mauve_almentra_bricks",
+    "excessive_building:maroon_almentra_bricks",
+    "excessive_building:grape_almentra_bricks",
+    "excessive_building:navy_almentra_bricks",
+    "excessive_building:sap_almentra_bricks",
+    "excessive_building:amber_almentra_bricks",
+    "excessive_building:sage_almentra_bricks",
+    "excessive_building:velvet_almentra_bricks",
+    "excessive_building:mold_almentra_bricks"
+  ]
+}

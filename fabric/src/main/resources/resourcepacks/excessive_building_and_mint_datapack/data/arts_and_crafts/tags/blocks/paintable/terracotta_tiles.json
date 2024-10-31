@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:mint_terracotta_tiles",
+    "excessive_building:peach_terracotta_tiles",
+    "excessive_building:periwinkle_terracotta_tiles",
+    "excessive_building:artichoke_terracotta_tiles",
+    "excessive_building:fuchsia_terracotta_tiles",
+    "excessive_building:vermilion_terracotta_tiles",
+    "excessive_building:shamrock_terracotta_tiles",
+    "excessive_building:indigo_terracotta_tiles",
+    "excessive_building:banana_terracotta_tiles",
+    "excessive_building:cerulean_terracotta_tiles",
+    "excessive_building:acorn_terracotta_tiles",
+    "excessive_building:mauve_terracotta_tiles",
+    "excessive_building:maroon_terracotta_tiles",
+    "excessive_building:grape_terracotta_tiles",
+    "excessive_building:navy_terracotta_tiles",
+    "excessive_building:sap_terracotta_tiles",
+    "excessive_building:amber_terracotta_tiles",
+    "excessive_building:sage_terracotta_tiles",
+    "excessive_building:velvet_terracotta_tiles",
+    "excessive_building:mold_terracotta_tiles"
+  ]
+}

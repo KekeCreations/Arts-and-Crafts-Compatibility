@@ -24,7 +24,7 @@ dependencies {
     modImplementation "curse.maven:dramatic-doors-380617:5476685"
     modImplementation "curse.maven:excessive-building-845097:5765499"
     modImplementation "curse.maven:forge-config-api-port-fabric-547434:4583000"
-    modImplementation "curse.maven:el-and-ls-dyes-1122454:5816277"
+    modImplementation "maven.modrinth:el-and-ls-dye-mod:1.0.4+1.20.1"
     modImplementation "curse.maven:geckolib-388172:5675212"
     modImplementation("net.fabricmc:fabric-language-kotlin:1.12.3+kotlin.2.0.21")
     modImplementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}")

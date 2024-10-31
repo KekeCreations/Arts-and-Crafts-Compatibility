@@ -7,7 +7,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.leafenzo.mint.util.ModDyeColor;
+import net.leafenzo.mint.util.ElsDyeModDyeColor;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
@@ -29,7 +29,7 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
     }
 
     public void mint() {
-        for (DyeColor colour : ModDyeColor.VALUES) {
+        for (DyeColor colour : ElsDyeModDyeColor.VALUES) {
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
                     .add(ACItems.getChalkStick(colour.getId()));
             this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)

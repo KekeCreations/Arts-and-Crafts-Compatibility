@@ -53,6 +53,10 @@ subprojects {
             name = 'Curse Maven'
             url = "https://cursemaven.com"
         }
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
+        }
         //so dye mod doesn't crash
         maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
         maven { url = "https://maven.blamejared.com/" } // JEI

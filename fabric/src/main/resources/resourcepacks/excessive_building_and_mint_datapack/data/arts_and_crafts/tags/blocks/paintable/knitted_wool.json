@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:mint_knitted_wool",
+    "excessive_building:peach_knitted_wool",
+    "excessive_building:periwinkle_knitted_wool",
+    "excessive_building:artichoke_knitted_wool",
+    "excessive_building:fuchsia_knitted_wool",
+    "excessive_building:vermilion_knitted_wool",
+    "excessive_building:shamrock_knitted_wool",
+    "excessive_building:indigo_knitted_wool",
+    "excessive_building:banana_knitted_wool",
+    "excessive_building:cerulean_knitted_wool",
+    "excessive_building:acorn_knitted_wool",
+    "excessive_building:mauve_knitted_wool",
+    "excessive_building:maroon_knitted_wool",
+    "excessive_building:grape_knitted_wool",
+    "excessive_building:navy_knitted_wool",
+    "excessive_building:sap_knitted_wool",
+    "excessive_building:amber_knitted_wool",
+    "excessive_building:sage_knitted_wool",
+    "excessive_building:velvet_knitted_wool",
+    "excessive_building:mold_knitted_wool"
+  ]
+}

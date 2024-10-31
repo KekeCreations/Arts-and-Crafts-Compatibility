@@ -35,9 +35,11 @@ public class ACCModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators generator) {
         for (DyeColor colour : DyeColor.values()) {
             //ECOLOGICS
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
-            this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
+            if (colour.getId() <= 16) {
+                this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedAzaleaFlower(colour), "azalea_flower", colour, generator);
+                this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedWalnutSapling(colour), "walnut_sapling", colour, generator);
+                this.createFlowerPot(CompatUtils.ECOLOGICS, EcologicsFlowerPots.getDyedPottedCoconutSeedling(colour), "coconut_seedling", colour, generator);
+            }
         }
         //BUILT
         generator.createTrivialBlock(ACCBlocks.CORK_COMPACT_PLANKS.get(), TexturedModel.CUBE);

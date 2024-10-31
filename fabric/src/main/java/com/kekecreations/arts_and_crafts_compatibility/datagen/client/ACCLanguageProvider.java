@@ -110,9 +110,8 @@ public class ACCLanguageProvider extends FabricLanguageProvider {
         builder.add(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(),"Polished Soapstone Vertical Stairs");
         builder.add(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(),"Soapstone Brick Vertical Stairs");
         for (DyeColor colour : DyeColor.values()) {
-            if (colour.getId() > 16) {
+            if (colour.getId() <= 16) {
                 String stringColour = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colour.getName(), "blue", "Blue"), "gray", "Gray"), "_", " "));
-
                 builder.add(ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()), stringColour + " Terracotta Shingle Vertical Stairs");
                 builder.add(ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()), stringColour + " Soapstone Vertical Stairs");
                 builder.add(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()), stringColour + " Polished Soapstone Vertical Stairs");

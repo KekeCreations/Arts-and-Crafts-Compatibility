@@ -1,6 +1,6 @@
 V1.3.1
 • Fixed Mixin Config Conflicts so it no longer crashes with Create mods
-• Fixed block loot table log spam
+• Fixed all log errors (No more log spam!)
 
 
 

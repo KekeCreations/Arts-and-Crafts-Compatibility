@@ -59,7 +59,23 @@ public class ForgeArtsAndCraftsCompatibilityClient {
             if (Services.PLATFORM.isModLoaded(CompatUtils.BUILT)) {
                 bpBuilt(event);
             }
+            if (Services.PLATFORM.isModLoaded(CompatUtils.ECOLOGICS)) {
+                bpEcologics(event);
+            }
         }
+    }
+
+    private static void bpEcologics(AddPackFindersEvent event) {
+        IModFileInfo mod = ModList.get().getModFileById(ArtsAndCraftsCompatibility.MOD_ID);
+        Path file = mod.getFile().findResource("resourcepacks/ecologics_datapack");
+        event.addRepositorySource((packConsumer) ->
+                packConsumer.accept(Pack.create(
+                        "ecologics_datapack",
+                        Component.literal("Ecologic Compatibility Data Pack"),
+                        false,
+                        (path) -> new PathPackResources(path, file, true),
+                        new Pack.Info(Component.literal("Arts & Crafts Compat features for Ecologics"), SharedConstants.getCurrentVersion().getPackVersion(PackType.SERVER_DATA), FeatureFlagSet.of()),
+                        PackType.SERVER_DATA, Pack.Position.TOP, true, PackSource.BUILT_IN)));
     }
 
 

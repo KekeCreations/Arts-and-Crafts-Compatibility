@@ -48,6 +48,9 @@ public class FabricArtsAndCraftsCompatResourcePacks {
                 registerBuiltinDataPack(modContainer.get(),  "excessive_building_and_mint");
                 registerBuiltinResourcePack(modContainer.get(),  "excessive_building_and_mint");
             }
+            if (FabricArtsAndCraftsCompatibility.isModLoaded(CompatUtils.ECOLOGICS)) {
+                registerBuiltinDataPack(modContainer.get(), CompatUtils.ECOLOGICS);
+            }
         }
     }
 }

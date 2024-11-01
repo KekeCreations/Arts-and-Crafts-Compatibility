@@ -26,7 +26,7 @@ public class ACCBlockLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        ecologics();
+        //ecologics();
         twigs();
         decorativeBlocks();
         //excessiveBuilding();

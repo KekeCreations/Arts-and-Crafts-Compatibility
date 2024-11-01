@@ -1,3 +1,9 @@
+V1.3.1
+• Fixed Mixin Config Conflicts so it no longer crashes with Create mods
+• Fixed block loot table log spam
+
+
+
 V1.3.0
 • This update only works with Arts & Crafts V1.3.1+
 • Dyed Compat Flower Pots are no longer enabled if Dyed Flower Pots are disabled.

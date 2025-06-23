@@ -1,6 +1,5 @@
 package com.kekecreations.arts_and_crafts_compatibility;
 
-import com.kekecreations.arts_and_crafts.common.util.CreativeCategoryUtils;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.MintFlowerPots;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.CompatUtils;
@@ -8,6 +7,7 @@ import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.util.DyeModDyedBlockLists;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.compat.ExcessiveBuildingFlowerPots;
+import com.kekecreations.jinxedlib.core.util.JinxedCreativeCategoryHelper;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -105,21 +105,21 @@ public class FabricArtsAndCraftsCompatibility implements ModInitializer {
                 event.addAfter(ACCBlocks.GYPSUM_VERTICAL_STAIRS.get(), ACCBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get());
                 event.addAfter(ACCBlocks.POLISHED_GYPSUM_VERTICAL_STAIRS.get(), ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get());
                 event.addAfter(ACCBlocks.GYPSUM_BRICK_VERTICAL_STAIRS.get(), ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get());
-                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
+                for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrderBackToFront) {
+                    //event.addAfter(ACCBlocks.TERRACOTTA_SHINGLE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedTerracottaShingleVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCBlocks.getDyedTerracottaShingleVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
-                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
+               // event.addAfter(ACCBlocks.getDyedTerracottaShingleVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get());
+                for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrderBackToFront) {
+                   // event.addAfter(ACCBlocks.SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCBlocks.getDyedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
-                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
+               // event.addAfter(ACCBlocks.getDyedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get());
+                for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrderBackToFront) {
+                   // event.addAfter(ACCBlocks.POLISHED_SOAPSTONE_VERTICAL_STAIRS.get(), ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(colour.getId()));
                 }
-                event.addAfter(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
-                for (DyeColor colour : CreativeCategoryUtils.colourOrder) {
-                    event.addAfter(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
-                    event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "mud_brick_vertical_stairs")), ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
+              //  event.addAfter(ACCBlocks.getDyedPolishedSoapstoneVerticalStairs(DyeColor.PINK.getId()), ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get());
+                for (DyeColor colour : JinxedCreativeCategoryHelper.colourOrderBackToFront) {
+                   // event.addAfter(ACCBlocks.SOAPSTONE_BRICK_VERTICAL_STAIRS.get(), ACCBlocks.getDyedSoapstoneBrickVerticalStairs(colour.getId()));
+                   // event.addAfter(BuiltInRegistries.ITEM.get(new ResourceLocation(CompatUtils.EXCESSIVE_BUILDING, "mud_brick_vertical_stairs")), ACCBlocks.getDyedMudBrickVerticalStairs(colour.getId()));
                 }
             });
         }

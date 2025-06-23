@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.registry;
 
-import com.kekecreations.arts_and_crafts.common.misc.KekeBlockSetType;
+import com.kekecreations.arts_and_crafts.core.init.ACBlockSetType;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts.core.registry.ACSoundTypes;
 import com.kekecreations.arts_and_crafts_compatibility.common.block.*;
@@ -21,10 +21,10 @@ public class ACCBlocks {
 
     //DRAMATIC DOORS
     public static final Supplier<Block> SHORT_CORK_DOOR = CompatUtils.registerBlock("short_cork_door",
-            () -> new ACCShortDoorBlock(ACBlocks.CORK_DOOR.get(), KekeBlockSetType.CORK));
+            () -> new ACCShortDoorBlock(ACBlocks.CORK_DOOR.get(), ACBlockSetType.CORK));
 
     public static final Supplier<Block> TALL_CORK_DOOR = CompatUtils.registerBlock("tall_cork_door",
-            () -> new ACCTallDoorBlock(ACBlocks.CORK_DOOR.get(), KekeBlockSetType.CORK));
+            () -> new ACCTallDoorBlock(ACBlocks.CORK_DOOR.get(), ACBlockSetType.CORK));
 
     //TWIGS COMPAT
     public static final Supplier<Block> CORK_TABLE = CompatUtils.registerBlockWithItem(CompatUtils.TWIGS, "cork_table",

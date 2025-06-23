@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACItems;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCItems;
@@ -30,9 +30,9 @@ public class ACCItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     public void mint() {
         for (DyeColor colour : ElsDyeModDyeColor.VALUES) {
-            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.CHALK_STICKS)
+            this.getOrCreateTagBuilder(ACTags.ItemTags.CHALK_STICKS)
                     .add(ACItems.getChalkStick(colour.getId()));
-            this.getOrCreateTagBuilder(ArtsAndCraftsTags.ItemTags.PAINTBRUSHES)
+            this.getOrCreateTagBuilder(ACTags.ItemTags.PAINTBRUSHES)
                     .add(ACItems.getPaintBrush(colour.getId()));
         }
     }

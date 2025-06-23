@@ -63,7 +63,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    implementation fg.deobf("curse.maven:artsandcrafts-1034791:5854531")
+    implementation fg.deobf("curse.maven:artsandcrafts-1034791:6645608")
+    implementation fg.deobf("curse.maven:jinxedlib-1203401:6630668")
 
     //GOTTA KEEP FOR CODE
     implementation fg.deobf("curse.maven:decorative-blocks-362528:5089406")

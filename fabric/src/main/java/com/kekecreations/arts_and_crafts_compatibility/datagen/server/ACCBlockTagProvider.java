@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.datagen.server;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsTags;
+import com.kekecreations.arts_and_crafts.core.init.ACTags;
 import com.kekecreations.arts_and_crafts.core.registry.ACBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCBlocks;
 import com.kekecreations.arts_and_crafts_compatibility.core.registry.ACCTags;
@@ -33,7 +33,7 @@ public class ACCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void mint() {
         for (DyeColor colour : ElsDyeModDyeColor.VALUES) {
-            this.getOrCreateTagBuilder(ArtsAndCraftsTags.BlockTags.CHALK_DUST)
+            this.getOrCreateTagBuilder(ACTags.BlockTags.CHALK_DUST)
                     .add(ACBlocks.getChalkDust(colour.getId()));
             this.getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                     .add(ACBlocks.getDyedFlowerPot(colour.getId()));

@@ -1,6 +1,6 @@
 package com.kekecreations.arts_and_crafts_compatibility.core.util;
 
-import com.kekecreations.arts_and_crafts.common.util.ArtsAndCraftsDyedBlockLists;
+import com.kekecreations.arts_and_crafts.core.init.ACDyedBlockLists;
 import net.leafenzo.mint.block.ElsDyeModBlocks;
 import net.leafenzo.mint.util.ElsDyeModDyeColor;
 import net.minecraft.util.StringRepresentable;
@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.HashMap;
 
-public class DyeModDyedBlockLists extends ArtsAndCraftsDyedBlockLists {
+public class DyeModDyedBlockLists extends ACDyedBlockLists {
 
     public static HashMap<StringRepresentable, Block> DYE_MOD_TERRACOTTA = new HashMap();
 
